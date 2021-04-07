@@ -9,7 +9,6 @@ DBComment:
 * redo/sniff path/spawns for @CGUID+76 and @CGUID+77, its currently not as long/wide as it should be
 * @CGUID+72 - @CGUID+75 were changed to 17940 at some point
 * changed position for @CGUID+75 spawn due to extreme desync pathing befor: -33.9556, -353.67, 78.0838, 0.242071, recheck spawns @CGUID+75 and @CGUID+74
-* Core Issue: Pooling overwrites spawnmask making it possible to have heroic chest in normal, chests need some sort of chanced solution where the maxchance of a pool might be below 100% Set Master Pools to 2 when this is resolved
 EndDBScriptData */
 
 SET @CGUID := 5470000; -- creatures
@@ -110,8 +109,6 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (@CGUID+56, 4, -131.952, -401.757, 79.0816, 3.63012, 0, 0),
 (@CGUID+56, 5, -118.676, -393.847, 81.0774, 0.631466, 0, 0),
 (@CGUID+56, 6, -117.975, -370.358, 81.2919, 1.68469, 0, 0),
-(@CGUID+57, 1, 70.9442, -380.246, 6.60473, 3.14089, 0, 0),
-(@CGUID+57, 2, 129.382, -380.298, 30.2733, 3.16131, 30000, 0),
 (@CGUID+59, 1, -92.427, -208.33, -1.16262, 1.84654, 0, 0),
 (@CGUID+59, 2, -94.1575, -192.332, -1.71617, 1.59914, 0, 0),
 (@CGUID+59, 3, -91.469, -174.521, -3.35942, 1.41143, 0, 0),
@@ -189,74 +186,47 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (@CGUID+77, 6, -55.6635, -541.527, -1.59247, 1.90194, 0, 0),
 (@CGUID+77, 7, -52.6052, -552.869, -1.59247, 1.67025, 0, 0),
 (@CGUID+77, 8, -63.2146, -569.216, -1.06684, 1.90194, 0, 0),
-(@CGUID+80, 1, -39.4115, -297.88, -1.45878, 4.84274, 0, 0),
-(@CGUID+80, 2, -41.4277, -286.794, -1.3566, 1.63753, 0, 0),
-(@CGUID+80, 3, -53.5928, -274.91, -1.12075, 2.48184, 0, 0),
-(@CGUID+80, 4, -41.7862, -285.465, -1.35429, 5.53311, 0, 0),
-(@CGUID+81, 1, -64.909, -252.151, -3.43075, 3.07666, 0, 0),
-(@CGUID+81, 2, -73.8958, -246.971, -3.26706, 2.66825, 0, 0),
-(@CGUID+81, 3, -66.0702, -249.654, -3.57934, 6.25752, 0, 0),
-(@CGUID+81, 4, -54.3672, -250.814, -3.4374, 0.775442, 0, 0),
-(@CGUID+82, 1, -60.1871, -274.514, -1.32443, 0.26623, 0, 0),
-(@CGUID+82, 2, -72.5992, -278.49, -1.19043, 3.46201, 0, 0),
-(@CGUID+82, 3, -82.794, -279.765, -1.20342, 3.26252, 0, 0),
-(@CGUID+82, 4, -96.5694, -290.858, -1.53293, 3.80209, 0, 0),
-(@CGUID+82, 5, -100.228, -298.107, -1.55955, 4.24506, 0, 0),
-(@CGUID+82, 6, -96.3875, -289.726, -1.53346, 1.14116, 0, 0),
-(@CGUID+82, 7, -88.7323, -288.205, -1.49494, 0.131142, 0, 0),
-(@CGUID+82, 8, -83.6441, -280.069, -1.24312, 0.979372, 0, 0),
-(@CGUID+82, 9, -77.2797, -280.477, -1.16125, 6.20384, 0, 0),
-(@CGUID+83, 1, -77.1743, -181.779, -4.78266, 1.41468, 0, 0),
-(@CGUID+83, 2, -76.478, -180.728, -4.88586, 5.83647, 0, 0),
-(@CGUID+83, 3, -60.2513, -175.565, -3.92092, 5.37701, 0, 0),
-(@CGUID+83, 4, -76.7508, -179.345, -4.78848, 4.94897, 0, 0),
-(@CGUID+83, 5, -78.3569, -194.255, -3.4248, 5.6676, 0, 0),
-(@CGUID+83, 6, -79.0214, -195.244, -3.31888, 5.41785, 0, 0),
-(@CGUID+84, 1, -41.4325, -0.859783, -1.4011, 0, 0, 0),
-(@CGUID+84, 2, -41.4325, -0.859783, -1.4011, 0, 40, 0),
-(@CGUID+84, 3, -34.0809, 5.04258, -1.10683, 0, 0, 0),
-(@CGUID+84, 4, -34.0809, 5.04258, -1.10683, 0, 40, 0),
-(@CGUID+84, 5, -37.9689, 1.56942, -1.26356, 0, 0, 0),
-(@CGUID+84, 6, -31.1588, -6.45397, -1.41263, 0, 0, 0),
-(@CGUID+84, 7, -20.6941, 4.13184, -0.873265, 0, 1240, 0),
-(@CGUID+84, 8, -22.7928, -1.29729, -1.19428, 0, 0, 0),
-(@CGUID+84, 9, -39.3552, -1.18264, -1.32415, 0, 0, 0),
-(@CGUID+84, 10, -40.382, 1.78264, -1.35346, 0, 1200, 0),
-(@CGUID+85, 1, -71.5674, -16.3256, -4.66597, 6.1193, 0, 0),
-(@CGUID+85, 2, -62.0915, -15.9753, -3.14027, 5.8562, 0, 0),
-(@CGUID+85, 3, -54.1279, -23.8254, -2.0657, 4.15189, 0, 0),
-(@CGUID+85, 4, -60.538, -15.5768, -3.09803, 2.43972, 0, 0),
-(@CGUID+85, 5, -70.6641, -17.5188, -4.41936, 5.00797, 0, 0),
-(@CGUID+86, 1, -97.4907, -107.516, 19.304, 0, 0, 0),
-(@CGUID+86, 2, -97.4907, -107.516, 19.304, 0, 40, 0),
-(@CGUID+86, 3, -97.4907, -107.516, 19.304, 0, 20, 0),
-(@CGUID+86, 4, -97.4907, -107.516, 19.304, 0, 10, 0),
-(@CGUID+86, 5, -97.4907, -107.516, 19.304, 0, 20, 0),
-(@CGUID+86, 6, -97.4907, -107.516, 19.304, 0, 0, 0),
-(@CGUID+86, 7, -97.4907, -107.516, 19.304, 0, 0, 0),
-(@CGUID+86, 8, -97.4907, -107.516, 19.304, 0, 0, 0),
-(@CGUID+86, 9, -97.4907, -107.516, 19.304, 0, 0, 0),
-(@CGUID+86, 10, -97.4907, -107.516, 19.304, 0, 0, 0),
-(@CGUID+86, 11, -111.342, -104.957, 16.4121, 0, 0, 0),
-(@CGUID+86, 12, -111.342, -104.957, 16.4121, 0, 40, 0),
-(@CGUID+86, 13, -111.809, -104.863, 16.0057, 0, 10, 0),
-(@CGUID+86, 14, -111.809, -104.863, 16.0057, 0, 0, 0),
-(@CGUID+86, 15, -111.809, -104.863, 16.0057, 0, 20, 0),
-(@CGUID+86, 16, -99.3708, -109.742, 20.8652, 0, 0, 0),
-(@CGUID+86, 17, -85.8723, -111.917, 19.7182, 0, 20, 0),
-(@CGUID+86, 18, -85.8723, -111.917, 19.7182, 0, 10, 0),
-(@CGUID+86, 19, -85.8723, -111.917, 19.7182, 0, 0, 0),
-(@CGUID+86, 20, -85.8723, -111.917, 19.7182, 0, 20, 0),
-(@CGUID+86, 21, -85.8723, -111.917, 19.7182, 0, 15, 0),
-(@CGUID+86, 22, -85.8723, -111.917, 19.7182, 0, 0, 0),
-(@CGUID+86, 23, -98.6581, -110.209, 20.8816, 0, 0, 0),
-(@CGUID+86, 24, -97.783, -109.408, 20.3391, 0, 0, 0),
-(@CGUID+86, 25, -97.783, -109.408, 20.3391, 0, 10, 0),
-(@CGUID+86, 26, -97.783, -109.408, 20.3391, 0, 20, 0),
-(@CGUID+86, 27, -97.783, -109.408, 20.3391, 0, 40, 0),
-(@CGUID+86, 28, -97.783, -109.408, 20.3391, 0, 20, 0),
-(@CGUID+86, 29, -97.783, -109.408, 20.3391, 0, 10, 0),
-(@CGUID+86, 30, -97.783, -109.408, 20.3391, 0, 20, 0),
+(@CGUID+80, 1, -58.623344, -272.43045, -1.2523658, 100, 0, 0),
+(@CGUID+80, 2, -49.053898, -276.486, -1.0135521, 100, 0, 0),
+(@CGUID+80, 3, -41.325123, -284.97256, -1.2997084, 100, 0, 0),
+(@CGUID+80, 4, -38.087578, -297.45834, -1.3999375, 100, 0, 0),
+(@CGUID+80, 5, -41.325123, -284.97256, -1.2997084, 100, 0, 0),
+(@CGUID+80, 6, -49.053898, -276.486, -1.0135521, 100, 0, 0),
+(@CGUID+81, 1, -47.796593, -247.22282, -2.8943856, 100, 0, 0),
+(@CGUID+81, 2, -52.00373, -251.65726, -2.9330606, 100, 0, 0),
+(@CGUID+81, 3, -61.78871, -253.90524, -3.2789962, 100, 0, 0),
+(@CGUID+81, 4, -70.96448, -251.71724, -2.9398856, 100, 0, 0),
+(@CGUID+81, 5, -78.4796, -246.30057, -2.9249973, 100, 0, 0),
+(@CGUID+81, 6, -70.96448, -251.71724, -2.9398856, 100, 0, 0),
+(@CGUID+81, 7, -61.78871, -253.90524, -3.2789962, 100, 0, 0),
+(@CGUID+81, 8, -52.00373, -251.65726, -2.9330606, 100, 0, 0),
+(@CGUID+82, 1, -100.68125, -292.32104, -1.5775821, 100, 0, 0),
+(@CGUID+82, 2, -94.04997, -286.40472, -1.5394256, 100, 0, 0),
+(@CGUID+82, 3, -85.52775, -285.34708, -1.4778596, 100, 0, 0),
+(@CGUID+82, 4, -79.20152, -275.89697, -0.9708502, 100, 0, 0),
+(@CGUID+82, 5, -85.52775, -285.34708, -1.4778596, 100, 0, 0),
+(@CGUID+82, 6, -94.04997, -286.40472, -1.5394256, 100, 0, 0),
+(@CGUID+83, 1, -91.04075, -192.95897, -1.6159151, 100, 0, 0),
+(@CGUID+83, 2, -87.60288, -181.37634, -3.301994, 100, 0, 0),
+(@CGUID+83, 3, -79.72039, -172.97456, -4.0686054, 100, 0, 0),
+(@CGUID+83, 4, -69.84593, -169.56969, -3.3459024, 100, 0, 0),
+(@CGUID+83, 5, -79.72039, -172.97456, -4.0686054, 100, 0, 0),
+(@CGUID+83, 6, -87.60288, -181.37634, -3.301994, 100, 0, 0),
+(@CGUID+84, 1, -21.41529, 1.867674, -1.0036224, 100, 0, 0),
+(@CGUID+84, 2, -26.136015, -3.06594, -1.2948818, 100, 0, 0),
+(@CGUID+84, 3, -33.154163, -1.31646, -1.2554848, 100, 0, 0),
+(@CGUID+84, 4, -41.80579, -1.938733, -1.4184747, 100, 0, 0),
+(@CGUID+84, 5, -48.399025, 0.686625, -1.8147835, 100, 0, 0),
+(@CGUID+84, 6, -41.80579, -1.938733, -1.4184747, 100, 0, 0),
+(@CGUID+84, 7, -33.154163, -1.31646, -1.2554848, 100, 0, 0),
+(@CGUID+84, 8, -26.136015, -3.06594, -1.2948818, 100, 0, 0),
+-- Either hardcoded or Send AI Event from Wastewalker Worker [Entry 17964] for @CGUID+84 to Search Contact Point for Movement and then RP Event
+-- (@CGUID+84, 9, -37.788975, 0.7791434, -1.2592647, 100, 0, 0),
+-- (@CGUID+84, 10, -29.533947, 0.94795275, -1.1761957, 100, 0, 0),
+(@CGUID+85, 1, -69.57311, -14.861713, -4.3982778, 100, 0, 0),
+(@CGUID+85, 2, -59.46139, -16.815935, -2.937329, 100, 0, 0),
+(@CGUID+85, 3, -52.72164, -27.052872, -1.7162553, 100, 0, 0),
+(@CGUID+85, 4, -59.46139, -16.815935, -2.937329, 100, 0, 0),
 (@CGUID+89, 1, -110.45, -591.891, 5.80183, 5.1569, 0, 0),
 (@CGUID+89, 2, -114.93, -595.137, 7.46083, 3.61517, 0, 0),
 (@CGUID+89, 3, -116.278, -594.244, 7.41621, 2.55645, 20000, 1378),
@@ -296,11 +266,15 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (@CGUID+202, 1, -115.351, -584.643, 4.97746, 6.20593, 32000, 0),
 (@CGUID+202, 2, -115.351, -584.643, 4.97746, 6.20593, 20000, 1378);
 
-DELETE FROM creature_movement_template WHERE entry IN (17893,17942,17957,17960,17961);
+DELETE FROM creature_movement_template WHERE entry IN (17893,17941,17942,17957,17960,17961);
 INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`) VALUES
 (17893, 0, 1, -190.926, -796.39, 43.7993, 0, 0, 0),
 (17893, 0, 2, -190.926, -796.39, 43.7993, 0.733148, 3000, 1789301),
 (17893, 0, 3, -183.408, -780.199, 43.7993, 100, 1000, 1789302),
+(17941, 0, 1, 121.63626, -380.37653, 29.957338, 100, 0, 0),
+(17941, 0, 2, 89.427284, -380.23688, 15.121437, 100, 0, 0),
+(17941, 0, 3, 49.4763, -380.21915, 3.0355754, 100, 0, 0),
+(17941, 0, 4, 89.26869, -380.23682, 15.089901, 100, 0, 0),
 (17942, 0, 1, -261.614, -675.771, 10.5416, 0, 0, 0),
 (17942, 0, 2, -246.732, -683.163, 15.529, 0, 0, 0),
 (17942, 0, 3, -238.079, -686.423, 18.4731, 0, 0, 0),
@@ -394,8 +368,8 @@ INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 (@CGUID+40, @CGUID+64, 1155), -- Coilfang Observer -> Coilfang Champion
 (@CGUID+96, @CGUID+64, 1155), -- creature_spawn_entry -> Coilfang Champion
 (@CGUID+207, @CGUID+64, 1155), -- Coilfang Ray -> Coilfang Champion
-(@CGUID+88, @CGUID+59, 1667), -- Coilfang Soothsayer -> Coilfang Champion
-(@CGUID+95, @CGUID+59, 1667), -- Coilfang Enchantress -> Coilfang Champion
+(@CGUID+88, @CGUID+59, 1667), -- creature_spawn_entry -> Coilfang Champion
+(@CGUID+95, @CGUID+59, 1667), -- creature_spawn_entry -> Coilfang Champion
 (@CGUID+119, @CGUID+83, 1155), -- Wastewalker Slave -> Coilfang Slavehandler
 (@CGUID+140, @CGUID+83, 1155), -- Wastewalker Worker -> Coilfang Slavehandler
 (@CGUID+141, @CGUID+83, 1155), -- Wastewalker Worker -> Coilfang Slavehandler
@@ -494,6 +468,7 @@ INSERT INTO `creature_spawn_entry` (`guid`, `entry`) VALUES
 (@CGUID+61, 17960), (@CGUID+61, 21126), -- Coilfang Soothsayer, Coilfang Scale-Healer
 (@CGUID+88, 17960), (@CGUID+88, 17961), -- Coilfang Soothsayer, Coilfang Enchantress
 (@CGUID+89, 17960), (@CGUID+89, 21126), -- Coilfang Soothsayer, Coilfang Scale-Healer
+(@CGUID+95, 17960), (@CGUID+95, 17961), -- Coilfang Soothsayer, Coilfang Enchantress
 (@CGUID+96, 17961), (@CGUID+96, 21126), -- Coilfang Enchantress, Coilfang Scale-Healer
 (@CGUID+114, 17963), (@CGUID+114, 17964), -- Wastewalker Slave, Wastewalker Worker
 (@CGUID+115, 17963), (@CGUID+115, 17964), -- Wastewalker Slave, Wastewalker Worker
@@ -504,6 +479,7 @@ INSERT INTO `creature_spawn_entry` (`guid`, `entry`) VALUES
 (@CGUID+129, 17963), (@CGUID+129, 17964), -- Wastewalker Slave, Wastewalker Worker
 (@CGUID+131, 17963), (@CGUID+131, 17964), -- Wastewalker Slave, Wastewalker Worker
 (@CGUID+135, 17963), (@CGUID+135, 17964), -- Wastewalker Slave, Wastewalker Worker
+(@CGUID+141, 17963), (@CGUID+141, 17964), -- Wastewalker Slave, Wastewalker Worker
 (@CGUID+142, 17963), (@CGUID+142, 17964), -- Wastewalker Slave, Wastewalker Worker
 (@CGUID+143, 17963), (@CGUID+143, 17964), -- Wastewalker Slave, Wastewalker Worker
 (@CGUID+194, 17960), (@CGUID+194, 21126); -- Coilfang Soothsayer, Coilfang Scale-Healer
@@ -588,13 +564,13 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `positio
 (@CGUID+77, 17958, 547, 3, -63.2146, -569.216, -1.06684, 0.96025, 7200, 7200, 0, 0, 0, 2), -- Coilfang Defender
 (@CGUID+78, 17958, 547, 3, -6.498472, -296.8441, 3.15944, 2.932153, 7200, 7200, 0, 0, 0, 0), -- Coilfang Defender
 (@CGUID+79, 17958, 547, 3, -11.27964, -312.923, 2.95958, 2.86234, 7200, 7200, 0, 0, 0, 0), -- Coilfang Defender
-(@CGUID+80, 17959, 547, 3, -42.2976, -286.069, -1.36392, 5.14276, 7200, 7200, 0, 0, 0, 2), -- Coilfang Slavehandler
-(@CGUID+81, 17959, 547, 3, -54.3411, -251.294, -3.37616, 3.27301, 7200, 7200, 0, 0, 0, 2), -- Coilfang Slavehandler
-(@CGUID+82, 17959, 547, 3, -75.403, -278.698, -1.13182, 0.160201, 7200, 7200, 0, 0, 0, 2), -- Coilfang Slavehandler
-(@CGUID+83, 17959, 547, 3, -78.8031, -198.368, -3.30045, 1.27724, 7200, 7200, 0, 0, 0, 2), -- Coilfang Slavehandler
-(@CGUID+84, 17959, 547, 3, -41.1192, -1.00841, -1.38881, 1.69853, 7200, 7200, 0, 0, 0, 2), -- Coilfang Slavehandler
-(@CGUID+85, 17959, 547, 3, -71.858, -16.172, -4.7298, 5.70353, 7200, 7200, 0, 0, 0, 2), -- Coilfang Slavehandler
-(@CGUID+86, 17959, 547, 3, -97.774, -109.2, 20.2306, 1.49643, 7200, 7200, 0, 0, 0, 2), -- Coilfang Slavehandler
+(@CGUID+80, 17959, 547, 3, -58.623344, -272.43045, -1.2523658, 5.14276, 7200, 7200, 0, 0, 0, 2), -- Coilfang Slavehandler
+(@CGUID+81, 17959, 547, 3, -47.796593, -247.22282, -2.8943856, 3.27301, 7200, 7200, 0, 0, 0, 2), -- Coilfang Slavehandler
+(@CGUID+82, 17959, 547, 3, -100.68125, -292.32104, -1.5775821, 0.160201, 7200, 7200, 0, 0, 0, 2), -- Coilfang Slavehandler
+(@CGUID+83, 17959, 547, 3, -91.04075, -192.95897, -1.6159151, 1.27724, 7200, 7200, 0, 0, 0, 2), -- Coilfang Slavehandler
+(@CGUID+84, 17959, 547, 3, -21.41529, 1.867674, -1.0036224, 1.69853, 7200, 7200, 0, 0, 0, 2), -- Coilfang Slavehandler
+(@CGUID+85, 17959, 547, 3, -69.57311, -14.861713, -4.3982778, 5.70353, 7200, 7200, 0, 0, 0, 2), -- Coilfang Slavehandler
+-- (@CGUID+86, RE-USE
 (@CGUID+87, 17960, 547, 3, -45.5928, -264.443, -0.776139, 3.09535, 7200, 7200, 0, 0, 0, 0), -- Coilfang Soothsayer
 (@CGUID+88, 0, 547, 3, -92.2789, -224.129, -1.22842, 1.73087, 7200, 7200, 0, 0, 0, 0), -- creature_spawn_entry
 (@CGUID+89, 0, 547, 3, -112.68, -587.462, 5.10565, 0.116737, 7200, 7200, 0, 0, 0, 2), -- creature_spawn_entry
@@ -603,7 +579,7 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `positio
 (@CGUID+92, 17940, 547, 3, -227.724, -365.283, 3.03565, 2.49482, 7200, 7200, 0, 0, 0, 2), -- Coilfang Technician
 (@CGUID+93, 17940, 547, 3, -226.913, -394.971, 3.03554, 3.71478, 7200, 7200, 0, 0, 0, 2), -- Coilfang Technician
 (@CGUID+94, 17957, 547, 3, -84.6656, -724.307, 36.8609, 1.76082, 7200, 7200, 0, 0, 0, 0), -- Coilfang Champion
-(@CGUID+95, 17961, 547, 3, -86.6703, -223.546, -1.16106, 1.65547, 7200, 7200, 0, 0, 0, 0), -- Coilfang Enchantress
+(@CGUID+95, 0, 547, 3, -86.6703, -223.546, -1.16106, 1.65547, 7200, 7200, 0, 0, 0, 0), -- creature_spawn_entry
 (@CGUID+96, 0, 547, 3, -121.849, -147.4496, -1.981267, 1.082104, 7200, 7200, 0, 0, 0, 0), -- creature_spawn_entry
 (@CGUID+97, 17961, 547, 3, -76.53473, -588.3738, 1.945644, 0.4363323, 7200, 7200, 0, 0, 0, 0), -- Coilfang Enchantress
 (@CGUID+98, 17962, 547, 3, 127.8732, -308.6316, 3.035726, 0.04372006, 7200, 7200, 3, 0, 0, 1), -- Coilfang Collaborator
@@ -625,7 +601,7 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `positio
 (@CGUID+114, 0, 547, 3, -54.29192, -248.0854, -3.691535, 1.972222, 7200, 7200, 0, 0, 0, 0), -- creature_spawn_entry
 (@CGUID+115, 0, 547, 3, -89.17553, -91.53407, -2.22339, 6.073746, 7200, 7200, 0, 0, 0, 0), -- creature_spawn_entry
 (@CGUID+116, 0, 547, 3, -120.7097, -65.83062, -2.223061, 3.159046, 7200, 7200, 0, 0, 0, 0), -- creature_spawn_entry
-(@CGUID+117, 17963, 547, 3, -84.1077, -112.735, 20.0618, 0.166668, 7200, 7200, 0, 0, 0, 0), -- Wastewalker Slave
+-- (@CGUID+117, RE-USE
 (@CGUID+118, 0, 547, 3, -57.08875, -27.93377, -1.772427, 3.176499, 7200, 7200, 0, 0, 0, 0), -- creature_spawn_entry
 (@CGUID+119, 17963, 547, 3, -74.5327, -195.691, -3.96449, 0.226366, 7200, 7200, 0, 0, 0, 0), -- Wastewalker Slave
 (@CGUID+120, 0, 547, 3, -113.1554, -8.017564, -8.669127, 1.762783, 7200, 7200, 0, 0, 0, 0), -- creature_spawn_entry
@@ -645,11 +621,11 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `positio
 (@CGUID+134, 17964, 547, 3, -27.17291, 1.65894, -0.7652907, 1.815142, 7200, 7200, 0, 0, 0, 0), -- Wastewalker Worker
 (@CGUID+135, 0, 547, 3, -96.44904, -62.15407, -1.792045, 0.1396263, 7200, 7200, 0, 0, 0, 0), -- creature_spawn_entry
 (@CGUID+136, 17964, 547, 3, -61.51235, -20.17615, -2.663957, 4.18879, 7200, 7200, 0, 0, 0, 0), -- Wastewalker Worker
-(@CGUID+137, 17964, 547, 3, -84.9579, -109.468, 18.9157, 0.535805, 7200, 7200, 0, 0, 0, 0), -- Wastewalker Worker
-(@CGUID+138, 17964, 547, 3, -113.57, -109.156, 16.0274, 3.44178, 7200, 7200, 0, 0, 0, 0), -- Wastewalker Worker
-(@CGUID+139, 17964, 547, 3, -111.425, -104.728, 16.2073, 2.8331, 7200, 7200, 0, 0, 0, 0), -- Wastewalker Worker
+-- (@CGUID+137, RE-USE
+-- (@CGUID+138, RE-USE
+-- (@CGUID+139, RE-USE
 (@CGUID+140, 17964, 547, 3, -73.61772, -182.1575, -5.111982, 5.148721, 7200, 7200, 0, 0, 0, 0), -- Wastewalker Worker
-(@CGUID+141, 17964, 547, 3, -60.16751, -176.9379, -4.0791, 4.660029, 7200, 7200, 0, 0, 0, 0), -- Wastewalker Worker
+(@CGUID+141, 0, 547, 3, -60.16751, -176.9379, -4.0791, 4.660029, 7200, 7200, 0, 0, 0, 0), -- creature_spawn_entry
 (@CGUID+142, 0, 547, 3, -112.2143, -105.2496, -4.700827, 2.75762, 7200, 7200, 0, 0, 0, 0), -- creature_spawn_entry
 (@CGUID+143, 0, 547, 3, -71.8825, -19.18774, -4.44727, 4.153883, 7200, 7200, 0, 0, 0, 0), -- creature_spawn_entry
 (@CGUID+144, 17964, 547, 3, -61.51586, -248.3638, -3.940233, 0.9948376, 7200, 7200, 0, 0, 0, 0), -- Wastewalker Worker
@@ -747,7 +723,9 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `positio
 (@CGUID+236, 2110, 547, 3, -267.6875, -423.0457, 3.033333, 2.048809, 900, 900, 2, 0, 0, 1), -- Black Rat
 (@CGUID+237, 3300, 547, 3, -92.67388, -682.744, 32.88058, 1.747012, 900, 900, 2, 0, 0, 1), -- Adder
 (@CGUID+238, 3300, 547, 3, -93.79716, -688.0134, 34.53195, 4.112295, 900, 900, 2, 0, 0, 1), -- Adder
-(@CGUID+239, 13321, 547, 3, -174.8439, -720.9562, 37.89231, 3.282116, 900, 900, 2, 0, 0, 1); -- Frog
+(@CGUID+239, 13321, 547, 3, -174.8439, -720.9562, 37.89231, 3.282116, 900, 900, 2, 0, 0, 1), -- Frog
+(@CGUID+240, 2110, 547, 3, 44.73293, -384.43765, 3.0355592, 0.9511, 900, 900, 2, 0, 0, 1), -- Black Rat
+(@CGUID+241, 13321, 547, 3, -91.8257, -156.66465, -2.648026, 2.597963, 900, 900, 2, 0, 0, 1); -- Frog
 
 -- ===========
 -- GAMEOBJECTS
@@ -828,43 +806,44 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `posit
 (@OGUID+72, 181556, 547, 3, -71.34264, -282.6859, -1.401498, 0.7330382, 0, 0, 0.3583679, 0.9335805, 86400, 86400, 255, 1), -- Adamantite Deposit
 (@OGUID+73, 181556, 547, 3, 0.00864, -186.6674, -1.555333, 3.944446, 0, 0, -0.9205046, 0.3907318, 86400, 86400, 255, 1), -- Adamantite Deposit
 (@OGUID+74, 181569, 547, 3, 0.00864, -186.6674, -1.555333, 3.944446, 0, 0, -0.9205046, 0.3907318, 86400, 86400, 255, 1), -- Rich Adamantite Deposit
-(@OGUID+75, 184932, 547, 1, -8.733916, -182.9387, -1.57517, 1.433549, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Fel Iron Chest
-(@OGUID+76, 184933, 547, 1, -8.733916, -182.9387, -1.57517, 1.433549, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Fel Iron Chest
-(@OGUID+77, 184932, 547, 1, -8.92, -209.92, -1.57, 1.93, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Fel Iron Chest
-(@OGUID+78, 184933, 547, 1, -8.92, -209.92, -1.57, 1.93, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Fel Iron Chest
-(@OGUID+79, 184932, 547, 1, -9.452101, -209.0335, -1.579993, 1.675516, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Fel Iron Chest
-(@OGUID+80, 184933, 547, 1, -9.452101, -209.0335, -1.579993, 1.675516, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Fel Iron Chest
-(@OGUID+81, 184932, 547, 1, -15.10876, -328.1017, -1.58162, 0.2443461, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Fel Iron Chest
-(@OGUID+82, 184933, 547, 1, -15.10876, -328.1017, -1.58162, 0.2443461, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Fel Iron Chest
-(@OGUID+83, 184932, 547, 1, -84.90, -294.53, -1.48, 5.39, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Fel Iron Chest				// guessed coords
-(@OGUID+84, 184933, 547, 1, -84.90, -294.53, -1.48, 5.39, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Fel Iron Chest				// guessed coords
-(@OGUID+85, 184932, 547, 1, 135.5916, -304.6217, 3.035721, -2.687807, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Fel Iron Chest
-(@OGUID+86, 184933, 547, 1, 135.5916, -304.6217, 3.035721, -2.687807, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Fel Iron Chest
-(@OGUID+87, 184932, 547, 1, 134.5852, -446.5189, 3.035388, 2.775068, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Fel Iron Chest
-(@OGUID+88, 184933, 547, 1, 134.5852, -446.5189, 3.035388, 2.775068, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Fel Iron Chest
-(@OGUID+89, 184932, 547, 1, -41.41404, -512.5812, -1.585812, -2.495821, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Fel Iron Chest
-(@OGUID+90, 184933, 547, 1, -41.41404, -512.5812, -1.585812, -2.495821, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Fel Iron Chest
-(@OGUID+91, 184932, 547, 1, -124.2653, -595.8683, 9.163177, 0.06981316, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Fel Iron Chest
-(@OGUID+92, 184933, 547, 1, -124.2653, -595.8683, 9.163177, 0.06981316, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Fel Iron Chest
-(@OGUID+93, 184940, 547, 2, -8.733916, -182.9387, -1.57517, 1.433549, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest
-(@OGUID+94, 184941, 547, 2, -8.733916, -182.9387, -1.57517, 1.433549, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Adamantite Chest
-(@OGUID+95, 184940, 547, 2, -8.92, -209.92, -1.57, 1.93, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest
-(@OGUID+96, 184941, 547, 2, -8.92, -209.92, -1.57, 1.93, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Adamantite Chest
-(@OGUID+97, 184940, 547, 2, -9.452101, -209.0335, -1.579993, 1.675516, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest
-(@OGUID+98, 184941, 547, 2, -9.452101, -209.0335, -1.579993, 1.675516, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Adamantite Chest
-(@OGUID+99, 184940, 547, 2, -15.10876, -328.1017, -1.58162, 0.2443461, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest
-(@OGUID+100, 184941, 547, 2, -15.10876, -328.1017, -1.58162, 0.2443461, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Adamantite Chest
-(@OGUID+101, 184940, 547, 2, -84.90, -294.53, -1.48, 5.39, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest				// guessed coords
-(@OGUID+102, 184941, 547, 2, -84.90, -294.53, -1.48, 5.39, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Adamantite Chest				// guessed coords
+(@OGUID+75, 181569, 547, 3, -136.8079, -128.9627, -1.692187, 1.919862, 0, 0, 0.8191519, 0.5735767, 86400, 86400, 255, 1), -- Rich Adamantite Deposit
+-- 76 - 80
+(@OGUID+81, 184932, 547, 1, -8.733916, -182.9387, -1.57517, 1.433549, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Fel Iron Chest
+(@OGUID+82, 184933, 547, 1, -8.733916, -182.9387, -1.57517, 1.433549, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Fel Iron Chest
+(@OGUID+83, 184940, 547, 2, -8.733916, -182.9387, -1.57517, 1.433549, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest
+(@OGUID+84, 184941, 547, 2, -8.733916, -182.9387, -1.57517, 1.433549, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Adamantite Chest
+(@OGUID+85, 184932, 547, 1, -8.92, -209.92, -1.57, 1.93, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Fel Iron Chest
+(@OGUID+86, 184933, 547, 1, -8.92, -209.92, -1.57, 1.93, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Fel Iron Chest
+(@OGUID+87, 184940, 547, 2, -8.92, -209.92, -1.57, 1.93, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest
+(@OGUID+88, 184941, 547, 2, -8.92, -209.92, -1.57, 1.93, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Adamantite Chest
+(@OGUID+89, 184932, 547, 1, -9.452101, -209.0335, -1.579993, 1.675516, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Fel Iron Chest
+(@OGUID+90, 184933, 547, 1, -9.452101, -209.0335, -1.579993, 1.675516, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Fel Iron Chest
+(@OGUID+91, 184940, 547, 2, -9.452101, -209.0335, -1.579993, 1.675516, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest
+(@OGUID+92, 184941, 547, 2, -9.452101, -209.0335, -1.579993, 1.675516, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Adamantite Chest
+(@OGUID+93, 184932, 547, 1, -15.10876, -328.1017, -1.58162, 0.2443461, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Fel Iron Chest
+(@OGUID+94, 184933, 547, 1, -15.10876, -328.1017, -1.58162, 0.2443461, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Fel Iron Chest
+(@OGUID+95, 184940, 547, 2, -15.10876, -328.1017, -1.58162, 0.2443461, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest
+(@OGUID+96, 184941, 547, 2, -15.10876, -328.1017, -1.58162, 0.2443461, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Adamantite Chest
+(@OGUID+97, 184932, 547, 1, -84.90, -294.53, -1.48, 5.39, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Fel Iron Chest				// guessed coords
+(@OGUID+98, 184933, 547, 1, -84.90, -294.53, -1.48, 5.39, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Fel Iron Chest				// guessed coords
+(@OGUID+99, 184940, 547, 2, -84.90, -294.53, -1.48, 5.39, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest				// guessed coords
+(@OGUID+100, 184941, 547, 2, -84.90, -294.53, -1.48, 5.39, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Adamantite Chest				// guessed coords
+(@OGUID+101, 184932, 547, 1, 135.5916, -304.6217, 3.035721, -2.687807, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Fel Iron Chest
+(@OGUID+102, 184933, 547, 1, 135.5916, -304.6217, 3.035721, -2.687807, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Fel Iron Chest
 (@OGUID+103, 184940, 547, 2, 135.5916, -304.6217, 3.035721, -2.687807, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest
 (@OGUID+104, 184941, 547, 2, 135.5916, -304.6217, 3.035721, -2.687807, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Adamantite Chest
-(@OGUID+105, 184940, 547, 2, 134.5852, -446.5189, 3.035388, 2.775068, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest
-(@OGUID+106, 184941, 547, 2, 134.5852, -446.5189, 3.035388, 2.775068, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Adamantite Chest
-(@OGUID+107, 184940, 547, 2, -41.41404, -512.5812, -1.585812, -2.495821, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest
-(@OGUID+108, 184941, 547, 2, -41.41404, -512.5812, -1.585812, -2.495821, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Adamantite Chest
-(@OGUID+109, 184940, 547, 2, -124.2653, -595.8683, 9.163177, 0.06981316, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest
-(@OGUID+110, 184941, 547, 2, -124.2653, -595.8683, 9.163177, 0.06981316, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Adamantite Chest
-(@OGUID+111, 181569, 547, 3, -136.8079, -128.9627, -1.692187, 1.919862, 0, 0, 0.8191519, 0.5735767, 86400, 86400, 255, 1), -- Rich Adamantite Deposit
+(@OGUID+105, 184932, 547, 1, 134.5852, -446.5189, 3.035388, 2.775068, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Fel Iron Chest
+(@OGUID+106, 184933, 547, 1, 134.5852, -446.5189, 3.035388, 2.775068, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Fel Iron Chest
+(@OGUID+107, 184940, 547, 2, 134.5852, -446.5189, 3.035388, 2.775068, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest
+(@OGUID+108, 184941, 547, 2, 134.5852, -446.5189, 3.035388, 2.775068, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Adamantite Chest
+(@OGUID+109, 184932, 547, 1, -41.41404, -512.5812, -1.585812, -2.495821, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Fel Iron Chest
+(@OGUID+110, 184933, 547, 1, -41.41404, -512.5812, -1.585812, -2.495821, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Fel Iron Chest
+(@OGUID+111, 184940, 547, 2, -41.41404, -512.5812, -1.585812, -2.495821, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest
+(@OGUID+112, 184941, 547, 2, -41.41404, -512.5812, -1.585812, -2.495821, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Adamantite Chest
+(@OGUID+113, 184932, 547, 1, -124.2653, -595.8683, 9.163177, 0.06981316, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Fel Iron Chest
+(@OGUID+114, 184933, 547, 1, -124.2653, -595.8683, 9.163177, 0.06981316, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Fel Iron Chest
+(@OGUID+115, 184940, 547, 2, -124.2653, -595.8683, 9.163177, 0.06981316, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Bound Adamantite Chest
+(@OGUID+116, 184941, 547, 2, -124.2653, -595.8683, 9.163177, 0.06981316, 0, 0, 0, 0, 86400, 86400, 100, 1), -- Solid Adamantite Chest
 
 -- WOTLK+
 -- preserved but probably not blizzlike, part of game_event 1
@@ -925,24 +904,6 @@ INSERT INTO `game_event_gameobject` (`guid`, `event`) VALUES
 -- =======
 
 INSERT INTO `pool_pool` (`pool_id`, `mother_pool`, `chance`, `description`) VALUES
-(@PGUID+31, @PGUID+30, 0, 'Slave Pens (Normal) - Bound / Solid Fel Iron Chest - #1'),
-(@PGUID+32, @PGUID+30, 0, 'Slave Pens (Normal) - Bound / Solid Fel Iron Chest - #2'),
-(@PGUID+33, @PGUID+30, 0, 'Slave Pens (Normal) - Bound / Solid Fel Iron Chest - #3'),
-(@PGUID+34, @PGUID+30, 0, 'Slave Pens (Normal) - Bound / Solid Fel Iron Chest - #4'),
-(@PGUID+35, @PGUID+30, 0, 'Slave Pens (Normal) - Bound / Solid Fel Iron Chest - #5'),
-(@PGUID+36, @PGUID+30, 0, 'Slave Pens (Normal) - Bound / Solid Fel Iron Chest - #6'),
-(@PGUID+37, @PGUID+30, 0, 'Slave Pens (Normal) - Bound / Solid Fel Iron Chest - #7'),
-(@PGUID+38, @PGUID+30, 0, 'Slave Pens (Normal) - Bound / Solid Fel Iron Chest - #8'),
-(@PGUID+39, @PGUID+30, 0, 'Slave Pens (Normal) - Bound / Solid Fel Iron Chest - #9'),
-(@PGUID+41, @PGUID+40, 0, 'Slave Pens (Heroic) - Bound / Solid Adamantite Chest - #1'),
-(@PGUID+42, @PGUID+40, 0, 'Slave Pens (Heroic) - Bound / Solid Adamantite Chest - #2'),
-(@PGUID+43, @PGUID+40, 0, 'Slave Pens (Heroic) - Bound / Solid Adamantite Chest - #3'),
-(@PGUID+44, @PGUID+40, 0, 'Slave Pens (Heroic) - Bound / Solid Adamantite Chest - #4'),
-(@PGUID+45, @PGUID+40, 0, 'Slave Pens (Heroic) - Bound / Solid Adamantite Chest - #5'),
-(@PGUID+46, @PGUID+40, 0, 'Slave Pens (Heroic) - Bound / Solid Adamantite Chest - #6'),
-(@PGUID+47, @PGUID+40, 0, 'Slave Pens (Heroic) - Bound / Solid Adamantite Chest - #7'),
-(@PGUID+48, @PGUID+40, 0, 'Slave Pens (Heroic) - Bound / Solid Adamantite Chest - #8'),
-(@PGUID+49, @PGUID+40, 0, 'Slave Pens (Heroic) - Bound / Solid Adamantite Chest - #9'),
 (@PGUID+54, @PGUID+53, 0, 'Ragveil / Flame Cap - #1'),
 (@PGUID+55, @PGUID+53, 0, 'Ragveil / Flame Cap - #2'),
 (@PGUID+56, @PGUID+53, 0, 'Ragveil / Flame Cap - #3'),
@@ -955,29 +916,18 @@ INSERT INTO `pool_pool` (`pool_id`, `mother_pool`, `chance`, `description`) VALU
 (@PGUID+63, @PGUID+50, 0, 'Adamantite Deposit / Rich Adamantite Deposit - #2'),
 (@PGUID+64, @PGUID+50, 0, 'Adamantite Deposit / Rich Adamantite Deposit - #3'),
 (@PGUID+65, @PGUID+50, 0, 'Adamantite Deposit / Rich Adamantite Deposit / Khorium - #4'),
-(@PGUID+66, @PGUID+50, 0, 'Adamantite Deposit / Rich Adamantite Deposit - #5');
+(@PGUID+66, @PGUID+50, 0, 'Adamantite Deposit / Rich Adamantite Deposit - #5'),
+(@PGUID+91, @PGUID+90, 0, 'Slave Pens - Chest - #1'),
+(@PGUID+92, @PGUID+90, 0, 'Slave Pens - Chest - #2'),
+(@PGUID+93, @PGUID+90, 0, 'Slave Pens - Chest - #3'),
+(@PGUID+94, @PGUID+90, 0, 'Slave Pens - Chest - #4'),
+(@PGUID+95, @PGUID+90, 0, 'Slave Pens - Chest - #5'),
+(@PGUID+96, @PGUID+90, 0, 'Slave Pens - Chest - #6'),
+(@PGUID+97, @PGUID+90, 0, 'Slave Pens - Chest - #7'),
+(@PGUID+98, @PGUID+90, 0, 'Slave Pens - Chest - #8'),
+(@PGUID+99, @PGUID+90, 0, 'Slave Pens - Chest - #9');
 
 INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
-(@PGUID+30, 1, 'Slave Pens (Normal) - Master Chest Pool'),
-(@PGUID+31, 1, 'Slave Pens (Normal) - Bound / Solid Fel Iron Chest - #1'),
-(@PGUID+32, 1, 'Slave Pens (Normal) - Bound / Solid Fel Iron Chest - #2'),
-(@PGUID+33, 1, 'Slave Pens (Normal) - Bound / Solid Fel Iron Chest - #3'),
-(@PGUID+34, 1, 'Slave Pens (Normal) - Bound / Solid Fel Iron Chest - #4'),
-(@PGUID+35, 1, 'Slave Pens (Normal) - Bound / Solid Fel Iron Chest - #5'),
-(@PGUID+36, 1, 'Slave Pens (Normal) - Bound / Solid Fel Iron Chest - #6'),
-(@PGUID+37, 1, 'Slave Pens (Normal) - Bound / Solid Fel Iron Chest - #7'),
-(@PGUID+38, 1, 'Slave Pens (Normal) - Bound / Solid Fel Iron Chest - #8'),
-(@PGUID+39, 1, 'Slave Pens (Normal) - Bound / Solid Fel Iron Chest - #9'),
-(@PGUID+40, 1, 'Slave Pens (Heroic) - Master Chest Pool'),
-(@PGUID+41, 1, 'Slave Pens (Heroic) - Bound / Solid Adamantite Chest - #1'),
-(@PGUID+42, 1, 'Slave Pens (Heroic) - Bound / Solid Adamantite Chest - #2'),
-(@PGUID+43, 1, 'Slave Pens (Heroic) - Bound / Solid Adamantite Chest - #3'),
-(@PGUID+44, 1, 'Slave Pens (Heroic) - Bound / Solid Adamantite Chest - #4'),
-(@PGUID+45, 1, 'Slave Pens (Heroic) - Bound / Solid Adamantite Chest - #5'),
-(@PGUID+46, 1, 'Slave Pens (Heroic) - Bound / Solid Adamantite Chest - #6'),
-(@PGUID+47, 1, 'Slave Pens (Heroic) - Bound / Solid Adamantite Chest - #7'),
-(@PGUID+48, 1, 'Slave Pens (Heroic) - Bound / Solid Adamantite Chest - #8'),
-(@PGUID+49, 1, 'Slave Pens (Heroic) - Bound / Solid Adamantite Chest - #9'),
 (@PGUID+50, 4, 'Slave Pens - Master Mineral Pool'),
 (@PGUID+51, 4, 'Slave Pens - Master Anchient Lichen (181278) Pool'),
 (@PGUID+52, 3, 'Slave Pens - Master Felweed (181270) Pool'),
@@ -994,49 +944,23 @@ INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
 (@PGUID+63, 1, 'Slave Pens - Adamantite Deposit / Rich Adamantite Deposit - #2'),
 (@PGUID+64, 1, 'Slave Pens - Adamantite Deposit / Rich Adamantite Deposit - #3'),
 (@PGUID+65, 1, 'Slave Pens - Adamantite Deposit / Rich Adamantite Deposit / Khorium - #4'),
-(@PGUID+66, 1, 'Slave Pens - Adamantite Deposit / Rich Adamantite Deposit - #5');
+(@PGUID+66, 1, 'Slave Pens - Adamantite Deposit / Rich Adamantite Deposit - #5'),
+(@PGUID+90, 1, 'Slave Pens - Master Chest Pool'),
+(@PGUID+91, 1, 'Slave Pens - Chest - #1'),
+(@PGUID+92, 1, 'Slave Pens - Chest - #2'),
+(@PGUID+93, 1, 'Slave Pens - Chest - #3'),
+(@PGUID+94, 1, 'Slave Pens - Chest - #4'),
+(@PGUID+95, 1, 'Slave Pens - Chest - #5'),
+(@PGUID+96, 1, 'Slave Pens - Chest - #6'),
+(@PGUID+97, 1, 'Slave Pens - Chest - #7'),
+(@PGUID+98, 1, 'Slave Pens - Chest - #8'),
+(@PGUID+99, 1, 'Slave Pens - Chest - #9');
 
 -- INSERT INTO `pool_creature` (`guid`, `pool_entry`, `chance`, `description`) VALUES
 
 -- INSERT INTO `pool_creature_template` (`id`, `pool_entry`, `chance`, `description`) VALUES
 
 INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VALUES
-(@OGUID+75, @PGUID+31, 0, 'Slave Pens (Normal) - Bound Fel Iron Chest (184932) - #1'),
-(@OGUID+76, @PGUID+31, 0, 'Slave Pens (Normal) - Solid Fel Iron Chest (184933) - #1'),
-(@OGUID+77, @PGUID+32, 0, 'Slave Pens (Normal) - Bound Fel Iron Chest (184932) - #2'),
-(@OGUID+78, @PGUID+32, 0, 'Slave Pens (Normal) - Solid Fel Iron Chest (184933) - #2'),
-(@OGUID+79, @PGUID+33, 0, 'Slave Pens (Normal) - Bound Fel Iron Chest (184932) - #3'),
-(@OGUID+80, @PGUID+33, 0, 'Slave Pens (Normal) - Solid Fel Iron Chest (184933) - #3'),
-(@OGUID+81, @PGUID+34, 0, 'Slave Pens (Normal) - Bound Fel Iron Chest (184932) - #4'),
-(@OGUID+82, @PGUID+34, 0, 'Slave Pens (Normal) - Solid Fel Iron Chest (184933) - #4'),
-(@OGUID+83, @PGUID+35, 0, 'Slave Pens (Normal) - Bound Fel Iron Chest (184932) - #5'),
-(@OGUID+84, @PGUID+35, 0, 'Slave Pens (Normal) - Solid Fel Iron Chest (184933) - #5'),
-(@OGUID+85, @PGUID+36, 0, 'Slave Pens (Normal) - Bound Fel Iron Chest (184932) - #6'),
-(@OGUID+86, @PGUID+36, 0, 'Slave Pens (Normal) - Solid Fel Iron Chest (184933) - #6'),
-(@OGUID+87, @PGUID+37, 0, 'Slave Pens (Normal) - Bound Fel Iron Chest (184932) - #7'),
-(@OGUID+88, @PGUID+37, 0, 'Slave Pens (Normal) - Solid Fel Iron Chest (184933) - #7'),
-(@OGUID+89, @PGUID+38, 0, 'Slave Pens (Normal) - Bound Fel Iron Chest (184932) - #8'),
-(@OGUID+90, @PGUID+38, 0, 'Slave Pens (Normal) - Solid Fel Iron Chest (184933) - #8'),
-(@OGUID+91, @PGUID+39, 0, 'Slave Pens (Normal) - Bound Fel Iron Chest (184932) - #9'),
-(@OGUID+92, @PGUID+39, 0, 'Slave Pens (Normal) - Solid Fel Iron Chest (184933) - #9'),
-(@OGUID+93, @PGUID+41, 0, 'Slave Pens (Heroic) - Bound Adamantite Chest (184940) - #1'),
-(@OGUID+94, @PGUID+41, 0, 'Slave Pens (Heroic) - Solid Adamantite Chest (184941) - #1'),
-(@OGUID+95, @PGUID+42, 0, 'Slave Pens (Heroic) - Bound Adamantite Chest (184940) - #2'),
-(@OGUID+96, @PGUID+42, 0, 'Slave Pens (Heroic) - Solid Adamantite Chest (184941) - #2'),
-(@OGUID+97, @PGUID+43, 0, 'Slave Pens (Heroic) - Bound Adamantite Chest (184940) - #3'),
-(@OGUID+98, @PGUID+43, 0, 'Slave Pens (Heroic) - Solid Adamantite Chest (184941) - #3'),
-(@OGUID+99, @PGUID+44, 0, 'Slave Pens (Heroic) - Bound Adamantite Chest (184940) - #4'),
-(@OGUID+100, @PGUID+44, 0, 'Slave Pens (Heroic) - Solid Adamantite Chest (184941) - #4'),
-(@OGUID+101, @PGUID+45, 0, 'Slave Pens (Heroic) - Bound Adamantite Chest (184940) - #5'),
-(@OGUID+102, @PGUID+45, 0, 'Slave Pens (Heroic) - Solid Adamantite Chest (184941) - #5'),
-(@OGUID+103, @PGUID+46, 0, 'Slave Pens (Heroic) - Bound Adamantite Chest (184940) - #6'),
-(@OGUID+104, @PGUID+46, 0, 'Slave Pens (Heroic) - Solid Adamantite Chest (184941) - #6'),
-(@OGUID+105, @PGUID+47, 0, 'Slave Pens (Heroic) - Bound Adamantite Chest (184940) - #7'),
-(@OGUID+106, @PGUID+47, 0, 'Slave Pens (Heroic) - Solid Adamantite Chest (184941) - #7'),
-(@OGUID+107, @PGUID+48, 0, 'Slave Pens (Heroic) - Bound Adamantite Chest (184940) - #8'),
-(@OGUID+108, @PGUID+48, 0, 'Slave Pens (Heroic) - Solid Adamantite Chest (184941) - #8'),
-(@OGUID+109, @PGUID+49, 0, 'Slave Pens (Heroic) - Bound Adamantite Chest (184940) - #9'),
-(@OGUID+110, @PGUID+49, 0, 'Slave Pens (Heroic) - Solid Adamantite Chest (184941) - #9'),
 (@OGUID+7, @PGUID+51, 0, 'Slave Pens - Anchient Lichen (181278)'),
 (@OGUID+8, @PGUID+51, 0, 'Slave Pens - Anchient Lichen (181278)'),
 (@OGUID+9, @PGUID+51, 0, 'Slave Pens - Anchient Lichen (181278)'),
@@ -1087,7 +1011,43 @@ INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VA
 (@OGUID+12, @PGUID+65, 0, 'Slave Pens - Rich Adamantite Deposit (181569) - #4'),
 (@OGUID+13, @PGUID+65, 0, 'Slave Pens - Khorium (181557) - #4'),
 (@OGUID+14, @PGUID+66, 0, 'Slave Pens - Adamantite Deposit (181556) - #5'),
-(@OGUID+111, @PGUID+66, 0, 'Slave Pens - Rich Adamantite Deposit (181569) - #5');
+(@OGUID+75, @PGUID+66, 0, 'Slave Pens - Rich Adamantite Deposit (181569) - #5'),
+(@OGUID+81, @PGUID+91, 0, 'Slave Pens (Normal) - Bound Fel Iron Chest (184932) - #1'),
+(@OGUID+82, @PGUID+91, 0, 'Slave Pens (Normal) - Solid Fel Iron Chest (184933) - #1'),
+(@OGUID+83, @PGUID+91, 0, 'Slave Pens (Heroic) - Bound Adamantite Chest (184940) - #1'),
+(@OGUID+84, @PGUID+91, 0, 'Slave Pens (Heroic) - Solid Adamantite Chest (184941) - #1'),
+(@OGUID+85, @PGUID+92, 0, 'Slave Pens (Normal) - Bound Fel Iron Chest (184932) - #2'),
+(@OGUID+86, @PGUID+92, 0, 'Slave Pens (Normal) - Solid Fel Iron Chest (184933) - #2'),
+(@OGUID+87, @PGUID+92, 0, 'Slave Pens (Heroic) - Bound Adamantite Chest (184940) - #2'),
+(@OGUID+88, @PGUID+92, 0, 'Slave Pens (Heroic) - Solid Adamantite Chest (184941) - #2'),
+(@OGUID+89, @PGUID+93, 0, 'Slave Pens (Normal) - Bound Fel Iron Chest (184932) - #3'),
+(@OGUID+90, @PGUID+93, 0, 'Slave Pens (Normal) - Solid Fel Iron Chest (184933) - #3'),
+(@OGUID+91, @PGUID+93, 0, 'Slave Pens (Heroic) - Bound Adamantite Chest (184940) - #3'),
+(@OGUID+92, @PGUID+93, 0, 'Slave Pens (Heroic) - Solid Adamantite Chest (184941) - #3'),
+(@OGUID+93, @PGUID+94, 0, 'Slave Pens (Normal) - Bound Fel Iron Chest (184932) - #4'),
+(@OGUID+94, @PGUID+94, 0, 'Slave Pens (Normal) - Solid Fel Iron Chest (184933) - #4'),
+(@OGUID+95, @PGUID+94, 0, 'Slave Pens (Heroic) - Bound Adamantite Chest (184940) - #4'),
+(@OGUID+96, @PGUID+94, 0, 'Slave Pens (Heroic) - Solid Adamantite Chest (184941) - #4'),
+(@OGUID+97, @PGUID+95, 0, 'Slave Pens (Normal) - Bound Fel Iron Chest (184932) - #5'),
+(@OGUID+98, @PGUID+95, 0, 'Slave Pens (Normal) - Solid Fel Iron Chest (184933) - #5'),
+(@OGUID+99, @PGUID+95, 0, 'Slave Pens (Heroic) - Bound Adamantite Chest (184940) - #5'),
+(@OGUID+100, @PGUID+95, 0, 'Slave Pens (Heroic) - Solid Adamantite Chest (184941) - #5'),
+(@OGUID+101, @PGUID+96, 0, 'Slave Pens (Normal) - Bound Fel Iron Chest (184932) - #6'),
+(@OGUID+102, @PGUID+96, 0, 'Slave Pens (Normal) - Solid Fel Iron Chest (184933) - #6'),
+(@OGUID+103, @PGUID+96, 0, 'Slave Pens (Heroic) - Bound Adamantite Chest (184940) - #6'),
+(@OGUID+104, @PGUID+96, 0, 'Slave Pens (Heroic) - Solid Adamantite Chest (184941) - #6'),
+(@OGUID+105, @PGUID+97, 0, 'Slave Pens (Normal) - Bound Fel Iron Chest (184932) - #7'),
+(@OGUID+106, @PGUID+97, 0, 'Slave Pens (Normal) - Solid Fel Iron Chest (184933) - #7'),
+(@OGUID+107, @PGUID+97, 0, 'Slave Pens (Heroic) - Bound Adamantite Chest (184940) - #7'),
+(@OGUID+108, @PGUID+97, 0, 'Slave Pens (Heroic) - Solid Adamantite Chest (184941) - #7'),
+(@OGUID+109, @PGUID+98, 0, 'Slave Pens (Normal) - Bound Fel Iron Chest (184932) - #8'),
+(@OGUID+110, @PGUID+98, 0, 'Slave Pens (Normal) - Solid Fel Iron Chest (184933) - #8'),
+(@OGUID+111, @PGUID+98, 0, 'Slave Pens (Heroic) - Bound Adamantite Chest (184940) - #8'),
+(@OGUID+112, @PGUID+98, 0, 'Slave Pens (Heroic) - Solid Adamantite Chest (184941) - #8'),
+(@OGUID+113, @PGUID+99, 0, 'Slave Pens (Normal) - Bound Fel Iron Chest (184932) - #9'),
+(@OGUID+114, @PGUID+99, 0, 'Slave Pens (Normal) - Solid Fel Iron Chest (184933) - #9'),
+(@OGUID+115, @PGUID+99, 0, 'Slave Pens (Heroic) - Bound Adamantite Chest (184940) - #9'),
+(@OGUID+116, @PGUID+99, 0, 'Slave Pens (Heroic) - Solid Adamantite Chest (184941) - #9');
 
 -- INSERT INTO `pool_gameobject_template` (`id`, `pool_entry`, `chance`, `description`) VALUES
 
@@ -1113,21 +1073,12 @@ INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `command`, `datalong`, `datalon
 -- INSERT INTO `dbscripts_on_event` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_spell` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 
-DELETE FROM gossip_menu WHERE entry IN(7540,7520); -- NPC has two entries, has to be handled by SD2
-INSERT INTO gossip_menu VALUES
-('7520', '9119', '0', '0'),
-('7540', '9144', '0', '0');
-DELETE FROM gossip_menu_option WHERE menu_id IN(7540,7520);
-INSERT INTO gossip_menu_option(menu_id, id, option_icon, option_text, option_id, npc_option_npcflag, action_menu_id, action_poi_id, action_script_id, box_coded, box_money, box_text, condition_id) VALUES
-('7520', '0', '0', 'Alright, Bite, I\'ll let you out.', '1', '1', '0', '0', '7520', '0', '0', NULL, '0'),
-('7540', '0', '0', 'Naturalist, please grant me your boon.', '1', '1', '-1', '0', '7540', '0', '0', NULL, '0');
-
 DELETE FROM dbscripts_on_gossip WHERE id IN(7540,7520);
 INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 ('7520', '0', '8', '17893', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Naturalist Bite - Give Kill Credit to Group'),
 ('7520', '0', '13', '0', '0', '0', '182094', '5', '1', '0', '0', '0', '0', '0', '0', '0', '0', 'Naturalist Bite - Open cage'),
-('7520', '0', '5', '46', '256', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Naturalist Bite - Remove Unit Flag IMMUNE_TO_PLAYER'),
-('7520', '0', '5', '46', '512', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Naturalist Bite - Remove Unit Flag IMMUNE_TO_NPC'),
+('7520', '0', '5', '59', '256', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Naturalist Bite - Remove Unit Flag IMMUNE_TO_PLAYER'), -- wotlk has 59
+('7520', '0', '5', '59', '512', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Naturalist Bite - Remove Unit Flag IMMUNE_TO_NPC'), -- wotlk has 59
 ('7520', '0', '22', '113', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Naturalist Bite - Change faction'),
 ('7520', '0', '29', '1', '2', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Naturalist Bite - Remove NPC Gossip flag'),
 ('7520', '0', '20', '2', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'Naturalist Bite - Move Waypoint'),
@@ -1140,9 +1091,9 @@ INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalo
 -- INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 
 DELETE FROM `dbscript_string` WHERE `entry` IN (2000020039,2000020040);
-INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES
-(2000020039,'Uh oh!  It would appear that all of the noise you''ve been making has attracted some unwanted attention!', '0', '0', '0', '0', 'Naturalist Bite on Waypoint 2'),
-(2000020040,'Intrudersss with the prisssoner!  Kill them!!!','0','1','0','0','Coilfang Champion on Releasing Naturalist Bite');
+INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `broadcast_text_id`, `comment`) VALUES
+(2000020039,'Uh oh!  It would appear that all of the noise you''ve been making has attracted some unwanted attention!', '0', '0', '0', '0', '14575', 'Naturalist Bite on Waypoint 2'),
+(2000020040,'Intrudersss with the prisssoner!  Kill them!!!','0','1','0','0','15896','Coilfang Champion on Releasing Naturalist Bite');
 
 -- INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `comments`) VALUES
 

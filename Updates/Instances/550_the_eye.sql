@@ -497,16 +497,20 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (@CGUID+173, 13, 617.546, 111.25, 45.619, 5.70748, 0, 0),
 (@CGUID+173, 14, 623.417, 107.439, 46.4887, 5.70748, 0, 0);
 
-DELETE FROM creature_movement_template WHERE entry IN (19514);
-INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`) VALUES
-(19514, 0, 1, 370.328, -32.5953, 44.0863, 100, 0, 0),
-(19514, 0, 2, 383.009, -0.892289, 43.9995, 100, 0, 0),
-(19514, 0, 3, 370.542, 31.2867, 43.8086, 100, 0, 0),
-(19514, 0, 4, 332.547, 45.7709, 43.6697, 100, 0, 0),
-(19514, 0, 5, 294.315, 30.9292, 43.8919, 100, 0, 0),
-(19514, 0, 6, 282.064, -0.653615, 43.9197, 100, 0, 0),
-(19514, 0, 7, 294.213, -32.4156, 43.6141, 100, 0, 0),
-(19514, 0, 8, 332.342, -47.5406, 43.6975, 100, 0, 0);
+DELETE FROM creature_movement_template WHERE entry IN(19514);
+INSERT INTO `creature_movement_template` (`entry`,`pathId`,`point`,`position_x`,`position_y`,`position_z`,`waittime`,`script_id`,`orientation`) VALUES
+(19514,0,1,383.0095,-0.892289,43.99946,0,0,100),
+(19514,0,2,370.5421,31.28668,43.80863,0,0,100),
+(19514,0,3,332.5465,45.77088,43.6697,0,0,100),
+(19514,0,4,294.3148,30.9292,43.8919,0,0,100),
+(19514,0,5,282.0638,-0.653615,43.91968,0,0,100),
+(19514,0,6,294.2132,-32.41557,43.61413,0,0,100),
+(19514,0,7,332.3423,-47.54061,43.69747,0,0,100),
+(19514,0,8,370.3282,-32.59526,44.08632,0,0,100);
+
+DELETE FROM creature_spawn_data WHERE guid IN(@CGUID+3);
+INSERT INTO creature_spawn_data(Guid,Id) VALUES
+(@CGUID+3, 1);
 
 -- INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_pvp_state`, `emote`, `moveflags`, `auras`) VALUES
 
@@ -740,18 +744,18 @@ REPLACE INTO `creature_linking_template` (`entry`, `map`, `master_entry`, `flag`
 (19551, 550, 19514, 12304, 0); -- Ember of Al'ar -> Al'ar
 
 INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecsmin`, `spawntimesecsmax`, `spawndist`, `currentwaypoint`, `DeathState`, `MovementType`) VALUES
-(@CGUID+1, 18805, 550, 1, 432.909, -373.424, 17.9608, 1.06421, 604800, 604800, 0, 0, 0, 0), -- High Astromancer Solarian
+(@CGUID+1, 18805, 550, 1, 432.7402, -373.6453, 18.01385, 1.396263, 604800, 604800, 0, 0, 0, 0), -- High Astromancer Solarian
 (@CGUID+2, 18928, 550, 1, 432.419, -373.063, 17.9609, 4.09901, 10800, 10800, 0, 0, 0, 0), -- Astromancer Solarian Spotlight
-(@CGUID+3, 19514, 550, 1, 370.328, -32.5953, 44.0863, 3.19012, 604800, 604800, 0, 0, 0, 2), -- Al'ar
-(@CGUID+4, 19516, 550, 1, 423.308, 407.96, 14.8928, 4.99, 604800, 604800, 0, 0, 0, 0), -- Void Reaver
+(@CGUID+3, 19514, 550, 1, 370.328, -32.5953, 44.0863, 3.19012, 604800, 604800, 0, 0, 0, 3), -- Al'ar
+(@CGUID+4, 19516, 550, 1, 424.2349, 403.4754, 14.97731, 4.991642, 604800, 604800, 0, 0, 0, 0), -- Void Reaver
 (@CGUID+5, 19622, 550, 1, 795.007, -0.460572, 48.7285, 3.08436, 604800, 604800, 0, 0, 0, 0), -- Kael'thas Sunstrider
 (@CGUID+6, 20031, 550, 1, 519.164, -157.407, 20.2431, 4.86057, 10800, 10800, 0, 0, 0, 0), -- Bloodwarder Legionnaire
 (@CGUID+7, 20031, 550, 1, 514.414, -158.116, 20.2424, 4.86057, 10800, 10800, 0, 0, 0, 0), -- Bloodwarder Legionnaire
 (@CGUID+8, 20031, 550, 1, 104.421, -11.506, -2.33548, 2.34534, 10800, 10800, 0, 0, 0, 2), -- Bloodwarder Legionnaire
 (@CGUID+9, 20031, 550, 1, 104.904, 8.37891, -2.33387, 4.19622, 10800, 10800, 0, 0, 0, 2), -- Bloodwarder Legionnaire
 (@CGUID+10, 20031, 550, 1, 191.993, -4.75432, -2.4305, 2.97222, 10800, 10800, 0, 0, 0, 2), -- Bloodwarder Legionnaire
-(@CGUID+11, 20031, 550, 1, 475.821, -337.397, 16.409, 5.03113, 10800, 10800, 0, 0, 0, 2), -- Bloodwarder Legionnaire
-(@CGUID+12, 20031, 550, 1, 472.011, -339.06, 15.9107, 5.1725, 10800, 10800, 0, 0, 0, 2), -- Bloodwarder Legionnaire
+(@CGUID+11, 20031, 550, 1, 475.821, -337.397, 16.409, 5.03113, 10800, 10800, 0, 0, 0, 0), -- Bloodwarder Legionnaire
+(@CGUID+12, 20031, 550, 1, 472.011, -339.06, 15.9107, 5.1725, 10800, 10800, 0, 0, 0, 0), -- Bloodwarder Legionnaire
 (@CGUID+13, 20031, 550, 1, 381.193, -429.486, 19.2682, 5.83223, 10800, 10800, 0, 0, 0, 0), -- Bloodwarder Legionnaire
 (@CGUID+14, 20031, 550, 1, 383.905, -426.031, 18.688, 5.69479, 10800, 10800, 0, 0, 0, 0), -- Bloodwarder Legionnaire
 (@CGUID+15, 20031, 550, 1, 191.375, 3.30484, -2.35456, 3.26377, 7200, 7200, 0, 0, 0, 2), -- Bloodwarder Legionnaire
@@ -799,7 +803,7 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `positio
 (@CGUID+57, 20038, 550, 1, 303.647, 32.4885, -2.38937, 3.94531, 10800, 10800, 0, 0, 0, 0), -- Phoenix-Hawk Hatchling
 (@CGUID+58, 20038, 550, 1, 305.2, 28.1524, -2.39064, 3.42369, 10800, 10800, 0, 0, 0, 0), -- Phoenix-Hawk Hatchling
 (@CGUID+59, 20038, 550, 1, 311.187, 31.7648, -2.38916, 3.68444, 10800, 10800, 0, 0, 0, 0), -- Phoenix-Hawk Hatchling
-(@CGUID+60, 20038, 550, 1, 354.06, -39.9079, -2.38663, 3.94531, 10800, 10800, 0, 0, 0, 2), -- Phoenix-Hawk Hatchling
+(@CGUID+60, 20038, 550, 1, 354.06, -39.9079, -2.38663, 3.94531, 10800, 10800, 0, 0, 0, 0), -- Phoenix-Hawk Hatchling
 (@CGUID+61, 20038, 550, 1, 346.227, -39.0626, -2.38708, 3.68444, 10800, 10800, 0, 0, 0, 0), -- Phoenix-Hawk Hatchling
 (@CGUID+62, 20039, 550, 1, 398.219, -78.8478, 20.1794, 3.67277, 10800, 10800, 0, 0, 0, 2), -- Phoenix-Hawk
 (@CGUID+63, 20039, 550, 1, 411.409, -39.8267, 20.1802, 4.18163, 10800, 10800, 0, 0, 0, 2), -- Phoenix-Hawk
@@ -924,56 +928,67 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `positio
 (@CGUID+182, 20052, 550, 1, 388.124, 357.658, 15.6923, 0.31474, 10800, 10800, 0, 0, 0, 0), -- Crystalcore Mechanic
 (@CGUID+183, 20052, 550, 1, 394.039, 344.668, 15.8235, 0.675238, 10800, 10800, 0, 0, 0, 0), -- Crystalcore Mechanic
 (@CGUID+184, 20052, 550, 1, 474.989, 391.686, 15.5304, 3.59299, 10800, 10800, 0, 0, 0, 0), -- Crystalcore Mechanic
-(@CGUID+185, 20060, 550, 1, 785.825, -22.1231, 48.7285, 2.66553, 604800, 604800, 0, 0, 0, 0), -- Lord Sanguinar
-(@CGUID+186, 20062, 550, 1, 791.128, -12.6735, 48.7285, 2.55164, 604800, 604800, 0, 0, 0, 0), -- Grand Astromancer Capernian
-(@CGUID+187, 20063, 550, 1, 791.906, 11.9183, 48.7285, 3.73367, 604800, 604800, 0, 0, 0, 0), -- Master Engineer Telonicus
-(@CGUID+188, 20064, 550, 1, 786.28, 20.2825, 48.7285, 3.6944, 604800, 604800, 0, 0, 0, 0), -- Thaladred the Darkener
+(@CGUID+185, 20060, 550, 1, 785.7821, -20.39954, 48.81179, 2.303835, 604800, 604800, 0, 0, 0, 0), -- Lord Sanguinar
+(@CGUID+186, 20062, 550, 1, 792.4081, -13.24149, 48.81179, 2.687807, 604800, 604800, 0, 0, 0, 0), -- Grand Astromancer Capernian
+(@CGUID+187, 20063, 550, 1, 792.7254, 12.77545, 48.81183, 3.595378, 604800, 604800, 0, 0, 0, 0), -- Master Engineer Telonicus
+(@CGUID+188, 20064, 550, 1, 785.8074, 19.48621, 48.81183, 3.979351, 604800, 604800, 0, 0, 0, 0), -- Thaladred the Darkener
 
 -- transition triggers, need to be explicitly in this order else animations wont work accordingly
-(@CGUID+189,22517,550,1,799.8832,-39.79063,86.04091,3.316126,300,300,0,0,0,0),
-(@CGUID+190,22517,550,1,799.4819,38.38402,84.18855,3.839724,300,300,0,0,0,0),
-(@CGUID+191,22517,550,1,847.8403,14.67272,64.72507,3.787364,300,300,0,0,0,0),
-(@CGUID+192,22517,550,1,847.9123,-16.27052,64.80233,4.660029,300,300,0,0,0,0),
-(@CGUID+193,22517,550,1,844.8558,6.185529,65.86212,0.2443461,300,300,0,0,0,0),
-(@CGUID+194,22517,550,1,844.8883,-7.439569,66.13985,0.2443461,300,300,0,0,0,0),
+(@CGUID+189, 22517, 550, 1, 799.8832, -39.79063, 86.04091, 3.316126, 300, 300, 0, 0, 0, 0), -- World Trigger (Large AOI)
+(@CGUID+190, 22517, 550, 1, 799.4819, 38.38402, 84.18855, 3.839724, 300, 300, 0, 0, 0, 0), -- World Trigger (Large AOI)
+(@CGUID+191, 22517, 550, 1, 847.8403, 14.67272, 64.72507, 3.787364, 300, 300, 0, 0, 0, 0), -- World Trigger (Large AOI)
+(@CGUID+192, 22517, 550, 1, 847.9123, -16.27052, 64.80233, 4.660029, 300, 300, 0, 0, 0, 0), -- World Trigger (Large AOI)
+(@CGUID+193, 22517, 550, 1, 844.8558, 6.185529, 65.86212, 0.2443461, 300, 300, 0, 0, 0, 0), -- World Trigger (Large AOI)
+(@CGUID+194, 22517, 550, 1, 844.8883, -7.439569, 66.13985, 0.2443461, 300, 300, 0, 0, 0, 0), -- World Trigger (Large AOI)
 -- explosion triggers
-(@CGUID+195,22517,550,1,701.9359,66.05067,46.86216,3.124139,300,300,0,0,0,0),
-(@CGUID+196,22517,550,1,699.306,-67.62751,46.86217,1.518436,300,300,0,0,0,0),
-(@CGUID+197,22517,550,1,665.1088,-0.950598,46.86217,4.415683,300,300,0,0,0,0),
-(@CGUID+198,22517,550,1,708.8086,-0.769152,46.86216,5.148721,300,300,0,0,0,0),
-(@CGUID+199,22517,550,1,732.9473,-0.566178,46.86214,3.612832,300,300,0,0,0,0),
-(@CGUID+200,22517,550,1,766.7248,-0.726238,50.13387,0.1919862,300,300,0,0,0,0),
+(@CGUID+195, 22517, 550, 1, 701.9359, 66.05067, 46.86216, 3.124139, 300, 300, 0, 0, 0, 0), -- World Trigger (Large AOI)
+(@CGUID+196, 22517, 550, 1, 699.306, -67.62751, 46.86217, 1.518436, 300, 300, 0, 0, 0, 0), -- World Trigger (Large AOI)
+(@CGUID+197, 22517, 550, 1, 665.1088, -0.950598, 46.86217, 4.415683, 300, 300, 0, 0, 0, 0), -- World Trigger (Large AOI)
+(@CGUID+198, 22517, 550, 1, 708.8086, -0.769152, 46.86216, 5.148721, 300, 300, 0, 0, 0, 0), -- World Trigger (Large AOI)
+(@CGUID+199, 22517, 550, 1, 732.9473, -0.566178, 46.86214, 3.612832, 300, 300, 0, 0, 0, 0), -- World Trigger (Large AOI)
+(@CGUID+200, 22517, 550, 1, 766.7248, -0.726238, 50.13387, 0.1919862, 300, 300, 0, 0, 0, 0), -- World Trigger (Large AOI)
 -- first group - casts 36201
-(@CGUID+201,22517,550,1,778.8183,56.69846,126.9899,2.513274,300,300,0,0,0,0),
-(@CGUID+202,22517,550,1,798.8123,61.56698,115.3441,3.769911,300,300,0,0,0,0),
-(@CGUID+203,22517,550,1,786.0614,65.85825,100.4249,3.263766,300,300,0,0,0,0),
+(@CGUID+201, 22517, 550, 1, 778.8183, 56.69846, 126.9899, 2.513274, 300, 300, 0, 0, 0, 0), -- World Trigger (Large AOI)
+(@CGUID+202, 22517, 550, 1, 798.8123, 61.56698, 115.3441, 3.769911, 300, 300, 0, 0, 0, 0), -- World Trigger (Large AOI)
+(@CGUID+203, 22517, 550, 1, 786.0614, 65.85825, 100.4249, 3.263766, 300, 300, 0, 0, 0, 0), -- World Trigger (Large AOI)
 -- second group - casts 36290
-(@CGUID+204,22517,550,1,851.5966,17.91289,109.8992,1.27409,300,300,0,0,0,0),
-(@CGUID+205,22517,550,1,852.7165,-17.16145,111.8991,5.602507,300,300,0,0,0,0),
-(@CGUID+206,22517,550,1,848.437,30.28408,92.7951,4.817109,300,300,0,0,0,0),
-(@CGUID+207,22517,550,1,847.2033,-31.35966,99.57969,0.8203048,300,300,0,0,0,0),
-(@CGUID+208,22517,550,1,846.6299,-37.76403,84.40607,2.617994,300,300,0,0,0,0),
-(@CGUID+209,22517,550,1,849.4088,37.11266,77.68398,4.921828,300,300,0,0,0,0),
-(@CGUID+210,22517,550,1,855.7502,-1.335043,112.8265,3.839724,300,300,0,0,0,0),
+(@CGUID+204, 22517, 550, 1, 851.5966, 17.91289, 109.8992, 1.27409, 300, 300, 0, 0, 0, 0), -- World Trigger (Large AOI)
+(@CGUID+205, 22517, 550, 1, 852.7165, -17.16145, 111.8991, 5.602507, 300, 300, 0, 0, 0, 0), -- World Trigger (Large AOI)
+(@CGUID+206, 22517, 550, 1, 848.437, 30.28408, 92.7951, 4.817109, 300, 300, 0, 0, 0, 0), -- World Trigger (Large AOI)
+(@CGUID+207, 22517, 550, 1, 847.2033, -31.35966, 99.57969, 0.8203048, 300, 300, 0, 0, 0, 0), -- World Trigger (Large AOI)
+(@CGUID+208, 22517, 550, 1, 846.6299, -37.76403, 84.40607, 2.617994, 300, 300, 0, 0, 0, 0), -- World Trigger (Large AOI)
+(@CGUID+209, 22517, 550, 1, 849.4088, 37.11266, 77.68398, 4.921828, 300, 300, 0, 0, 0, 0), -- World Trigger (Large AOI)
+(@CGUID+210, 22517, 550, 1, 855.7502, -1.335043, 112.8265, 3.839724, 300, 300, 0, 0, 0, 0), -- World Trigger (Large AOI)
 -- third group - casts 36291
-(@CGUID+211,22517,550,1,785.4241,-52.29982,134.9155,4.712389,300,300,0,0,0,0),
-(@CGUID+212,22517,550,1,800.0196,-62.71717,109.6165,1.605703,300,300,0,0,0,0),
-(@CGUID+213,22517,550,1,775.7325,-61.36944,119.4992,5.8294,300,300,0,0,0,0);
+(@CGUID+211, 22517, 550, 1, 785.4241, -52.29982, 134.9155, 4.712389, 300, 300, 0, 0, 0, 0), -- World Trigger (Large AOI)
+(@CGUID+212, 22517, 550, 1, 800.0196, -62.71717, 109.6165, 1.605703, 300, 300, 0, 0, 0, 0), -- World Trigger (Large AOI)
+(@CGUID+213, 22517, 550, 1, 775.7325, -61.36944, 119.4992, 5.8294, 300, 300, 0, 0, 0, 0), -- World Trigger (Large AOI)
+--
+(@CGUID+214, 12999, 550, 1, 425.4077, -0.379617, 80.36799, 0.9250245, 300, 300, 0, 0, 0, 0), -- World Invisible Trigger
+(@CGUID+215, 15384, 550, 1, 388.7511, 31.73123, 20.26364, 4.625123, 300, 300, 0, 0, 0, 0), -- OLDWorld Trigger (DO NOT DELETE)
+(@CGUID+216, 15384, 550, 1, 388.7913, -33.10595, 20.26358, 4.852015, 300, 300, 0, 0, 0, 0), -- OLDWorld Trigger (DO NOT DELETE)
+(@CGUID+217, 15384, 550, 1, 335.6376, 59.48792, 17.93191, 1.832596, 300, 300, 0, 0, 0, 0), -- OLDWorld Trigger (DO NOT DELETE)
+(@CGUID+218, 15384, 550, 1, 332.723, -61.15897, 17.97906, 3.647738, 300, 300, 0, 0, 0, 0), -- OLDWorld Trigger (DO NOT DELETE)
+(@CGUID+219, 15384, 550, 1, 330.3438, -1.1002, 42.86049, 3.176499, 300, 300, 0, 0, 0, 0), -- OLDWorld Trigger (DO NOT DELETE)
+(@CGUID+220, 15384, 550, 1, 276.0723, -0.578703, 26.20747, 2.111848, 300, 300, 0, 0, 0, 0), -- OLDWorld Trigger (DO NOT DELETE)
+(@CGUID+221, 15384, 550, 1, 259.2285, 35.87902, 20.26298, 5.009095, 300, 300, 0, 0, 0, 0), -- OLDWorld Trigger (DO NOT DELETE)
+(@CGUID+222, 15384, 550, 1, 258.9592, -38.68707, 20.26289, 5.72468, 300, 300, 0, 0, 0, 0), -- OLDWorld Trigger (DO NOT DELETE)
+(@CGUID+223, 22515, 550, 1, 810.1933, -0.727374, 50.13386, 3.141593, 300, 300, 0, 0, 0, 0); -- World Trigger
 
 -- ===========
 -- GAMEOBJECTS
 -- ===========
 
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
-(@OGUID+1, 184069, 550, 1, 743.057, 4.63443, 137.796, 3.14159, 0, 0, -1, 0, 7200, 7200, 255, 1), -- Tempest Bridge Window
-(@OGUID+2, 184324, 550, 1, 676.698, 43.1643, 48.2814, 0.610866, 0, 0, 0, 0, 300, 300, 100, 0), -- Doodad_TK_Arcane_Door_Horiz04
-(@OGUID+3, 184325, 550, 1, 676.517, -44.5225, 48.2813, 2.53073, 0, 0, 0, 0, 300, 300, 100, 0), -- Doodad_TK_Arcane_Door_Horiz03
-(@OGUID+4, 184326, 550, 1, 654.145, -76.828, 48.195, 2.53073, 0, 0, 0, 0, 300, 300, 100, 0), -- Doodad_TK_Arcane_Door_Vert03
-(@OGUID+5, 184327, 550, 1, 544.538, -143.139, 26.3453, -2.87979, 0, 0, 0, 0, 300, 300, 100, 0), -- Doodad_TK_Raid_Door03
-(@OGUID+6, 184328, 550, 1, 654.129, 75.3316, 48.195, 0.610866, 0, 0, 0, 0, 300, 300, 100, 0), -- Doodad_TK_Arcane_Door_Vert04
-(@OGUID+7, 184329, 550, 1, 544.626, 141.888, 26.3453, 2.87979, 0, 0, 0, 0, 300, 300, 100, 0), -- Doodad_TK_Raid_Door04
-(@OGUID+8, 184596, 550, 1, 744.045, -44.6345, 46.661, 3.14159, 0, 0, 0, 0, 300, 300, 100, 1), -- Doodad_Kael_Explode_FX_Right01
-(@OGUID+9, 184597, 550, 1, 744.045, 42.3536, 46.661, 3.14159, 0, 0, 0, 0, 300, 300, 100, 1); -- Doodad_Kael_Explode_FX_Left01
+(@OGUID+1, 184069, 550, 1, 743.0566, 4.634431, 137.7959, 3.141593, 0, 0, -1, 0, 7200, 7200, 255, 1), -- Tempest Bridge Window
+(@OGUID+2, 184324, 550, 1, 676.6985, 43.16431, 48.28136, 0.6108655, 0, 0, 0.3007059, 0.9537169, 300, 300, 100, 0), -- Doodad_TK_Arcane_Door_Horiz04
+(@OGUID+3, 184325, 550, 1, 676.5166, -44.52248, 48.28133, 2.530723, 0, 0, 0.9537163, 0.3007079, 300, 300, 100, 0), -- Doodad_TK_Arcane_Door_Horiz03
+(@OGUID+4, 184326, 550, 1, 654.1447, -76.82803, 48.19501, 2.530723, 0, 0, 0.9537163, 0.3007079, 300, 300, 100, 0), -- Doodad_TK_Arcane_Door_Vert03
+(@OGUID+5, 184327, 550, 1, 544.538, -143.1392, 26.34531, 3.403396, 0, 0, -0.9914446, 0.1305283, 300, 300, 100, 0), -- Doodad_TK_Raid_Door03
+(@OGUID+6, 184328, 550, 1, 654.1292, 75.33163, 48.19505, 0.6108655, 0, 0, 0.3007059, 0.9537169, 300, 300, 100, 0), -- Doodad_TK_Arcane_Door_Vert04
+(@OGUID+7, 184329, 550, 1, 544.6263, 141.888, 26.34531, 2.879789, 0, 0, 0.9914446, 0.1305283, 300, 300, 100, 0), -- Doodad_TK_Raid_Door04
+(@OGUID+8, 184596, 550, 1, 744.0446, -44.63448, 46.66097, 3.141593, 0, 0, -1, 0, 300, 300, 100, 1), -- Doodad_Kael_Explode_FX_Right01
+(@OGUID+9, 184597, 550, 1, 744.0448, 42.35362, 46.661, 3.141593, 0, 0, -1, 0, 300, 300, 100, 1); -- Doodad_Kael_Explode_FX_Left01
 
 -- ======
 -- EVENTS
@@ -1003,51 +1018,51 @@ INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalon
 (10121, 0, 45, 0, 10121, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Crystalcore Devastator - 10% chance (Tempest-Smith follower random say)'),
 (10122, 0, 45, 0, 10122, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Tempest-Smith - 50% chance (run diagnostics on Crystalcore Sentinel)'),
 (10123, 0, 45, 0, 10123, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Tempest-Smith - 50% chance (run diagnostics on Crystalcore Devastator)'),
-(10124, 3, 0, 10124, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Bloodwarder Marshal Chat'),
-(10125, 116, 0, 10125, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Squad Three speaker'),
+(10124, 3000, 0, 10124, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Bloodwarder Marshal Chat'),
+(10125, 116000, 0, 10125, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Squad Three speaker'),
 (10126, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Terminate'),
-(10127, 116, 1, 66, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Squad three salute'),
-(10128, 153, 0, 10128, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'second squad speaker Round 2'),
-(10129, 178, 0, 10129, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'first squad speaker'),
-(10130, 153, 1, 66, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Squad two salute Round 2'),
-(10131, 178, 1, 66, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Squad one salute'),
-(10132, 20, 0, 10132, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'second squad speaker Round 1'),
-(10133, 20, 1, 66, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Squad two salute Round 1');
+(10127, 116000, 1, 66, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Squad three salute'),
+(10128, 153000, 0, 10128, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'second squad speaker Round 2'),
+(10129, 178000, 0, 10129, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'first squad speaker'),
+(10130, 153000, 1, 66, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Squad two salute Round 2'),
+(10131, 178000, 1, 66, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Squad one salute'),
+(10132, 20000, 0, 10132, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'second squad speaker Round 1'),
+(10133, 20000, 1, 66, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Squad two salute Round 1');
 
 DELETE FROM dbscripts_on_relay WHERE id IN (10121,10122,10123);
 INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `command`, `datalong`, `datalong2`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 (10121,0,0,0,0,20042,20,0,2000020070,2000020071,2000020072,0,0,0,0,0,'Tempest-Smith to say random'),
-(10122,1,15,34946,0,0,0,0,0,0,0,0,0,0,0,0,'Tempest-Smith - Cast Repair Golem'),
-(10122,6,0,0,0,0,0,0,2000020073,0,0,0,0,0,0,0,'Tempest-Smith - say 1'),
-(10122,7,0,0,0,20041,20,0,2000020074,2000020075,2000020076,0,0,0,0,0,'Crystalcore Sentinel - say random'),
-(10123,1,15,34946,0,0,0,0,0,0,0,0,0,0,0,0,'Tempest-Smith - Cast Repair Golem'),
-(10123,6,0,0,0,0,20,0,2000020073,0,0,0,0,0,0,0,'Tempest-Smith - say 1'),
-(10123,7,0,0,0,20040,20,0,2000020074,2000020075,2000020076,0,0,0,0,0,'Crystalcore Devastator - say random');
+(10122,1000,15,34946,0,0,0,0,0,0,0,0,0,0,0,0,'Tempest-Smith - Cast Repair Golem'),
+(10122,6000,0,0,0,0,0,0,2000020073,0,0,0,0,0,0,0,'Tempest-Smith - say 1'),
+(10122,7000,0,0,0,20041,20,0,2000020074,2000020075,2000020076,0,0,0,0,0,'Crystalcore Sentinel - say random'),
+(10123,1000,15,34946,0,0,0,0,0,0,0,0,0,0,0,0,'Tempest-Smith - Cast Repair Golem'),
+(10123,6000,0,0,0,0,20,0,2000020073,0,0,0,0,0,0,0,'Tempest-Smith - say 1'),
+(10123,7000,0,0,0,20040,20,0,2000020074,2000020075,2000020076,0,0,0,0,0,'Crystalcore Devastator - say random');
 
 DELETE FROM `dbscript_string` WHERE `entry` IN (2000020070,2000020071,2000020072,2000020073,2000020074,2000020075,2000020076,2000020077,2000020078,
 2000020079,2000020080,2000020081,2000020082,2000020083,2000020084,2000020085,2000020086,2000020087,2000020088,2000020089,2000020090);
-INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES
-(2000020070, 'Golem movement appears to be within the specifications.', 0, 0, 0, 1, ''),
-(2000020071, 'I''ll be glad when final testing of this unit is complete.', 0, 0, 0, 1, ''),
-(2000020072, 'After this mobility test, we''ll only have the final weapons check to complete.', 0, 0, 0, 1, ''),
-(2000020073, 'Golem. Command. Operational status report.', 0, 0, 0, 1, ''),
-(2000020074, 'This unit is currently performing within normal parameters.', 0, 0, 0, 0, ''),
-(2000020075, 'This unit is ready to serve.', 0, 0, 0, 0, ''),
-(2000020076, 'This unit is currently at ninety five percent operational efficiency.', 0, 0, 0, 0, ''),
-(2000020077, 'All clear!', 0, 1, 0, 66, ''),
-(2000020078, 'Our defenses stand ready!', 0, 1, 0, 66, ''),
-(2000020079, 'Our blades and spells are at the ready!', 0, 1, 0, 66, ''),
-(2000020080, 'We stand ready to defend the Eye!', 0, 1, 0, 66, ''),
-(2000020081, 'Third squad reporting in!', 0, 1, 0, 66, ''),
-(2000020082, 'Second squad is ready to fight!', 0, 1, 0, 66, ''),
-(2000020083, 'The enemy will not get past us!', 0, 1, 0, 66, ''),
-(2000020084, 'First squad is ready for battle!', 0, 1, 0, 66, ''),
-(2000020085, 'We will show our enemies no quarter!', 0, 1, 0, 66, ''),
-(2000020086, 'Very well.', 0, 1, 0, 66, ''),
-(2000020087, 'Excellent work.', 0, 1, 0, 66, ''),
-(2000020088, 'Your conduct makes me proud.', 0, 1, 0, 66, ''),
-(2000020089, 'As you were!', 0, 1, 0, 66, ''),
-(2000020090, 'Stand vigilant.', 0, 1, 0, 66, '');
+INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `broadcast_text_id`, `comment`) VALUES
+(2000020070, 'Golem movement appears to be within the specifications.', 0, 0, 0, 1, 17839, ''),
+(2000020071, 'I''ll be glad when final testing of this unit is complete.', 0, 0, 0, 1, 17840, ''),
+(2000020072, 'After this mobility test, we''ll only have the final weapons check to complete.', 0, 0, 0, 1, 17841, ''),
+(2000020073, 'Golem. Command. Operational status report.', 0, 0, 0, 1, 17818, ''),
+(2000020074, 'This unit is currently performing within normal parameters.', 0, 0, 0, 0, 17821, ''),
+(2000020075, 'This unit is ready to serve.', 0, 0, 0, 0, 17822, ''),
+(2000020076, 'This unit is currently at ninety five percent operational efficiency.', 0, 0, 0, 0, 17820, ''),
+(2000020077, 'All clear!', 0, 1, 0, 66, 18031, ''),
+(2000020078, 'Our defenses stand ready!', 0, 1, 0, 66, 18040, ''),
+(2000020079, 'Our blades and spells are at the ready!', 0, 1, 0, 66, 18037, ''),
+(2000020080, 'We stand ready to defend the Eye!', 0, 1, 0, 66, 18032, ''),
+(2000020081, 'Third squad reporting in!', 0, 1, 0, 66, 18038, ''),
+(2000020082, 'Second squad is ready to fight!', 0, 1, 0, 66, 18035, ''),
+(2000020083, 'The enemy will not get past us!', 0, 1, 0, 66, 18036, ''),
+(2000020084, 'First squad is ready for battle!', 0, 1, 0, 66, 18030, ''),
+(2000020085, 'We will show our enemies no quarter!', 0, 1, 0, 66, 18039, ''),
+(2000020086, 'Very well.', 0, 1, 0, 66, 18047, ''),
+(2000020087, 'Excellent work.', 0, 1, 0, 66, 18048, ''),
+(2000020088, 'Your conduct makes me proud.', 0, 1, 0, 66, 18049, ''),
+(2000020089, 'As you were!', 0, 1, 0, 66, 18045, ''),
+(2000020090, 'Stand vigilant.', 0, 1, 0, 66, 18046, '');
 
 DELETE FROM dbscript_random_templates WHERE id IN (10121,10122,10123,10124,10125,10128,10129,10132);
 INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `comments`) VALUES

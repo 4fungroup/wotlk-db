@@ -7,8 +7,9 @@
 ####################################################################################################
 
 # need to be changed on each official DB/CORE release
-FULLDB_FILE="WoTLKDB_1_2_13992.sql"
-DB_TITLE="v1.2 'Ymiron'"
+FULLDB_FILE_ZIP="WoTLKDB_1_4_14029.sql.gz"
+FULLDB_FILE=${FULLDB_FILE_ZIP%.gz}
+DB_TITLE="v1.4 'WrathGate'"
 NEXT_MILESTONES="0.19 0.20"
 
 #internal use
@@ -75,6 +76,10 @@ FORCE_WAIT="YES"
 ## Set the variable to "YES" to use the dev directory
 DEV_UPDATES="NO"
 
+## Define if AHBot SQL updates need to be applied (by default, assume the core is built without AHBot)
+## Requires CORE_PATH to be set to a proper value. Set the variable to "YES" to import SQL updates.
+AHBOT="NO"
+
 # Enjoy using the tool
 EOF
 }
@@ -122,6 +127,15 @@ fi
 
 ## Full Database
 echo "> Processing WoTLK database $DB_TITLE ..."
+echo "  - Unziping $FULLDB_FILE_ZIP"
+gzip -kdf "${ADDITIONAL_PATH}Full_DB/$FULLDB_FILE_ZIP"
+if [[ $? != 0 ]]
+then
+  echo "ERROR: cannot unzip ${ADDITIONAL_PATH}Full_DB/$FULLDB_FILE_ZIP"
+  echo "GZIP 1.6 or greater should be installed"
+  exit 1
+fi
+echo "  - Applying $FULLDB_FILE"
 $MYSQL_COMMAND < "${ADDITIONAL_PATH}Full_DB/$FULLDB_FILE"
 if [[ $? != 0 ]]
 then
@@ -276,6 +290,25 @@ then
   echo
   echo
   
+  # Apply optional AHBot commands documentation
+  if [ "$AHBOT" == "YES" ]
+  then
+	  echo "> Trying to apply $CORE_PATH/sql/base/ahbot ..."
+	  for f in "$CORE_PATH/sql/base/ahbot/"*.sql
+	  do
+		echo "    Appending AHBot SQL file `basename $f` to database $DATABASE"
+		$MYSQL_COMMAND < $f
+		if [[ $? != 0 ]]
+		then
+		  echo "ERROR: cannot apply $f"
+		  exit 1
+		fi
+	  done
+	  echo "  AHBot SQL files successfully applied"
+	  echo
+	  echo  
+  fi
+  
   # Apply dbc folder
   echo "> Trying to apply $CORE_PATH/sql/base/dbc/original_data ..."
   for f in "$CORE_PATH/sql/base/dbc/original_data/"*.sql
@@ -307,15 +340,19 @@ then
   echo
   echo
 
-  # Apply scriptdev2.sql
-  echo "> Trying to apply $CORE_PATH/sql/scriptdev2/scriptdev2.sql ..."
-  $MYSQL_COMMAND < $CORE_PATH/sql/scriptdev2/scriptdev2.sql
-  if [[ $? != 0 ]]
-  then
-    echo "ERROR: cannot apply $CORE_PATH/sql/scriptdev2/scriptdev2.sql"
-    exit 1
-  fi
-  echo "  ScriptDev2 successfully applied"
+  # Apply ScriptDev2 data
+  echo "> Trying to apply $CORE_PATH/sql/scriptdev2 ..."
+  for f in "$CORE_PATH/sql/scriptdev2/"*.sql
+  do
+    echo "    Appending SD2 file update `basename $f` to database $DATABASE"
+    $MYSQL_COMMAND < $f
+    if [[ $? != 0 ]]
+    then
+      echo "ERROR: cannot apply $f"
+      exit 1
+    fi
+  done
+  echo "  ScriptDev2 data successfully applied"
   echo
   echo
 fi
@@ -332,6 +369,21 @@ then
   exit 1
 fi
 echo "  ACID successfully applied"
+echo
+echo
+
+#
+#               CMaNGOS custom updates file
+#
+# Apply cmangos_custom.sql
+echo "> Trying to apply ${ADDITIONAL_PATH}utilities/cmangos_custom.sql ..."
+$MYSQL_COMMAND < ${ADDITIONAL_PATH}utilities/cmangos_custom.sql
+if [[ $? != 0 ]]
+then
+  echo "ERROR: cannot apply ${ADDITIONAL_PATH}utilities/cmangos_custom.sql"
+  exit 1
+fi
+echo "  CMaNGOS custom updates successfully applied"
 echo
 echo
 

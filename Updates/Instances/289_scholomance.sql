@@ -117,7 +117,8 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (@CGUID+398, 8, 197.166, -0.002156, 115.708, 0, 0, 0),
 (@CGUID+398, 9, 172.25, -0.72485, 115.708, 0, 0, 0);
 
-DELETE FROM creature_movement_template WHERE entry IN (11551,14500);
+DELETE FROM creature_movement_template WHERE entry IN (11551);
+DELETE FROM creature_movement_template WHERE entry IN (14500) AND `pathId`=0; -- Also has movement path in Dire Maul, map 429
 INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`) VALUES
 (11551, 0, 1, 206.346, 80.7189, 104.244, 100, 0, 0),
 (11551, 0, 2, 221.189, 86.5182, 104.715, 100, 0, 0),
@@ -129,17 +130,17 @@ INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_
 (11551, 0, 8, 199.444, 69.7478, 104.716, 100, 0, 0),
 -- movement for J'eevee during q.7629 Imp Delivery
 (14500, 0, 1, 38.784, 160.639, 83.545, 100, 0, 0),
-(14500, 0, 2, 36.804, 160.705, 83.545, 100, 3000, 1450002),
+(14500, 0, 2, 36.804, 160.705, 83.545, 100, 3000, 1450001),
 (14500, 0, 3, 39.287, 160.044, 83.545, 100, 0, 0),
 (14500, 0, 4, 41.666, 154.591, 83.545, 100, 0, 0),
 (14500, 0, 5, 45.255, 155.014, 83.545, 100, 0, 0),
 (14500, 0, 6, 44.93, 161.186, 83.545, 100, 0, 0),
-(14500, 0, 7, 44.347, 161.12, 83.545, 100, 4000, 1450007),
+(14500, 0, 7, 44.347, 161.12, 83.545, 100, 4000, 1450002),
 (14500, 0, 8, 46.758, 157.877, 83.545, 100, 0, 0),
 (14500, 0, 9, 44.64, 154.405, 83.545, 100, 0, 0),
 (14500, 0, 10, 33.498, 156.046, 83.545, 100, 0, 0),
 (14500, 0, 11, 28.269, 160.792, 83.545, 100, 4000, 0),
-(14500, 0, 12, 33.294, 160.895, 83.545, 100, 10000, 1450012);
+(14500, 0, 12, 33.294, 160.895, 83.545, 100, 10000, 1450003);
 
 INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_pvp_state`, `emote`, `moveflags`, `auras`) VALUES
 (@CGUID+61, 0, 0, 1, 16, 0, 0, '12380'), -- Scholomance Adept
@@ -768,38 +769,42 @@ INSERT INTO `pool_creature` (`guid`, `pool_entry`, `chance`, `description`) VALU
 -- DBSCRIPTS
 -- =========
 
-DELETE FROM `dbscripts_on_creature_movement` WHERE `id` IN (1043201,1450002,1450007,1450012);
+DELETE FROM `dbscripts_on_creature_movement` WHERE `id` IN (1043201);
+DELETE FROM `dbscripts_on_creature_movement` WHERE `id` IN (1450001,1450002,1450003);
 INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
-(1043201, 1, 0, 0, 0, 0, 0, 0, 0, 2000005027, 0, 0, 0, 0, 0, 0, 0, ''),
-(1043201, 10, 0, 0, 0, 0, 0, 0, 0, 2000005028, 0, 0, 0, 0, 0, 0, 0, ''),
-(1043201, 20, 0, 0, 0, 0, 0, 0, 0, 2000005029, 0, 0, 0, 0, 0, 0, 0, ''),
-(1450002, 0, 0, 0, 0, 0, 0, 0, 0, 2000007714, 0, 0, 0, 0, 0, 0, 0, 'J''eevee say 2 on reach wp 2 (Scholomance)'),
-(1450007, 0, 0, 0, 0, 0, 0, 0, 0, 2000007715, 0, 0, 0, 0, 0, 0, 0, 'J''eevee say 3 on reach wp 7 (Scholomance)'),
-(1450012, 4, 0, 0, 0, 0, 0, 0, 0, 2000007716, 0, 0, 0, 0, 0, 0, 0, 'J''eevee say 4 on reach wp 12 (Scholomance)'),
-(1450012, 7, 15, 41232, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'J''eevee cast teleport on reach wp 12 (Scholomance)'),
-(1450012, 8, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'J''eevee despawn self on reach wp 12 (Scholomance)');
+(1043201, 1000, 0, 0, 0, 0, 0, 0, 0, 2000005027, 0, 0, 0, 0, 0, 0, 0, ''),
+(1043201, 10000, 0, 0, 0, 0, 0, 0, 0, 2000005028, 0, 0, 0, 0, 0, 0, 0, ''),
+(1043201, 20000, 0, 0, 0, 0, 0, 0, 0, 2000005029, 0, 0, 0, 0, 0, 0, 0, ''),
+(1450001, 0, 0, 0, 0, 0, 0, 0, 0, 2000007714, 0, 0, 0, 0, 0, 0, 0, 'J''eevee say 2 on reach wp 2 (Scholomance)'),
+(1450002, 0, 0, 0, 0, 0, 0, 0, 0, 2000007715, 0, 0, 0, 0, 0, 0, 0, 'J''eevee say 3 on reach wp 7 (Scholomance)'),
+(1450003, 4000, 0, 0, 0, 0, 0, 0, 0, 2000007716, 0, 0, 0, 0, 0, 0, 0, 'J''eevee say 4 on reach wp 12 (Scholomance)'),
+(1450003, 7000, 15, 41232, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'J''eevee cast teleport on reach wp 12 (Scholomance)'),
+(1450003, 8000, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'J''eevee despawn self on reach wp 12 (Scholomance)');
 
 INSERT INTO `dbscripts_on_creature_death` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
-(10503, 1, 0, 0, 0, 0, 0, 0, 0, 2000000612, 0, 0, 0, 0, 0, 0, 0, ''),
-(10503, 1, 15, 26096, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Jandice Barov - Summon Journal of Jandice Barov on Death');
+(10503, 1000, 0, 0, 0, 0, 0, 0, 0, 2000000612, 0, 0, 0, 0, 0, 0, 0, ''),
+(10503, 1000, 15, 26096, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Jandice Barov - Summon Journal of Jandice Barov on Death');
 
 INSERT INTO `dbscripts_on_go_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 (@OGUID+64, 0, 11, @OGUID+11, 7200, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
 (@OGUID+9, 0, 12, @OGUID+10, 600, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
-(@OGUID+9, 5, 10, 10506, 900000, 0, 0, 0, 0, 0, 0, 0, 0, 309.65, 93.47, 101.66, 0.03, '');
+(@OGUID+9, 5000, 10, 10506, 900000, 0, 0, 0, 0, 0, 0, 0, 0, 309.65, 93.47, 101.66, 0.03, '');
 
--- INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+DELETE FROM `dbscripts_on_go_template_use` WHERE `id` = 175617;
+INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
+(175617,5000,11,@OGUID+49,0,0,0,0,0x04,0,0,0,0,0,0,0,0,'Open Door');
+
 -- INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 
 DELETE FROM dbscripts_on_event WHERE id IN (5438,5439,8438);
 INSERT INTO `dbscripts_on_event` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
-(5438, 1, 9, @OGUID+46, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'respawn gobject'),
-(5439, 1, 9, @OGUID+45, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'respawn gobject'),
+(5438, 1000, 9, @OGUID+46, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'respawn gobject'),
+(5439, 1000, 9, @OGUID+45, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'respawn gobject'),
 -- q.7269 Imp Delivery
 (8438, 0, 10, 14500, 180000, 0, 0, 0, 0, 0, 0, 0, 0, 38.4345, 156.93, 83.545, 1.40746, 'Spawn J''eevee (Scholomance)'),
-(8438, 1, 0, 0, 0, 0, 14500, 40, 0, 2000007713, 0, 0, 0, 0, 0, 0, 0, 'J''eevee say 1 (Scholomance)'),
-(8438, 3, 20, 2, 0, 0, 14500, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'J''eevee set waypoint movement (Scholomance)'),
-(8438, 40, 8, 14500, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'J''eevee give quest credit (Scholomance)');
+(8438, 1000, 0, 0, 0, 0, 14500, 40, 0, 2000007713, 0, 0, 0, 0, 0, 0, 0, 'J''eevee say 1 (Scholomance)'),
+(8438, 3000, 20, 2, 0, 0, 14500, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'J''eevee set waypoint movement (Scholomance)'),
+(8438, 40000, 8, 14500, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'J''eevee give quest credit (Scholomance)');
 
 -- INSERT INTO `dbscripts_on_spell` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_gossip` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
@@ -807,15 +812,15 @@ INSERT INTO `dbscripts_on_event` (`id`, `delay`, `command`, `datalong`, `datalon
 -- INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 
 DELETE FROM dbscript_string WHERE entry IN (2000005027,2000005028,2000005029,2000000612,2000007713,2000007714,2000007715,2000007716);
-INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES
-(2000005027, 'The Lich King''s forces are building. It is imperative that our timetable supports his plans.', 0, 0, 0, 0, NULL), 
-(2000005028, 'Tomorrow we will begin training of our promising dragons, so don''t forget your chew toys.', 0, 0, 0, 0, NULL),
-(2000005029, 'Our oldest clutch of dragons are still far from maturity, but with patience and study, we are confident the dragons will soon be ready.', 0, 0, 0, 0, NULL),
-(2000000612, '%s loosens her grasp on the journal she had been clutching.', 0, 2, 0, 0, NULL),
-(2000007713, 'Ah, here we are! Well let''s get to work, shall we...?', 0, 0, 0, 0, 'J''eevee say 1 (Scholomance)'),
-(2000007714, 'Oh, right! Over here now...', 0, 0, 0, 0, 'J''eevee say 2 (Scholomance)'),
-(2000007715, 'And now... the final step!', 0, 0, 0, 0, 'J''eevee say 3 (Scholomance)'),
-(2000007716, 'I''m finished. The parchment is made. Now, return to Gorzeeki...', 0, 0, 0, 0, 'J''eevee say 4 (Scholomance)');
+INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `broadcast_text_id`, `comment`) VALUES
+(2000005027, 'The Lich King''s forces are building.  It is imperative that our timetable supports his plans.', 0, 0, 0, 0, 7194, NULL), 
+(2000005028, 'Tomorrow we will begin training of our promising dragons, so don''t forget your chew toys.', 0, 0, 0, 0, 7193, NULL),
+(2000005029, 'Our oldest clutch of dragons are still far from maturity, but with patience and study, we are confident the dragonflight will soon be ready.', 0, 0, 0, 0, 7191, NULL),
+(2000000612, '%s loosens her grasp on the journal she had been clutching.', 0, 2, 0, 0, 11408, NULL),
+(2000007713, 'Ah, here we are!  Well let''s get to work, shall we...?', 0, 0, 0, 0, 9769, 'J''eevee say 1 (Scholomance)'),
+(2000007714, 'Oh, right!  Over here now...', 0, 0, 0, 0, 9770, 'J''eevee say 2 (Scholomance)'),
+(2000007715, 'And now... the final step!', 0, 0, 0, 0, 9771, 'J''eevee say 3 (Scholomance)'),
+(2000007716, 'I''m finished.  The parchment is made.  Now, return to Gorzeeki...', 0, 0, 0, 0, 9742, 'J''eevee say 4 (Scholomance)');
 
 -- INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `comments`) VALUES
 

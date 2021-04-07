@@ -220,10 +220,20 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (@CGUID+344, 1, -7531.121094, -974.014465, 449.239990, 2.143344, 15*1000, 0),
 (@CGUID+344, 2, -7539.890137, -980.114990, 449.239990, 2.588665, 9*1000, 1247101);
 
-DELETE FROM creature_movement_template WHERE entry IN (10162,11983,13996,14601);
+DELETE FROM creature_movement_template WHERE entry IN (10162,11583,11983,13996,14601);
 INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_x`, `position_y`, `position_z`, `orientation`, `waittime`, `script_id`) VALUES
 (10162, 0, 1, 169.33, -444.8, 121.98, 6.27848, 0, 0),
 (10162, 0, 2, 161.91, -444.92, 121.98, 3.28768, 0, 0),
+
+(11583, 0, 1, -7348.85, -1495.13, 552.515, 100, 0, 0),
+(11583, 0, 2, -7348.54, -1494.18, 552.515, 100, 0, 0),
+(11583, 0, 3, -7392.87, -1475.7, 544.619, 100, 0, 0),
+(11583, 0, 4, -7423.42, -1437.66, 535.314, 100, 0, 0),
+(11583, 0, 5, -7445.25, -1402.11, 523.842, 100, 0, 0),
+(11583, 0, 6, -7460.38, -1372.6, 513.092, 100, 0, 0),
+(11583, 0, 7, -7479.81, -1331.76, 498.759, 100, 0, 0),
+(11583, 0, 8, -7492.58, -1295.35, 488.091, 100, 0, 0),
+(11583, 0, 9, -7502, -1256.5, 476.758, 100, 20000, 0),
 
 (11983, 0, 1, -7443.8, -908.338, 465.355, 100, 0, 0),
 (11983, 0, 2, -7458.05, -889.8, 465.217, 100, 0, 0),
@@ -256,7 +266,7 @@ INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_
 (13996, 0, 12, -7506.71, -972.992, 423.607, 3.50924, 0, 0),
 (13996, 0, 13, -7514.11, -974.566, 423.477, 3.04035, 0, 0),
 (13996, 0, 14, -7519.98, -969.585, 423.429, 2.28873, 0, 0),
-(13996, 0, 15, -7526.96, -961.592, 427.805, 2.28873, 0, 1),
+(13996, 0, 15, -7526.96, -961.592, 427.805, 2.28873, 1, 1),
 
 (13996, 1, 1, -7487.86, -1036.58, 408.562, 4.01652, 0, 0),
 (13996, 1, 2, -7490.35, -1046.43, 408.571, 4.754, 0, 0),
@@ -270,7 +280,7 @@ INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_
 (13996, 1, 10, -7520.4, -979.642, 423.502, 0.994302, 0, 0),
 (13996, 1, 11, -7519.79, -976.306, 423.433, 2.06087, 0, 0),
 (13996, 1, 12, -7526.15, -964.647, 426.48, 1.98547, 0, 0),
-(13996, 1, 13, -7529.9, -959.013, 427.93, 2.16926, 0, 1),
+(13996, 1, 13, -7529.9, -959.013, 427.93, 2.16926, 1, 1),
 
 -- Ebonroc
 (14601, 0, 1, -7358.19, -994.32, 477.167, 3.72812, 0, 0),
@@ -285,7 +295,7 @@ INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_
 (14601, 0, 10, -7392.39, -983.383, 476.911, 3.53177, 0, 0),
 (14601, 0, 11, -7378.3, -977.789, 477.168, 3.53177, 0, 0),
 (14601, 0, 12, -7368.8, -983.092, 477.167, 2.40158, 0, 0),
-(14601, 0, 13, -7358.19, -994.32, 477.167, 3.72812, 0, 1460101);
+(14601, 0, 13, -7358.19, -994.32, 477.167, 3.72812, 10, 1460101);
 
 INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_pvp_state`, `emote`, `moveflags`, `auras`) VALUES
 (@CGUID+1, 0, 5, 1, 0, 0, 0, NULL); -- Lord Victor Nefarius
@@ -934,20 +944,20 @@ INSERT INTO `gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `posi
 
 DELETE FROM dbscripts_on_creature_movement WHERE id IN (1246101,1247101,1460101);
 INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
-(1246101, 1, 20, 1, 2, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 'Death Talon Overseer - random movement'),
-(1246101, 21, 20, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Death Talon Overseer - waypoint movement'),
-(1247101, 1, 15, 23017, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Blackwing Spellbinder - cast Arcane channeling'),
-(1460101, 1, 20, 1, 5, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 'Ebonroc - random movement'),
-(1460101, 300, 20, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Ebonroc - waypoint movement');
+(1246101, 1000, 20, 1, 2, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 'Death Talon Overseer - random movement'),
+(1246101, 21000, 20, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Death Talon Overseer - waypoint movement'),
+(1247101, 1000, 15, 23017, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Blackwing Spellbinder - cast Arcane channeling'),
+(1460101, 1000, 20, 1, 5, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 'Ebonroc - random movement'),
+(1460101, 300000, 20, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Ebonroc - waypoint movement');
 
 -- INSERT INTO `dbscripts_on_creature_death` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_go_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 
 DELETE FROM `dbscripts_on_go_template_use` WHERE `id` = 179148;
 INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
-(179148, 1, 11, 0, 0, 0, 179116, 50, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Open Chromaggus side door'),
-(179148, 2, 25, 1, 0, 0, 14020, 70, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Set Chromaggus run = true'),
-(179148, 3, 3, 0, 0, 0, 14020, 70, 0, 0, 0, 0, 0, -7484.91, -1072.98, 476.55, 2.18, 'Move Chromaggus in the center of the room');
+(179148, 1000, 11, 0, 0, 0, 179116, 70, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Open Chromaggus side door'),
+(179148, 2000, 25, 1, 0, 0, 14020, 70, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Set Chromaggus run = true'),
+(179148, 3000, 3, 0, 0, 0, 14020, 70, 0, 0, 0, 0, 0, -7484.91, -1072.98, 476.55, 2.18, 'Move Chromaggus in the center of the room');
 
 -- INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_event` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES

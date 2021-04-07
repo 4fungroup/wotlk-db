@@ -44,15 +44,10 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (@CGUID+19, 4, -3.96269, 134.198, -5.54034, 4.71083, 0, 0),
 (@CGUID+19, 5, -5.29153, 130.642, -5.53917, 4.81372, 10000, 1799305),
 (@CGUID+26, 1, -161.2056, 391.8802, -17.6449, 1.954769, 16000, 1799301),
-(@CGUID+26, 2, -161.64, 398.266, -17.734, 2.23573, 0, 0),
-(@CGUID+26, 3, -157.994, 405.455, -17.6956, 0.805515, 0, 1799304),
-(@CGUID+26, 4, -164.289, 411.495, -17.7221, 2.44307, 0, 0),
-(@CGUID+26, 5, -169.039, 407.652, -17.6985, 1.72701, 60000, 1799302),
+(@CGUID+26, 2, -162.1803, 409.8343, -17.70864, 100, 0, 1799304),
+(@CGUID+26, 3, -162.6438, 427.7587, -17.79374, 100, 60000, 1799302),
 (@CGUID+27, 1, -166.6638, 391.7631, -17.61385, 1.32645, 16000, 1799301),
-(@CGUID+27, 2, -166.6638, 391.7631, -17.61385, 1.32645, 0, 0),
-(@CGUID+27, 3, -170.008, 400.085, -17.696, 1.75349, 0, 0),
-(@CGUID+27, 4, -161.852, 407.783, -17.6985, 1.7294, 0, 1799303),
-(@CGUID+27, 5, -163.747, 428.245, -17.7801, 1.72701, 60000, 1799302),
+(@CGUID+27, 2, -171.44, 422.8947, -17.74458, 1.72701, 60000, 1799303),
 (@CGUID+36, 1, 50.9215, 293.818, -5.63032, 1.68861, 0, 0),
 (@CGUID+36, 2, 50.4144, 282.994, -5.64831, 4.90482, 0, 0),
 (@CGUID+40, 1, 13.2272, 178.591, -5.5404, 5.07526, 0, 0),
@@ -361,119 +356,119 @@ REPLACE INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath
 (19843, 0, 0, 1, 16, 0, 0, '30831'); -- Nethervine Trickster
 
 INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
-(@CGUID+15, @CGUID+16, 1167), -- Bloodwarder Protector -> Bloodwarder Protector
-(@CGUID+17, @CGUID+18, 1167), -- Bloodwarder Protector -> Bloodwarder Protector
-(@CGUID+6, @CGUID+19, 1167), -- Bloodwarder Protector -> Bloodwarder Protector
-(@CGUID+48, @CGUID+51, 1167), -- Bloodwarder Greenkeeper -> Bloodwarder Greenkeeper
-(@CGUID+180, @CGUID+51, 1167), -- Bloodwarder Mender -> Bloodwarder Greenkeeper
-(@CGUID+46, @CGUID+47, 1167), -- Bloodwarder Greenkeeper -> Bloodwarder Greenkeeper
-(@CGUID+178, @CGUID+47, 1167), -- Bloodwarder Mender -> Bloodwarder Greenkeeper
-(@CGUID+44, @CGUID+177, 1167), -- Bloodwarder Greenkeeper -> Bloodwarder Mender
-(@CGUID+45, @CGUID+177, 1167), -- Bloodwarder Greenkeeper -> Bloodwarder Mender
-(@CGUID+8, @CGUID+7, 1167), -- Bloodwarder Protector -> Bloodwarder Protector
-(@CGUID+49, @CGUID+179, 1167), -- Bloodwarder Greenkeeper -> Bloodwarder Mender
-(@CGUID+50, @CGUID+179, 1167), -- Bloodwarder Greenkeeper -> Bloodwarder Mender
-(@CGUID+30, @CGUID+28, 1167), -- Bloodfalcon -> Bloodwarder Falconer
-(@CGUID+31, @CGUID+28, 1167), -- Bloodfalcon -> Bloodwarder Falconer
-(@CGUID+32, @CGUID+28, 1167), -- Bloodfalcon -> Bloodwarder Falconer
-(@CGUID+9, @CGUID+10, 1167), -- Bloodwarder Protector -> Bloodwarder Protector
-(@CGUID+11, @CGUID+36, 1167), -- Bloodwarder Protector -> Bloodwarder Steward
-(@CGUID+12, @CGUID+36, 1167), -- Bloodwarder Protector -> Bloodwarder Steward
-(@CGUID+33, @CGUID+29, 1167), -- Bloodfalcon -> Bloodwarder Falconer
-(@CGUID+34, @CGUID+29, 1167), -- Bloodfalcon -> Bloodwarder Falconer
-(@CGUID+35, @CGUID+29, 1167), -- Bloodfalcon -> Bloodwarder Falconer
-(@CGUID+20, @CGUID+37, 1167), -- Bloodwarder Protector -> Bloodwarder Steward
-(@CGUID+21, @CGUID+37, 1167), -- Bloodwarder Protector -> Bloodwarder Steward
-(@CGUID+24, @CGUID+39, 1167), -- Bloodwarder Protector -> Bloodwarder Steward
-(@CGUID+25, @CGUID+39, 1167), -- Bloodwarder Protector -> Bloodwarder Steward
-(@CGUID+22, @CGUID+38, 1167), -- Bloodwarder Protector -> Bloodwarder Steward
-(@CGUID+23, @CGUID+38, 1167), -- Bloodwarder Protector -> Bloodwarder Steward
-(@CGUID+63, @CGUID+54, 1167), -- Sunseeker Botanist -> Sunseeker Researcher
-(@CGUID+86, @CGUID+54, 1167), -- Sunseeker Chemist -> Sunseeker Researcher
-(@CGUID+144, @CGUID+54, 1167), -- Greater Frayer -> Sunseeker Researcher
+(@CGUID+15, @CGUID+16, 1155), -- Bloodwarder Protector -> Bloodwarder Protector
+(@CGUID+17, @CGUID+18, 1155), -- Bloodwarder Protector -> Bloodwarder Protector
+(@CGUID+6, @CGUID+19, 1155), -- Bloodwarder Protector -> Bloodwarder Protector
+(@CGUID+48, @CGUID+51, 1155), -- Bloodwarder Greenkeeper -> Bloodwarder Greenkeeper
+(@CGUID+180, @CGUID+51, 1155), -- Bloodwarder Mender -> Bloodwarder Greenkeeper
+(@CGUID+46, @CGUID+47, 1155), -- Bloodwarder Greenkeeper -> Bloodwarder Greenkeeper
+(@CGUID+178, @CGUID+47, 1155), -- Bloodwarder Mender -> Bloodwarder Greenkeeper
+(@CGUID+44, @CGUID+177, 1155), -- Bloodwarder Greenkeeper -> Bloodwarder Mender
+(@CGUID+45, @CGUID+177, 1155), -- Bloodwarder Greenkeeper -> Bloodwarder Mender
+(@CGUID+8, @CGUID+7, 1155), -- Bloodwarder Protector -> Bloodwarder Protector
+(@CGUID+49, @CGUID+179, 1155), -- Bloodwarder Greenkeeper -> Bloodwarder Mender
+(@CGUID+50, @CGUID+179, 1155), -- Bloodwarder Greenkeeper -> Bloodwarder Mender
+(@CGUID+30, @CGUID+28, 1155), -- Bloodfalcon -> Bloodwarder Falconer
+(@CGUID+31, @CGUID+28, 1155), -- Bloodfalcon -> Bloodwarder Falconer
+(@CGUID+32, @CGUID+28, 1155), -- Bloodfalcon -> Bloodwarder Falconer
+(@CGUID+9, @CGUID+10, 1155), -- Bloodwarder Protector -> Bloodwarder Protector
+(@CGUID+11, @CGUID+36, 1155), -- Bloodwarder Protector -> Bloodwarder Steward
+(@CGUID+12, @CGUID+36, 1155), -- Bloodwarder Protector -> Bloodwarder Steward
+(@CGUID+33, @CGUID+29, 1155), -- Bloodfalcon -> Bloodwarder Falconer
+(@CGUID+34, @CGUID+29, 1155), -- Bloodfalcon -> Bloodwarder Falconer
+(@CGUID+35, @CGUID+29, 1155), -- Bloodfalcon -> Bloodwarder Falconer
+(@CGUID+20, @CGUID+37, 1155), -- Bloodwarder Protector -> Bloodwarder Steward
+(@CGUID+21, @CGUID+37, 1155), -- Bloodwarder Protector -> Bloodwarder Steward
+(@CGUID+24, @CGUID+39, 1155), -- Bloodwarder Protector -> Bloodwarder Steward
+(@CGUID+25, @CGUID+39, 1155), -- Bloodwarder Protector -> Bloodwarder Steward
+(@CGUID+22, @CGUID+38, 1155), -- Bloodwarder Protector -> Bloodwarder Steward
+(@CGUID+23, @CGUID+38, 1155), -- Bloodwarder Protector -> Bloodwarder Steward
+(@CGUID+63, @CGUID+54, 1155), -- Sunseeker Botanist -> Sunseeker Researcher
+(@CGUID+86, @CGUID+54, 1155), -- Sunseeker Chemist -> Sunseeker Researcher
+(@CGUID+144, @CGUID+54, 1155), -- Greater Frayer -> Sunseeker Researcher
 (@CGUID+145, @CGUID+64, 1679), -- Greater Frayer -> Sunseeker Botanist
-(@CGUID+57, @CGUID+89, 1167), -- Sunseeker Researcher -> Sunseeker Chemist
-(@CGUID+58, @CGUID+89, 1167), -- Sunseeker Researcher -> Sunseeker Chemist
-(@CGUID+67, @CGUID+89, 1167), -- Sunseeker Botanist -> Sunseeker Chemist
-(@CGUID+148, @CGUID+89, 1167), -- Greater Frayer -> Sunseeker Chemist
+(@CGUID+57, @CGUID+89, 1155), -- Sunseeker Researcher -> Sunseeker Chemist
+(@CGUID+58, @CGUID+89, 1155), -- Sunseeker Researcher -> Sunseeker Chemist
+(@CGUID+67, @CGUID+89, 1155), -- Sunseeker Botanist -> Sunseeker Chemist
+(@CGUID+148, @CGUID+89, 1155), -- Greater Frayer -> Sunseeker Chemist
 (@CGUID+147, @CGUID+66, 1679), -- Greater Frayer -> Sunseeker Botanist
-(@CGUID+56, @CGUID+87, 1167), -- Sunseeker Researcher -> Sunseeker Chemist
-(@CGUID+62, @CGUID+87, 1167), -- Sunseeker Researcher -> Sunseeker Chemist
-(@CGUID+55, @CGUID+88, 1167), -- Sunseeker Researcher -> Sunseeker Chemist
-(@CGUID+59, @CGUID+88, 1167), -- Sunseeker Researcher -> Sunseeker Chemist
-(@CGUID+65, @CGUID+88, 1167), -- Sunseeker Botanist -> Sunseeker Chemist
-(@CGUID+146, @CGUID+88, 1167), -- Greater Frayer -> Sunseeker Chemist
-(@CGUID+70, @CGUID+52, 1167), -- Frayer -> Sunseeker Geomancer
-(@CGUID+71, @CGUID+52, 1167), -- Frayer -> Sunseeker Geomancer
-(@CGUID+72, @CGUID+52, 1167), -- Frayer -> Sunseeker Geomancer
-(@CGUID+73, @CGUID+52, 1167), -- Frayer -> Sunseeker Geomancer
-(@CGUID+74, @CGUID+52, 1167), -- Frayer -> Sunseeker Geomancer
-(@CGUID+75, @CGUID+52, 1167), -- Frayer -> Sunseeker Geomancer
-(@CGUID+76, @CGUID+52, 1167), -- Frayer -> Sunseeker Geomancer
-(@CGUID+77, @CGUID+52, 1167), -- Frayer -> Sunseeker Geomancer
-(@CGUID+60, @CGUID+68, 1167), -- Sunseeker Researcher -> Sunseeker Botanist
-(@CGUID+149, @CGUID+68, 1167), -- Greater Frayer -> Sunseeker Botanist
-(@CGUID+69, @CGUID+90, 1167), -- Sunseeker Botanist -> Sunseeker Chemist
-(@CGUID+150, @CGUID+90, 1167), -- Greater Frayer -> Sunseeker Chemist
-(@CGUID+78, @CGUID+53, 1167), -- Frayer -> Sunseeker Geomancer
-(@CGUID+79, @CGUID+53, 1167), -- Frayer -> Sunseeker Geomancer
-(@CGUID+80, @CGUID+53, 1167), -- Frayer -> Sunseeker Geomancer
-(@CGUID+81, @CGUID+53, 1167), -- Frayer -> Sunseeker Geomancer
-(@CGUID+82, @CGUID+53, 1167), -- Frayer -> Sunseeker Geomancer
-(@CGUID+83, @CGUID+53, 1167), -- Frayer -> Sunseeker Geomancer
-(@CGUID+84, @CGUID+53, 1167), -- Frayer -> Sunseeker Geomancer
-(@CGUID+85, @CGUID+53, 1167), -- Frayer -> Sunseeker Geomancer
-(@CGUID+92, @CGUID+93, 1167), -- Sunseeker Channeler -> Sunseeker Channeler
-(@CGUID+94, @CGUID+95, 1167), -- Sunseeker Channeler -> Sunseeker Channeler
-(@CGUID+114, @CGUID+120, 1167), -- Sunseeker Herbalist -> Sunseeker Harvester
-(@CGUID+115, @CGUID+120, 1167), -- Sunseeker Herbalist -> Sunseeker Harvester
+(@CGUID+56, @CGUID+87, 1155), -- Sunseeker Researcher -> Sunseeker Chemist
+(@CGUID+62, @CGUID+87, 1155), -- Sunseeker Researcher -> Sunseeker Chemist
+(@CGUID+55, @CGUID+88, 1155), -- Sunseeker Researcher -> Sunseeker Chemist
+(@CGUID+59, @CGUID+88, 1155), -- Sunseeker Researcher -> Sunseeker Chemist
+(@CGUID+65, @CGUID+88, 1155), -- Sunseeker Botanist -> Sunseeker Chemist
+(@CGUID+146, @CGUID+88, 1155), -- Greater Frayer -> Sunseeker Chemist
+(@CGUID+70, @CGUID+52, 1155), -- Frayer -> Sunseeker Geomancer
+(@CGUID+71, @CGUID+52, 1155), -- Frayer -> Sunseeker Geomancer
+(@CGUID+72, @CGUID+52, 1155), -- Frayer -> Sunseeker Geomancer
+(@CGUID+73, @CGUID+52, 1155), -- Frayer -> Sunseeker Geomancer
+(@CGUID+74, @CGUID+52, 1155), -- Frayer -> Sunseeker Geomancer
+(@CGUID+75, @CGUID+52, 1155), -- Frayer -> Sunseeker Geomancer
+(@CGUID+76, @CGUID+52, 1155), -- Frayer -> Sunseeker Geomancer
+(@CGUID+77, @CGUID+52, 1155), -- Frayer -> Sunseeker Geomancer
+(@CGUID+60, @CGUID+68, 1155), -- Sunseeker Researcher -> Sunseeker Botanist
+(@CGUID+149, @CGUID+68, 1155), -- Greater Frayer -> Sunseeker Botanist
+(@CGUID+69, @CGUID+90, 1155), -- Sunseeker Botanist -> Sunseeker Chemist
+(@CGUID+150, @CGUID+90, 1155), -- Greater Frayer -> Sunseeker Chemist
+(@CGUID+78, @CGUID+53, 1155), -- Frayer -> Sunseeker Geomancer
+(@CGUID+79, @CGUID+53, 1155), -- Frayer -> Sunseeker Geomancer
+(@CGUID+80, @CGUID+53, 1155), -- Frayer -> Sunseeker Geomancer
+(@CGUID+81, @CGUID+53, 1155), -- Frayer -> Sunseeker Geomancer
+(@CGUID+82, @CGUID+53, 1155), -- Frayer -> Sunseeker Geomancer
+(@CGUID+83, @CGUID+53, 1155), -- Frayer -> Sunseeker Geomancer
+(@CGUID+84, @CGUID+53, 1155), -- Frayer -> Sunseeker Geomancer
+(@CGUID+85, @CGUID+53, 1155), -- Frayer -> Sunseeker Geomancer
+(@CGUID+92, @CGUID+93, 1155), -- Sunseeker Channeler -> Sunseeker Channeler
+(@CGUID+94, @CGUID+95, 1155), -- Sunseeker Channeler -> Sunseeker Channeler
+(@CGUID+114, @CGUID+120, 1155), -- Sunseeker Herbalist -> Sunseeker Harvester
+(@CGUID+115, @CGUID+120, 1155), -- Sunseeker Herbalist -> Sunseeker Harvester
 (@CGUID+128, @CGUID+133, 1679), -- Nethervine Inciter -> Nethervine Reaper
-(@CGUID+126, @CGUID+125, 1167), -- Nethervine Inciter -> Nethervine Inciter
-(@CGUID+131, @CGUID+125, 1167), -- Nethervine Reaper -> Nethervine Inciter
-(@CGUID+132, @CGUID+125, 1167), -- Nethervine Reaper -> Nethervine Inciter
-(@CGUID+124, @CGUID+123, 1167), -- Nethervine Inciter -> Nethervine Inciter
-(@CGUID+129, @CGUID+123, 1167), -- Nethervine Reaper -> Nethervine Inciter
-(@CGUID+130, @CGUID+123, 1167), -- Nethervine Reaper -> Nethervine Inciter
-(@CGUID+98, @CGUID+117, 1167), -- Sunseeker Gene-Splicer -> Sunseeker Harvester
-(@CGUID+118, @CGUID+117, 1167), -- Sunseeker Harvester -> Sunseeker Harvester
-(@CGUID+153, @CGUID+117, 1167), -- Mutate Fleshlasher -> Sunseeker Harvester
-(@CGUID+154, @CGUID+117, 1167), -- Mutate Fleshlasher -> Sunseeker Harvester
-(@CGUID+97, @CGUID+151, 1167), -- Sunseeker Gene-Splicer -> Mutate Fleshlasher
-(@CGUID+112, @CGUID+151, 1167), -- Sunseeker Herbalist -> Mutate Fleshlasher
-(@CGUID+116, @CGUID+151, 1167), -- Sunseeker Harvester -> Mutate Fleshlasher
-(@CGUID+152, @CGUID+151, 1167), -- Mutate Fleshlasher -> Mutate Fleshlasher
-(@CGUID+99, @CGUID+155, 1167), -- Sunseeker Gene-Splicer -> Mutate Fleshlasher
-(@CGUID+113, @CGUID+155, 1167), -- Sunseeker Herbalist -> Mutate Fleshlasher
-(@CGUID+119, @CGUID+155, 1167), -- Sunseeker Harvester -> Mutate Fleshlasher
-(@CGUID+156, @CGUID+155, 1167), -- Mutate Fleshlasher -> Mutate Fleshlasher
-(@CGUID+13, @CGUID+14, 1167), -- Bloodwarder Protector -> Bloodwarder Protector
-(@CGUID+134, @CGUID+183, 1167), -- Mutate Fear-Shrieker -> Mutate Horror
-(@CGUID+135, @CGUID+183, 1167), -- Mutate Fear-Shrieker -> Mutate Horror
-(@CGUID+184, @CGUID+183, 1167), -- Mutate Horror -> Mutate Horror
-(@CGUID+137, @CGUID+136, 1167), -- Mutate Fear-Shrieker -> Mutate Fear-Shrieker
-(@CGUID+185, @CGUID+136, 1167), -- Mutate Horror -> Mutate Fear-Shrieker
-(@CGUID+186, @CGUID+136, 1167), -- Mutate Horror -> Mutate Fear-Shrieker
-(@CGUID+138, @CGUID+187, 1167), -- Mutate Fear-Shrieker -> Mutate Horror
-(@CGUID+139, @CGUID+187, 1167), -- Mutate Fear-Shrieker -> Mutate Horror
-(@CGUID+188, @CGUID+187, 1167), -- Mutate Horror -> Mutate Horror
-(@CGUID+157, @CGUID+158, 1167), -- Frayer Wildling -> Frayer Wildling
-(@CGUID+159, @CGUID+158, 1167), -- Frayer Wildling -> Frayer Wildling
-(@CGUID+160, @CGUID+158, 1167), -- Frayer Wildling -> Frayer Wildling
-(@CGUID+161, @CGUID+158, 1167), -- Frayer Wildling -> Frayer Wildling
-(@CGUID+162, @CGUID+158, 1167), -- Frayer Wildling -> Frayer Wildling
-(@CGUID+163, @CGUID+158, 1167), -- Frayer Wildling -> Frayer Wildling
-(@CGUID+164, @CGUID+158, 1167), -- Frayer Wildling -> Frayer Wildling
-(@CGUID+165, @CGUID+158, 1167), -- Frayer Wildling -> Frayer Wildling
-(@CGUID+166, @CGUID+158, 1167), -- Frayer Wildling -> Frayer Wildling
-(@CGUID+167, @CGUID+175, 1167), -- Frayer Wildling -> Frayer Wildling
-(@CGUID+168, @CGUID+175, 1167), -- Frayer Wildling -> Frayer Wildling
-(@CGUID+169, @CGUID+175, 1167), -- Frayer Wildling -> Frayer Wildling
-(@CGUID+170, @CGUID+175, 1167), -- Frayer Wildling -> Frayer Wildling
-(@CGUID+171, @CGUID+175, 1167), -- Frayer Wildling -> Frayer Wildling
-(@CGUID+172, @CGUID+175, 1167), -- Frayer Wildling -> Frayer Wildling
-(@CGUID+173, @CGUID+175, 1167), -- Frayer Wildling -> Frayer Wildling
-(@CGUID+174, @CGUID+175, 1167), -- Frayer Wildling -> Frayer Wildling
-(@CGUID+176, @CGUID+175, 1167); -- Frayer Wildling -> Frayer Wildling
+(@CGUID+126, @CGUID+125, 1155), -- Nethervine Inciter -> Nethervine Inciter
+(@CGUID+131, @CGUID+125, 1155), -- Nethervine Reaper -> Nethervine Inciter
+(@CGUID+132, @CGUID+125, 1155), -- Nethervine Reaper -> Nethervine Inciter
+(@CGUID+124, @CGUID+123, 1155), -- Nethervine Inciter -> Nethervine Inciter
+(@CGUID+129, @CGUID+123, 1155), -- Nethervine Reaper -> Nethervine Inciter
+(@CGUID+130, @CGUID+123, 1155), -- Nethervine Reaper -> Nethervine Inciter
+(@CGUID+98, @CGUID+117, 1155), -- Sunseeker Gene-Splicer -> Sunseeker Harvester
+(@CGUID+118, @CGUID+117, 1155), -- Sunseeker Harvester -> Sunseeker Harvester
+(@CGUID+153, @CGUID+117, 1155), -- Mutate Fleshlasher -> Sunseeker Harvester
+(@CGUID+154, @CGUID+117, 1155), -- Mutate Fleshlasher -> Sunseeker Harvester
+(@CGUID+97, @CGUID+151, 1155), -- Sunseeker Gene-Splicer -> Mutate Fleshlasher
+(@CGUID+112, @CGUID+151, 1155), -- Sunseeker Herbalist -> Mutate Fleshlasher
+(@CGUID+116, @CGUID+151, 1155), -- Sunseeker Harvester -> Mutate Fleshlasher
+(@CGUID+152, @CGUID+151, 1155), -- Mutate Fleshlasher -> Mutate Fleshlasher
+(@CGUID+99, @CGUID+155, 1155), -- Sunseeker Gene-Splicer -> Mutate Fleshlasher
+(@CGUID+113, @CGUID+155, 1155), -- Sunseeker Herbalist -> Mutate Fleshlasher
+(@CGUID+119, @CGUID+155, 1155), -- Sunseeker Harvester -> Mutate Fleshlasher
+(@CGUID+156, @CGUID+155, 1155), -- Mutate Fleshlasher -> Mutate Fleshlasher
+(@CGUID+13, @CGUID+14, 1155), -- Bloodwarder Protector -> Bloodwarder Protector
+(@CGUID+134, @CGUID+183, 1155), -- Mutate Fear-Shrieker -> Mutate Horror
+(@CGUID+135, @CGUID+183, 1155), -- Mutate Fear-Shrieker -> Mutate Horror
+(@CGUID+184, @CGUID+183, 1155), -- Mutate Horror -> Mutate Horror
+(@CGUID+137, @CGUID+136, 1155), -- Mutate Fear-Shrieker -> Mutate Fear-Shrieker
+(@CGUID+185, @CGUID+136, 1155), -- Mutate Horror -> Mutate Fear-Shrieker
+(@CGUID+186, @CGUID+136, 1155), -- Mutate Horror -> Mutate Fear-Shrieker
+(@CGUID+138, @CGUID+187, 1155), -- Mutate Fear-Shrieker -> Mutate Horror
+(@CGUID+139, @CGUID+187, 1155), -- Mutate Fear-Shrieker -> Mutate Horror
+(@CGUID+188, @CGUID+187, 1155), -- Mutate Horror -> Mutate Horror
+(@CGUID+157, @CGUID+158, 1155), -- Frayer Wildling -> Frayer Wildling
+(@CGUID+159, @CGUID+158, 1155), -- Frayer Wildling -> Frayer Wildling
+(@CGUID+160, @CGUID+158, 1155), -- Frayer Wildling -> Frayer Wildling
+(@CGUID+161, @CGUID+158, 1155), -- Frayer Wildling -> Frayer Wildling
+(@CGUID+162, @CGUID+158, 1155), -- Frayer Wildling -> Frayer Wildling
+(@CGUID+163, @CGUID+158, 1155), -- Frayer Wildling -> Frayer Wildling
+(@CGUID+164, @CGUID+158, 1155), -- Frayer Wildling -> Frayer Wildling
+(@CGUID+165, @CGUID+158, 1155), -- Frayer Wildling -> Frayer Wildling
+(@CGUID+166, @CGUID+158, 1155), -- Frayer Wildling -> Frayer Wildling
+(@CGUID+167, @CGUID+175, 1155), -- Frayer Wildling -> Frayer Wildling
+(@CGUID+168, @CGUID+175, 1155), -- Frayer Wildling -> Frayer Wildling
+(@CGUID+169, @CGUID+175, 1155), -- Frayer Wildling -> Frayer Wildling
+(@CGUID+170, @CGUID+175, 1155), -- Frayer Wildling -> Frayer Wildling
+(@CGUID+171, @CGUID+175, 1155), -- Frayer Wildling -> Frayer Wildling
+(@CGUID+172, @CGUID+175, 1155), -- Frayer Wildling -> Frayer Wildling
+(@CGUID+173, @CGUID+175, 1155), -- Frayer Wildling -> Frayer Wildling
+(@CGUID+174, @CGUID+175, 1155), -- Frayer Wildling -> Frayer Wildling
+(@CGUID+176, @CGUID+175, 1155); -- Frayer Wildling -> Frayer Wildling
 
 -- REPLACE INTO `creature_linking_template` (`entry`, `map`, `master_entry`, `flag`, `search_range`) VALUES
 
@@ -721,7 +716,7 @@ INSERT INTO `game_event_creature_data` (`guid`, `entry_id`, `modelid`, `equipmen
 
 -- INSERT INTO `pool_pool` (`pool_id`, `mother_pool`, `chance`, `description`) VALUES
 
-INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
+REPLACE INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
 (@PGUID+21, 2, 'The Botanica - Master Felweed (181270) / Terocone (181277) Pool'), -- gameobject
 (@PGUID+22, 1, 'The Botanica - Master Dreaming Glory (181271) Pool'),
 (@PGUID+23, 1, 'The Botanica - Master Netherbloom (181279) Pool'),
@@ -759,61 +754,65 @@ INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalon
 (1797501, 0, 0, 0, 0, 0, 0, 0, 0, 2000020095, 2000020096, 2000020097, 2000020098, 0, 0, 0, 0, 'High Botanist Freywinn - Text'),
 (1797601, 0, 0, 0, 0, 0, 0, 0, 0, 2000020091, 0, 0, 0, 0, 0, 0, 0, 'Commander Sarannis - Text'),
 (1797602, 0, 1, 66, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Commander Sarannis (Botanica) - Salute'),
-(1797602, 1, 1, 66, 0, 0, 18404, @CGUID+37, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Commander Sarannis (Botanica) - Bloodwarder Steward Salute'),
-(1797602, 1, 1, 66, 0, 0, 17993, @CGUID+20, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Commander Sarannis (Botanica) - Bloodwarder Protector Salute'),
-(1797602, 1, 1, 66, 0, 0, 17993, @CGUID+21, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Commander Sarannis (Botanica) - Bloodwarder Protector Salute'),
+(1797602, 1000, 1, 66, 0, 0, 18404, @CGUID+37, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Commander Sarannis (Botanica) - Bloodwarder Steward Salute'),
+(1797602, 1000, 1, 66, 0, 0, 17993, @CGUID+20, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Commander Sarannis (Botanica) - Bloodwarder Protector Salute'),
+(1797602, 1000, 1, 66, 0, 0, 17993, @CGUID+21, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Commander Sarannis (Botanica) - Bloodwarder Protector Salute'),
 (1797603, 0, 1, 66, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Commander Sarannis (Botanica) - Salute'),
-(1797603, 1, 1, 66, 0, 0, 17993, @CGUID+24, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Commander Sarannis (Botanica) - Bloodwarder Protector Salute'),
-(1797603, 1, 1, 66, 0, 0, 17993, @CGUID+25, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Commander Sarannis (Botanica) - Bloodwarder Protector Salute'),
-(1797603, 1, 1, 66, 0, 0, 18404, @CGUID+39, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Commander Sarannis (Botanica) - Bloodwarder Steward Salute'),
+(1797603, 1000, 1, 66, 0, 0, 17993, @CGUID+24, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Commander Sarannis (Botanica) - Bloodwarder Protector Salute'),
+(1797603, 1000, 1, 66, 0, 0, 17993, @CGUID+25, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Commander Sarannis (Botanica) - Bloodwarder Protector Salute'),
+(1797603, 1000, 1, 66, 0, 0, 18404, @CGUID+39, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Commander Sarannis (Botanica) - Bloodwarder Steward Salute'),
 (1797604, 0, 1, 66, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Commander Sarannis (Botanica) - Salute'),
-(1797604, 1, 1, 66, 0, 0, 18404, @CGUID+38, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Commander Sarannis (Botanica) - Bloodwarder Steward Salute'),
-(1797604, 1, 1, 66, 0, 0, 17993, @CGUID+22, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Commander Sarannis (Botanica) - Bloodwarder Protector Salute'),
-(1797604, 1, 1, 66, 0, 0, 17993, @CGUID+23, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Commander Sarannis (Botanica) - Bloodwarder Protector Salute'),
+(1797604, 1000, 1, 66, 0, 0, 18404, @CGUID+38, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Commander Sarannis (Botanica) - Bloodwarder Steward Salute'),
+(1797604, 1000, 1, 66, 0, 0, 17993, @CGUID+22, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Commander Sarannis (Botanica) - Bloodwarder Protector Salute'),
+(1797604, 1000, 1, 66, 0, 0, 17993, @CGUID+23, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Commander Sarannis (Botanica) - Bloodwarder Protector Salute'),
 (1799301, 0, 25, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Sunseeker Protector (Botanica) - Run Mode On'),
-(1799302, 0, 15, 37493, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Sunseeker Protector (Botanica) - Feign Death'),
-(1799302, 15, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Sunseeker Protector (Botanica) - Despawn'),
-(1799303, 0, 0, 0, 0, 0, 0, 0, 0, 2000020099, 0, 0, 0, 0, 0, 0, 0, 'Bloodwarder Protector - Text'),
-(1799304, 0, 0, 0, 0, 0, 0, 0, 0, 2000020100, 0, 0, 0, 0, 0, 0, 0, 'Bloodwarder Protector - Text'),
-(1799305, 1, 1, 66, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Bloodwarder Protector (Botanica) - Salute'),
-(1799305, 3, 1, 333, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Bloodwarder Protector (Botanica) - Ready For Combat'),
-(1799305, 3, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Bloodwarder Protector (Botanica) - Disable Waypoint Movement'),
-(1842001, 1, 0, 0, 0, 0, 0, 0, 0, 2000020092, 0, 0, 0, 0, 0, 0, 0, 'Sunseeker Geomancer - say'),
-(1842002, 1, 15, 34183, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
-(1842003, 1, 15, 34185, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
-(1842004, 1, 15, 34170, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
-(1842004, 3, 15, 34170, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
-(1842004, 5, 15, 34170, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
-(1842005, 5, 15, 34167, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
-(1842006, 5, 15, 34169, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
-(1842101, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
-(1842101, 6, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(1799301, 0, 22, 190, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Sunseeker Protector (Botanica) - Set Faction 190'),
+(1799301, 0, 4, 46, 33587264, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Sunseeker Protector (Botanica) - (UNIT_FLAG_UNK_6 + UNIT_FLAG_SWIMMING) + UNIT_FLAG_NOT_SELECTABLE'),
+(1799302, 0, 15, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Sunseeker Protector (Botanica) - Cast Suicide'),
+(1799302, 17000, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Sunseeker Protector (Botanica) - Despawn'),
+(1799303, 300, 0, 0, 0, 0, 0, 0, 0, 2000020100, 0, 0, 0, 0, 0, 0, 0, 'Bloodwarder Protector - Text'),
+(1799303, 1700, 15, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Sunseeker Protector (Botanica) - Cast Suicide'), -- 3700
+(1799303, 18200, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Sunseeker Protector (Botanica) - Despawn'),
+(1799304, 200, 0, 0, 0, 0, 0, 0, 0, 2000020099, 0, 0, 0, 0, 0, 0, 0, 'Bloodwarder Protector - Text'),
+(1799305, 1000, 1, 66, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Bloodwarder Protector (Botanica) - Salute'),
+(1799305, 3000, 1, 333, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Bloodwarder Protector (Botanica) - Ready For Combat'),
+(1799305, 3000, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Bloodwarder Protector (Botanica) - Disable Waypoint Movement'),
+(1842001, 1000, 0, 0, 0, 0, 0, 0, 0, 2000020092, 0, 0, 0, 0, 0, 0, 0, 'Sunseeker Geomancer - say'),
+(1842002, 1000, 15, 34183, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(1842003, 1000, 15, 34185, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(1842004, 1000, 15, 34170, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(1842004, 3000, 15, 34170, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(1842004, 5000, 15, 34170, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(1842005, 5000, 15, 34167, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(1842006, 5000, 15, 34169, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(1842101, 1000, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
+(1842101, 6000, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ''),
 (1842201, 0, 0, 0, 0, 0, 0, 0, 0, 2000020093, 0, 0, 0, 0, 0, 0, 0, ''),
 (1842202, 0, 0, 0, 0, 0, 0, 0, 0, 2000020094, 0, 0, 0, 0, 0, 0, 0, ''),
 (1842203, 0, 15, 34254, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Sunseeker Botanist - Cast Rejuvenate Plant'),
 (1950501, 0, 15, 34221, 0, 0, 19555, 30, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Sunseeker Channeler (Botanica) - Crystal Channel TK Atrium Channel Target'),
 (1950502, 0, 15, 34200, 0, 0, 19511, @CGUID+122, 17, 0, 0, 0, 0, 0, 0, 0, 0, 'Sunseeker Channeler (Botanica) - Crystal Channel Nethervine Inciter'),
-(1950502, 7, 15, 34187, 0, 0, 19511, @CGUID+122, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Sunseeker Channeler (Botanica) - Nethervine Inciter Casts Sunseeker Blessing'),
+(1950502, 7000, 15, 34187, 0, 0, 19511, @CGUID+122, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Sunseeker Channeler (Botanica) - Nethervine Inciter Casts Sunseeker Blessing'),
 (1950503, 0, 15, 34221, 0, 0, 19555, 15, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Sunseeker Channeler (Botanica) - Crystal Channel TK Atrium Channel Target'),
-(1950504, 2, 15, 34222, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Sunseeker Channeler (Botanica) - Cast Sunseeker Blessing AOE'),
-(1950505, 1, 1, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Sunseeker Channeler (Botanica) - Emote'),
-(1950506, 1, 15, 34173, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Sunseeker Channeler (Botanica) - Cast Sunseeker Blessing'),
-(1950701, 0, 4, 59, 33587264, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Sunseeker Gene-Splicer - (UNIT_FLAG_UNK_6 + UNIT_FLAG_SWIMMING) + UNIT_FLAG_NOT_SELECTABLE'),
+(1950504, 2000, 15, 34222, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Sunseeker Channeler (Botanica) - Cast Sunseeker Blessing AOE'),
+(1950505, 1000, 1, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Sunseeker Channeler (Botanica) - Emote'),
+(1950506, 1000, 15, 34173, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Sunseeker Channeler (Botanica) - Cast Sunseeker Blessing'),
+(1950701, 0, 4, 59, 33587264, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Sunseeker Gene-Splicer - (UNIT_FLAG_UNK_6 + UNIT_FLAG_SWIMMING) + UNIT_FLAG_NOT_SELECTABLE'), -- wotlk has 59
 (1950701, 0, 22, 190, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Sunseeker Gene-Splicer - Set Faction 190'),
-(1950701, 1, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Sunseeker Gene-Splicer - MovementType 0');
+(1950701, 1000, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Sunseeker Gene-Splicer - MovementType 0');
 
 DELETE FROM `dbscript_string` WHERE `entry` IN (2000020091,2000020092,2000020093,2000020094,2000020095,2000020096,2000020097,2000020098,2000020099,2000020100);
-INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES
-(2000020091, 'We must not fail our leader!  Kael''thas will redeem us!', 0, 1, 0, 4, 'Commander Sarannis in Botanica'),
-(2000020092, 'Hmm...Frost, Fire, and Arcane defenses respond faster than Batch 7, but Nature defenses remain passive.', 0, 0, 0, 1, 'Sunseeker Geomancer in Botanica'),
-(2000020093, 'Hmm...', 0, 0, 0, 1, 'Sunseeker Botanist in Botanica'),
-(2000020094, 'Yes. That did the trick.', 0, 0, 0, 1, 'Sunseeker Botanist in Botanica'),
-(2000020095, '...mumble...Petals of Fire...mumble...', 0, 0, 0, 69, 'High Botanist Freywinn in Botanica'),
-(2000020096, '...mumble mumble...', 0, 0, 0, 69, 'High Botanist Freywinn in Botanica'),
-(2000020097, '...with the right mixture, perhaps...', 0, 0, 0, 69, 'High Botanist Freywinn in Botanica'),
-(2000020098, '...thorny vines...mumble...ouch!', 0, 0, 0, 69, 'High Botanist Freywinn in Botanica'),
-(2000020099, 'Get out of here, there are too many of them! Escape while you can!', 0, 1, 0, 0, 'Sunseeker Protector in Botanica'),
-(2000020100, 'Help! Someone help us!', 0, 1, 0, 0, 'Sunseeker Protector in Botanica');
+INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `broadcast_text_id`, `comment`) VALUES
+(2000020091, 'We must not fail our leader!  Kael''thas will redeem us!', 0, 1, 0, 4, 16861, 'Commander Sarannis in Botanica'),
+(2000020092, 'Hmm...Frost, Fire, and Arcane defenses respond faster than Batch 7, but Nature defenses remain passive.', 0, 0, 0, 1, 17178, 'Sunseeker Geomancer in Botanica'),
+(2000020093, 'Hmm...', 0, 0, 0, 1, 17000, 'Sunseeker Botanist in Botanica'),
+(2000020094, 'Yes. That did the trick.', 0, 0, 0, 1, 16999, 'Sunseeker Botanist in Botanica'),
+(2000020095, '...mumble...Petals of Fire...mumble...', 0, 0, 0, 69, 16945, 'High Botanist Freywinn in Botanica'),
+(2000020096, '...mumble mumble...', 0, 0, 0, 69, 16946, 'High Botanist Freywinn in Botanica'),
+(2000020097, '...with the right mixture, perhaps...', 0, 0, 0, 69, 16948, 'High Botanist Freywinn in Botanica'),
+(2000020098, '...thorny vines...mumble...ouch!', 0, 0, 0, 69, 16947, 'High Botanist Freywinn in Botanica'),
+(2000020099, 'Get out of here, there are too many of them! Escape while you can!', 0, 1, 0, 0, 16993, 'Sunseeker Protector in Botanica'),
+(2000020100, 'Help! Someone help us!', 0, 1, 0, 0, 16994, 'Sunseeker Protector in Botanica');
 
 -- INSERT INTO `dbscripts_on_creature_death` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_go_use` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES

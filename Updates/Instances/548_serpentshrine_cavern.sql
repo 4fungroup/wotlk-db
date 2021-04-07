@@ -486,73 +486,73 @@ INSERT INTO `creature_movement_template` (`entry`, `pathId`, `point`, `position_
 (21253, 0,25,-165.536,-369.548,-1.62264,100,0,0),
 (21253, 0,26,-151.345,-388.268,-1.61304,100,0,0),
 (21253, 0,27,-143.414,-408.293,0.834221,100,0,0),
-(21253, 0,28,-147.303,-429.347,1.07458,100,0,1), -- despawn self
+(21253, 0,28,-147.303,-429.347,1.07458,100,1,1), -- despawn self
 -- Coilfang Guardian 1
 (21873, 0, 1, 106.962, -468.5177, -21.63681, 100, 0, 0),
 (21873, 0, 2, 91.57517, -454.056, -21.75797, 100, 0, 0),
 (21873, 0, 3, 76.18838, -439.5943, -21.87912, 100, 0, 0),
 (21873, 0, 4, 66.96297, -435.1991, -22.1097, 100, 0, 0),
 (21873, 0, 5, 63.72945, -432.9376, -19.51117, 100, 0, 0),
-(21873, 0, 6, 63.72945, -432.9376, -19.51117, 100, 0, 0),
+(21873, 0, 6, 63.72945, -432.9376, -19.51117, 100, 1000, 0),
 -- Coilfang Guardian 2
 (21873, 1, 1, 65.17899, -340.6617, -21.5217, 100, 0, 0),
 (21873, 1, 2, 60.30697, -351.5978, -21.66059, 100, 0, 0),
 (21873, 1, 3, 55.43496, -362.534, -21.79948, 100, 0, 0),
 (21873, 1, 4, 43.63028, -383.6669, -21.65929, 100, 0, 0),
 (21873, 1, 5, 39.98455, -388.5671, -19.30772, 100, 0, 0),
-(21873, 1, 6, 39.98455, -388.5671, -19.30772, 100, 0, 0),
+(21873, 1, 6, 39.98455, -388.5671, -19.30772, 100, 1000, 0),
 -- Coilfang Guardian 3
 (21873, 2, 1, -49.6826, -414.9719, -20.54604, 100, 0, 0),
 (21873, 2, 2, -34.9814, -418.4629, -21.49302, 100, 0, 0),
 (21873, 2, 3, -20.28021, -421.9539, -22.44001, 100, 0, 0),
 (21873, 2, 4, 5.458216, -424.9785, -21.60531, 100, 0, 0),
 (21873, 2, 5, 10.48551, -427.2359, -19.74024, 100, 0, 0),
-(21873, 2, 6, 10.48551, -427.2359, -19.74024, 100, 0, 0),
+(21873, 2, 6, 10.48551, -427.2359, -19.74024, 100, 1000, 0),
 -- Far West Platform
 -- Coilfang Ambusher 1
-(21865, 0, 1, 99.99268, -275.775, -21.85272, 100, 0, 0),
-(21865, 0, 2, 92.243, -298.7507, -21.65908, 100, 0, 0),
-(21865, 0, 3, 84.49333, -321.7264, -21.46544, 100, 0, 0),
-(21865, 0, 4, 77.75446, -350.1731, -21.79876, 100, 0, 0),
-(21865, 0, 5, 70.33445, -361.8618, -21.24937, 100, 0, 0),
-(21865, 0, 6, 69.53108, -363.2255, -19.72158, 100, 0, 0),
+(21865, 0, 1, 92.243004, -298.7507, -21.659077, 100, 0, 0),
+(21865, 0, 2, 84.49333, -321.7264, -21.465435, 100, 0, 0),
+(21865, 0, 3, 77.754456, -350.17313, -21.798763, 100, 0, 0),
+(21865, 0, 4, 70.33445, -361.86185, -21.249367, 100, 0, 0),
+(21865, 0, 5, 69.53108, -363.2255, -19.721577, 100, 1000, 0),
+(21865, 0, 6, 63.842957, -380.10226, -19.721577, 100, 1000, 0),
 -- Coilfang Ambusher 2
-(21865, 1, 1, 158.8119, -316.7783, -20.56834, 100, 0, 0),
-(21865, 1, 2, 137.5276, -325.2396, -21.65908, 100, 0, 0),
-(21865, 1, 3, 116.2432, -333.7009, -22.74981, 100, 0, 0),
-(21865, 1, 4, 90.797, -354.1427, -22.22203, 100, 0, 0),
-(21865, 1, 5, 80.9742, -367.6935, -21.55492, 100, 0, 0),
-(21865, 1, 6, 80.24744, -369.6647, -19.72158, 100, 0, 0),
+(21865, 1, 1, 137.52756, -325.2396, -21.659077, 100, 0, 0),
+(21865, 1, 2, 116.24323, -333.7009, -22.749815, 100, 0, 0),
+(21865, 1, 3, 90.797005, -354.14273, -22.222033, 100, 0, 0),
+(21865, 1, 4, 80.9742, -367.69354, -21.554916, 100, 0, 0),
+(21865, 1, 5, 80.247444, -369.6647, -19.721577, 100, 1000, 0),
+(21865, 1, 6, 78.43119, -381.565, -19.721577, 100, 1000, 0),
 -- Middle Platform
 -- Coilfang Ambusher 1
-(21865, 2, 1, 82.55382, -550.1996, -20.76506, 100, 0, 0),
-(21865, 2, 2, 78.67844, -528.1855, -21.69625, 100, 0, 0),
-(21865, 2, 3, 74.80305, -506.1713, -22.62744, 100, 0, 0),
-(21865, 2, 4, 64.98795, -475.8712, -20.82125, 100, 0, 0),
-(21865, 2, 5, 64.17319, -473.945, -19.79347, 100, 0, 0),
-(21865, 2, 6, 64.17319, -473.945, -19.79347, 100, 0, 0),
+(21865, 2, 1, 82.55382, -550.19965, -20.765057, 100, 0, 0),
+(21865, 2, 2, 78.67844, -528.1855, -21.696247, 100, 0, 0),
+(21865, 2, 3, 74.803055, -506.17133, -22.627438, 100, 0, 0),
+(21865, 2, 4, 64.98795, -475.87115, -20.821245, 100, 0, 0),
+(21865, 2, 5, 64.17319, -473.94498, -19.793468, 100, 1000, 0),
+(21865, 2, 6, 62.26062, -455.59006, -19.793468, 100, 1000, 0),
 -- Coilfang Ambusher 2
-(21865, 3, 1, 17.01065, -557.4272, -21.48728, 100, 0, 0),
-(21865, 3, 2, 31.46414, -533.449, -21.82125, 100, 0, 0),
-(21865, 3, 3, 45.91763, -509.4709, -22.15521, 100, 0, 0),
-(21865, 3, 4, 56.78963, -479.8066, -21.48792, 100, 0, 0),
-(21865, 3, 5, 56.66174, -476.9765, -19.79347, 100, 0, 0),
-(21865, 3, 6, 56.66174, -476.9765, -19.79347, 100, 0, 0),
+(21865, 3, 1, 17.01065, -557.4272, -21.487282, 100, 0, 0),
+(21865, 3, 2, 31.464138, -533.44904, -21.821247, 100, 0, 0),
+(21865, 3, 3, 45.917625, -509.47086, -22.155212, 100, 0, 0),
+(21865, 3, 4, 56.789635, -479.80664, -21.487915, 100, 0, 0),
+(21865, 3, 5, 56.661736, -476.9765, -19.793468, 100, 1000, 0),
+(21865, 3, 6, 52.19484, -457.6492, -19.793468, 100, 1000, 0),
 -- Far East Platform
 -- Coilfang Ambusher 1
-(21865, 4, 1, -14.23073, -549.0762, -21.05672, 100, 0, 0),
-(21865, 4, 2, -10.10605, -527.3586, -21.86986, 100, 0, 0),
-(21865, 4, 3, -5.981369, -505.641, -22.68299, 100, 0, 0),
-(21865, 4, 4, -1.541027, -474.3588, -21.29347, 100, 0, 0),
-(21865, 4, 5, -0.595155, -470.6852, -19.79347, 100, 0, 0),
-(21865, 4, 6, -0.595155, -470.6852, -19.79347, 100, 0, 0),
+(21865, 4, 1, -14.230728, -549.0762, -21.056725, 100, 0, 0),
+(21865, 4, 2, -10.106049, -527.3586, -21.869858, 100, 0, 0),
+(21865, 4, 3, -5.981369, -505.64102, -22.682991, 100, 0, 0),
+(21865, 4, 4, -1.541027, -474.3588, -21.293468, 100, 0, 0),
+(21865, 4, 5, -0.595155, -470.68518, -19.793468, 100, 1000, 0),
+(21865, 4, 6, 1.217682, -459.33658, -19.793468, 100, 1000, 0),
 -- Coilfang Ambusher 2
-(21865, 5, 1, -1.971265, -540.2956, -21.79284, 100, 0, 0),
-(21865, 5, 2, -0.557066, -530.1155, -22.0018, 100, 0, 0),
-(21865, 5, 3, 0.857133, -519.9354, -22.21077, 100, 0, 0),
-(21865, 5, 4, 7.354449, -476.1862, -21.18235, 100, 0, 0),
-(21865, 5, 5, 10.61764, -474.0561, -19.79347, 100, 0, 0),
-(21865, 5, 6, 10.61764, -474.0561, -19.79347, 100, 0, 0),
+(21865, 5, 1, -1.9712651, -540.2956, -21.792835, 100, 0, 0),
+(21865, 5, 2, -0.557066, -530.1155, -22.001804, 100, 0, 0),
+(21865, 5, 3, 0.857133, -519.93536, -22.210773, 100, 0, 0),
+(21865, 5, 4, 7.354449, -476.18625, -21.18235, 100, 0, 0),
+(21865, 5, 5, 10.617642, -474.0561, -19.793468, 100, 1000, 0),
+(21865, 5, 6, 14.129611, -458.14767, -19.793468, 100, 1000, 0),
 -- Toxic Spore Bat 1
 (22140,1,1,25.47625,-936.2615,71.9574, 100, 0, 0),
 (22140,1,2,15.45654,-949.6531,71.5687, 100, 0, 0),
@@ -704,6 +704,9 @@ INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 (@CGUID+69, @CGUID+38, 1024), -- Murloc Group 3 -> Morogrim Tidewalker
 (@CGUID+70, @CGUID+38, 1024), -- Murloc Group 4 -> Morogrim Tidewalker
 (@CGUID+72, @CGUID+38, 1024), -- Murloc Group 5 -> Morogrim Tidewalker
+(@CGUID+148, @CGUID+38, 1024), -- Underbog Colossus -> Morogrim Tidewalker
+(@CGUID+184, @CGUID+38, 1024), -- Coilfang Serpentguard -> Morogrim Tidewalker
+(@CGUID+188, @CGUID+38, 1024), -- Coilfang Serpentguard -> Morogrim Tidewalker
 (@CGUID+189, @CGUID+38, 1024), -- Coilfang Serpentguard -> Morogrim Tidewalker
 
 (@CGUID+127, @CGUID+39, 1024), -- Greyheart Shield-Bearer -> Fathom-Lord Karathress
@@ -716,9 +719,9 @@ INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 (@CGUID+191, @CGUID+39, 1024), -- Coilfang Serpentguard -> Fathom-Lord Karathress
 (@CGUID+192, @CGUID+39, 1024), -- Coilfang Serpentguard -> Fathom-Lord Karathress
 
-(@CGUID+281, @CGUID+39, 1159), -- Fathom-Guard Caribdis -> Fathom-Lord Karathress
-(@CGUID+282, @CGUID+39, 1159), -- Fathom-Guard Tidalvess -> Fathom-Lord Karathress
-(@CGUID+283, @CGUID+39, 1159), -- Fathom-Guard Sharkkis -> Fathom-Lord Karathress
+(@CGUID+281, @CGUID+39, 1159+4096), -- Fathom-Guard Caribdis -> Fathom-Lord Karathress
+(@CGUID+282, @CGUID+39, 1159+4096), -- Fathom-Guard Tidalvess -> Fathom-Lord Karathress
+(@CGUID+283, @CGUID+39, 1159+4096), -- Fathom-Guard Sharkkis -> Fathom-Lord Karathress
 
 (@CGUID+94, @CGUID+40, 1024), -- Greyheart Tidecaller -> Leotheras the Blind
 (@CGUID+96, @CGUID+40, 1024), -- Greyheart Tidecaller -> Leotheras the Blind
@@ -726,6 +729,9 @@ INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 (@CGUID+122, @CGUID+40, 1024), -- Greyheart Shield-Bearer -> Leotheras the Blind
 (@CGUID+123, @CGUID+40, 1024), -- Greyheart Shield-Bearer -> Leotheras the Blind
 (@CGUID+138, @CGUID+40, 1024), -- Greyheart Skulker -> Leotheras the Blind
+(@CGUID+147, @CGUID+40, 1024), -- Underbog Colossus -> Leotheras the Blind
+(@CGUID+180, @CGUID+40, 1024), -- Coilfang Serpentguard -> Leotheras the Blind
+(@CGUID+181, @CGUID+40, 1024), -- Coilfang Serpentguard -> Leotheras the Blind
 (@CGUID+186, @CGUID+40, 1024), -- Coilfang Serpentguard -> Leotheras the Blind
 (@CGUID+275, @CGUID+40, 1024), -- Greyheart Spellbinder -> Leotheras the Blind
 
@@ -741,11 +747,6 @@ INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 (@CGUID+45, @CGUID+154, 1024), -- Vashj'ir Honor Guard -> World Trigger (Not Immune PC)
 (@CGUID+46, @CGUID+154, 1024), -- Vashj'ir Honor Guard -> World Trigger (Not Immune PC)
 (@CGUID+47, @CGUID+154, 1024), -- Vashj'ir Honor Guard -> World Trigger (Not Immune PC)
-(@CGUID+147, @CGUID+154, 1024), -- Underbog Colossus -> World Trigger (Not Immune PC)
-(@CGUID+148, @CGUID+154, 1024), -- Underbog Colossus -> World Trigger (Not Immune PC)
-(@CGUID+180, @CGUID+154, 1024), -- Coilfang Serpentguard -> World Trigger (Not Immune PC)
-(@CGUID+181, @CGUID+154, 1024), -- Coilfang Serpentguard -> World Trigger (Not Immune PC)
-(@CGUID+188, @CGUID+154, 1024), -- Coilfang Serpentguard -> World Trigger (Not Immune PC)
 
 -- individual trash groups
 (@CGUID+48, @CGUID+42, 1167), -- Coilfang Priestess -> Vashj'ir Honor Guard
@@ -895,6 +896,7 @@ INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 (@CGUID+112, @CGUID+184, 1167), -- Greyheart Nether-Mage -> Coilfang Serpentguard
 (@CGUID+113, @CGUID+184, 1167), -- Greyheart Nether-Mage -> Coilfang Serpentguard
 (@CGUID+131, @CGUID+184, 1167), -- Greyheart Skulker -> Coilfang Serpentguard
+(@CGUID+183, @CGUID+184, 1167), -- Coilfang Serpentguard -> Coilfang Serpentguard
 
 (@CGUID+185, @CGUID+186, 1167), -- Coilfang Serpentguard -> Coilfang Serpentguard
 (@CGUID+193, @CGUID+186, 1167), -- Coilfang Fathom-Witch -> Coilfang Serpentguard
@@ -923,6 +925,7 @@ INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 (@CGUID+273, @CGUID+275, 1167), -- Greyheart Spellbinder -> Greyheart Spellbinder
 (@CGUID+274, @CGUID+275, 1167); -- Greyheart Spellbinder -> Greyheart Spellbinder
 
+DELETE FROM creature_linking_template WHERE entry IN (21964,21965,21966);
 REPLACE INTO `creature_linking_template` (`entry`, `map`, `master_entry`, `flag`, `search_range`) VALUES
 (21806, 548, 21806, 3, 0), -- Greyheart Spellbinder -> Greyheart Spellbinder
 (21857, 548, 21215, 4112, 0), -- Inner Demon -> Leotheras the Blind
@@ -932,15 +935,13 @@ REPLACE INTO `creature_linking_template` (`entry`, `map`, `master_entry`, `flag`
 (21913, 548, 21213, 4112, 0), -- Water Globule -> Morogrim Tidewalker
 (21920, 548, 21213, 4112, 0), -- Tidewalker Lurker -> Morogrim Tidewalker
 (21958, 548, 21212, 4096, 0), -- Enchanted Elemental -> Lady Vashj
-(21964, 548, 21214, 7, 0), -- Fathom-Guard Caribdis -> Fathom-Lord Karathress
-(21965, 548, 21214, 7, 0), -- Fathom-Guard Tidalvess -> Fathom-Lord Karathress
-(21966, 548, 21214, 7, 0), -- Fathom-Guard Sharkkis -> Fathom-Lord Karathress
 (22009, 548, 21212, 4096, 0), -- Tainted Elemental -> Lady Vashj
 (22035, 548, 21216, 4112, 0), -- Pure Spawn of Hydross -> Hydross the Unstable
 (22036, 548, 21216, 4112, 0), -- Tainted Spawn of Hydross -> Hydross the Unstable
 (22055, 548, 21212, 4096, 0), -- Coilfang Elite -> Lady Vashj
 (22056, 548, 21212, 4096, 0), -- Coilfang Strider -> Lady Vashj
-(22140, 548, 21212, 4096, 0); -- Toxic Spore Bat -> Lady Vashj
+(22140, 548, 21212, 4096, 0), -- Toxic Spore Bat -> Lady Vashj
+(22820, 548, 21214, 1024, 0); -- Seer Olum -> Fathom-Lord Karathress
 
 INSERT INTO creature_spawn_entry (guid, entry) VALUES
 -- Random between Tidewalker Depth-Seer (21224), Tidewalker Warrior (21225), Tidewalker Shaman (21226), Tidewalker Harpooner (21227), and Tidewalker Hydromancer (21228)
@@ -1267,7 +1268,7 @@ UPDATE creature SET equipment_id=50130 WHERE guid IN (@CGUID+119,@CGUID+95,@CGUI
 
 INSERT INTO `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecsmin`, `spawntimesecsmax`, `animprogress`, `state`) VALUES
 (@OGUID+1, 183407, 548, 1, 50, -0.0071, 820.2, 3.15, 0, 0, 0, 0, 500, 500, 100, 1), -- Doodad_CF_elevatorPlatform01
-(@OGUID+2, 183490, 548, 1, -58.9, -98.7, -52.79, 3.13366, 0, 0, 0, 0, 500, 500, 100, 1), -- Doodad_CF_elevatorPlatform_small01
+(@OGUID+2, 183490, 548, 1, -59.1349906921386718, -98.7966156005859375, -52.9341926574707031, 3.141592741012573242, 0, 0, 0, 0, 500, 500, 100, 1), -- Doodad_CF_elevatorPlatform_small01
 (@OGUID+3, 184203, 548, 1, 26.3285, -654.495, 15.4742, 3.14159, 0, 0, 0, 0, 30, 30, 100, 1), -- Doodad_Coilfang_Raid_Bridge_Part01
 (@OGUID+4, 184204, 548, 1, 26.3285, -654.495, 15.4742, 3.14159, 0, 0, 0, 0, 30, 30, 100, 1), -- Doodad_Coilfang_Raid_Bridge_Part02
 (@OGUID+5, 184205, 548, 1, 26.3285, -654.495, 15.4742, 3.14159, 0, 0, 0, 0, 30, 30, 100, 1), -- Doodad_Coilfang_Raid_Bridge_Part03
@@ -1336,125 +1337,125 @@ INSERT INTO `dbscripts_on_creature_movement` (`id`, `delay`, `command`, `datalon
 (2121807, 0, 45, 0, 10111, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Honor Guard - 25% chance (speak to Priestess)'),
 (2121808, 0, 45, 0, 10112, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Honor Guard - 25% chance (speak to Shatterer)'),
 (2125301, 0, 36, 0, 0, 0, 21216, 50, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Tainted Water Elemental - Face Hydross'),
-(2125301, 1, 15, 36461, 0, 0, 21216, 50, 3, 0, 0, 0, 0, 0, 0, 0, 0, 'Tainted Water Elemental - Force Hydross to cast Purify Elemental'),
-(2125301, 2, 44, 21260, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Tainted Water Elemental - Change to Purified'),
+(2125301, 1000, 15, 36461, 0, 0, 21216, 50, 3, 0, 0, 0, 0, 0, 0, 0, 0, 'Tainted Water Elemental - Force Hydross to cast Purify Elemental'),
+(2125301, 2000, 44, 21260, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Tainted Water Elemental - Change to Purified'),
 (2126301, 0, 32, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Greyheart Technician - Pause waypoints'),
 (2126301, 0, 1, 173, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Greyheart Technician - STATE_WORK'),
 -- (2126301,0,1,0,0,0,0,0,173,69,0,0,0,0,0,0,'Greyheart Technician - Random between STATE_WORK and STATE_USESTANDING'), -- STATE_USESTANDING doesn't work for Broken model creatures?
 (2126301, 0, 25, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Greyheart Technician - Run on'),
-(2126302, 1, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Greyheart Technician - Bow'),
-(2126302, 4, 1, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Greyheart Technician - Beg'),
-(2129801, 1, 0, 0, 0, 0, 21299, 10, 0, 2000020064, 2000020065, 2000020066, 0, 0, 0, 0, 0, 'Coilfang Fathom-Witch - random say'),
-(2129801, 3, 0, 0, 0, 0, 0, 0, 0, 2000020067, 2000020068, 0, 0, 0, 0, 0, 0, 'Coilfang Serpentguard - random response');
+(2126302, 1000, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Greyheart Technician - Bow'),
+(2126302, 4000, 1, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Greyheart Technician - Beg'),
+(2129801, 1000, 0, 0, 0, 0, 21299, 10, 0, 2000020064, 2000020065, 2000020066, 0, 0, 0, 0, 0, 'Coilfang Fathom-Witch - random say'),
+(2129801, 3000, 0, 0, 0, 0, 0, 0, 0, 2000020067, 2000020068, 0, 0, 0, 0, 0, 0, 'Coilfang Serpentguard - random response');
 
 INSERT INTO `dbscripts_on_creature_death` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 (21214, 0, 18, 3600000, 0, 0, 22820, 100, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Despawn Seer Olum after 1 hour'),
 (21214, 0, 29, 3, 1, 0, 22820, 100, 3, 0, 0, 0, 0, 0, 0, 0, 0, 'Add Gossip/quest giver flag to Seer Olum'),
-(21214, 1, 13, 0, 0, 0, 185474, @OGUID+35, 17, 0, 0, 0, 0, 0, 0, 0, 0, 'Open Seer Olum''s cage'),
-(21214, 2, 3, 0, 0, 0, 22820, 100, 3, 0, 0, 0, 0, 457.031, -543.231, -7.54802, 0.39321, 'Move Seer Olum out of cage'),
-(21214, 3, 0, 0, 0, 0, 22820, 100, 3, 2000020069, 0, 0, 0, 0, 0, 0, 0, 'Force Seer Olum to say text');
+(21214, 1000, 13, 0, 0, 0, 185474, @OGUID+35, 17, 0, 0, 0, 0, 0, 0, 0, 0, 'Open Seer Olum''s cage'),
+(21214, 2000, 3, 0, 0, 0, 22820, 100, 3, 0, 0, 0, 0, 457.031, -543.231, -7.54802, 0.39321, 'Move Seer Olum out of cage'),
+(21214, 3000, 0, 0, 0, 0, 22820, 100, 3, 2000020069, 0, 0, 0, 0, 0, 0, 0, 'Force Seer Olum to say text');
 
 DELETE FROM dbscripts_on_relay WHERE id BETWEEN 10105 AND 10112;
 INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `command`, `datalong`, `datalong2`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 (10105,0,32,1,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - pause waypoints'),
 (10105,0,3,0,0,0,0,0,0,0,0,0,-57.3285,-371.109,1.58651,0,'Honor Guard - move to center (platform 1)'),
-(10105,6,35,5,45,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - send AI event A'),
-(10105,12,0,0,0,0,0,0,2000020041,0,0,0,0,0,0,0,'Honor Guard - say'),
-(10105,15,0,0,0,0,0,0,2000020042,0,0,0,0,0,0,0,'Honor Guard - say'),
-(10105,17,32,0,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - unpause waypoints'),
+(10105,6000,35,5,45,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - send AI event A'),
+(10105,12000,0,0,0,0,0,0,2000020041,0,0,0,0,0,0,0,'Honor Guard - say'),
+(10105,15000,0,0,0,0,0,0,2000020042,0,0,0,0,0,0,0,'Honor Guard - say'),
+(10105,17000,32,0,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - unpause waypoints'),
 
 (10106,0,32,1,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - pause waypoints'),
 (10106,0,3,0,0,0,0,0,0,0,0,0,40.2521,-304.251,1.5865,0,'Honor Guard - move to center (platform 2)'),
-(10106,6,35,5,45,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - send AI event A'),
-(10106,12,0,0,0,0,0,0,2000020041,0,0,0,0,0,0,0,'Honor Guard - say'),
-(10106,15,0,0,0,0,0,0,2000020042,0,0,0,0,0,0,0,'Honor Guard - say'),
-(10106,17,32,0,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - unpause waypoints'),
+(10106,6000,35,5,45,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - send AI event A'),
+(10106,12000,0,0,0,0,0,0,2000020041,0,0,0,0,0,0,0,'Honor Guard - say'),
+(10106,15000,0,0,0,0,0,0,2000020042,0,0,0,0,0,0,0,'Honor Guard - say'),
+(10106,17000,32,0,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - unpause waypoints'),
 
 (10107,0,32,1,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - pause waypoints'),
 (10107,0,3,0,0,0,0,0,0,0,0,0,140.93,-353.593,1.58652,0,'Honor Guard - move to center (platform 3)'),
-(10107,6,35,5,45,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - send AI event A'),
-(10107,12,0,0,0,0,0,0,2000020041,0,0,0,0,0,0,0,'Honor Guard - say'),
-(10107,15,0,0,0,0,0,0,2000020042,0,0,0,0,0,0,0,'Honor Guard - say'),
-(10107,17,32,0,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - unpause waypoints'),
+(10107,6000,35,5,45,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - send AI event A'),
+(10107,12000,0,0,0,0,0,0,2000020041,0,0,0,0,0,0,0,'Honor Guard - say'),
+(10107,15000,0,0,0,0,0,0,2000020042,0,0,0,0,0,0,0,'Honor Guard - say'),
+(10107,17000,32,0,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - unpause waypoints'),
 
 (10108,0,32,1,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - pause waypoints'),
 (10108,0,3,0,0,0,0,0,0,0,0,0,141.894,-509.504,1.58652,0,'Honor Guard - move to center (platform 4)'),
-(10108,6,35,5,45,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - send AI event A'),
-(10108,12,0,0,0,0,0,0,2000020041,0,0,0,0,0,0,0,'Honor Guard - say'),
-(10108,15,0,0,0,0,0,0,2000020042,0,0,0,0,0,0,0,'Honor Guard - say'),
-(10108,17,32,0,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - unpause waypoints'),
+(10108,6000,35,5,45,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - send AI event A'),
+(10108,12000,0,0,0,0,0,0,2000020041,0,0,0,0,0,0,0,'Honor Guard - say'),
+(10108,15000,0,0,0,0,0,0,2000020042,0,0,0,0,0,0,0,'Honor Guard - say'),
+(10108,17000,32,0,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - unpause waypoints'),
 
 (10109,0,32,1,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - pause waypoints'),
 (10109,0,3,0,0,0,0,0,0,0,0,0,40.9439,-554.403,1.58541,0,'Honor Guard - move to center (platform 5)'),
-(10109,6,35,5,45,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - send AI event A'),
-(10109,12,0,0,0,0,0,0,2000020041,0,0,0,0,0,0,0,'Honor Guard - say'),
-(10109,15,0,0,0,0,0,0,2000020042,0,0,0,0,0,0,0,'Honor Guard - say'),
-(10109,17,32,0,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - unpause waypoints'),
+(10109,6000,35,5,45,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - send AI event A'),
+(10109,12000,0,0,0,0,0,0,2000020041,0,0,0,0,0,0,0,'Honor Guard - say'),
+(10109,15000,0,0,0,0,0,0,2000020042,0,0,0,0,0,0,0,'Honor Guard - say'),
+(10109,17000,32,0,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - unpause waypoints'),
 
 (10110,0,32,1,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - pause waypoints'),
 (10110,0,3,0,0,0,0,0,0,0,0,0,-57.0144,-482.826,1.58653,0,'Honor Guard - move to center (platform 6)'),
-(10110,6,35,5,45,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - send AI event A'),
-(10110,12,0,0,0,0,0,0,2000020041,0,0,0,0,0,0,0,'Honor Guard - say'),
-(10110,15,0,0,0,0,0,0,2000020042,0,0,0,0,0,0,0,'Honor Guard - say'),
-(10110,17,32,0,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - unpause waypoints'),
+(10110,6000,35,5,45,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - send AI event A'),
+(10110,12000,0,0,0,0,0,0,2000020041,0,0,0,0,0,0,0,'Honor Guard - say'),
+(10110,15000,0,0,0,0,0,0,2000020042,0,0,0,0,0,0,0,'Honor Guard - say'),
+(10110,17000,32,0,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - unpause waypoints'),
 
 (10111,0,32,1,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - pause waypoints'),
-(10111,1,37,0,0,21220,20,2,0,0,0,0,0,0,0,0,'Honor Guard - move to Priestess'),
-(10111,6,36,0,0,21220,20,0,0,0,0,0,0,0,0,0,'Priestess - face Honor Guard'),
-(10111,6,0,0,0,21220,5,0,2000020043,0,0,0,0,0,0,0,'Priestess - say'),
-(10111,7,36,0,0,21220,20,1,0,0,0,0,0,0,0,0,'Honor Guard - face Priestess'),
-(10111,9,0,10101,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - say random (template)'),
-(10111,12,0,0,0,21220,5,0,2000020052,2000020053,2000020054,2000020055,0,0,0,0,'Priestess - say random'),
-(10111,15,0,10102,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - say random (template)'),
-(10111,17,32,0,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - unpause waypoints'),
-(10111,17,36,1,0,21220,5,0,0,0,0,0,0,0,0,0,'Priestess - reset orientation'),
+(10111,1000,37,0,0,21220,20,2,0,0,0,0,0,0,0,0,'Honor Guard - move to Priestess'),
+(10111,6000,36,0,0,21220,20,0,0,0,0,0,0,0,0,0,'Priestess - face Honor Guard'),
+(10111,6000,0,0,0,21220,5,0,2000020043,0,0,0,0,0,0,0,'Priestess - say'),
+(10111,7000,36,0,0,21220,20,1,0,0,0,0,0,0,0,0,'Honor Guard - face Priestess'),
+(10111,9000,0,10101,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - say random (template)'),
+(10111,12000,0,0,0,21220,5,0,2000020052,2000020053,2000020054,2000020055,0,0,0,0,'Priestess - say random'),
+(10111,15000,0,10102,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - say random (template)'),
+(10111,17000,32,0,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - unpause waypoints'),
+(10111,17000,36,1,0,21220,5,0,0,0,0,0,0,0,0,0,'Priestess - reset orientation'),
 
 (10112,0,32,1,0,21301,40,0,0,0,0,0,0,0,0,0,'Shatterer - pause waypoints'),
 (10112,0,32,1,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - pause waypoints'),
-(10112,1,37,0,0,21301,40,2,0,0,0,0,0,0,0,0,'Honor Guard - move to Shatterer'),
-(10112,3,37,0,0,21301,40,0,0,0,0,0,0,0,0,0,'Shatterer - move to Honor Guard'),
-(10112,7,36,0,0,21301,40,0,0,0,0,0,0,0,0,0,'Shatterer - face Honor Guard'),
-(10112,7,36,0,0,21301,40,1,0,0,0,0,0,0,0,0,'Honor Guard - face Shatterer'),
-(10112,8,0,0,0,21301,10,0,2000020043,0,0,0,0,0,0,0,'Shatterer - say'),
-(10112,10,0,10101,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - say random (template)'),
-(10112,13,0,0,0,21301,10,0,2000020052,2000020053,2000020054,2000020055,0,0,0,0,'Shatterer - say random'),
-(10112,16,0,10102,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - say random (template)'),
-(10112,18,32,0,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - unpause waypoints'),
-(10112,18,32,0,0,21301,10,0,0,0,0,0,0,0,0,0,'Shatterer - unpause waypoints');
+(10112,1000,37,0,0,21301,40,2,0,0,0,0,0,0,0,0,'Honor Guard - move to Shatterer'),
+(10112,3000,37,0,0,21301,40,0,0,0,0,0,0,0,0,0,'Shatterer - move to Honor Guard'),
+(10112,7000,36,0,0,21301,40,0,0,0,0,0,0,0,0,0,'Shatterer - face Honor Guard'),
+(10112,7000,36,0,0,21301,40,1,0,0,0,0,0,0,0,0,'Honor Guard - face Shatterer'),
+(10112,8000,0,0,0,21301,10,0,2000020043,0,0,0,0,0,0,0,'Shatterer - say'),
+(10112,10000,0,10101,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - say random (template)'),
+(10112,13000,0,0,0,21301,10,0,2000020052,2000020053,2000020054,2000020055,0,0,0,0,'Shatterer - say random'),
+(10112,16000,0,10102,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - say random (template)'),
+(10112,18000,32,0,0,0,0,0,0,0,0,0,0,0,0,0,'Honor Guard - unpause waypoints'),
+(10112,18000,32,0,0,21301,10,0,0,0,0,0,0,0,0,0,'Shatterer - unpause waypoints');
 
 DELETE FROM `dbscript_string` WHERE `entry` IN (2000020041,2000020042,2000020043,2000020044,2000020045,2000020046,2000020047,2000020048,2000020049,2000020050,
 2000020051,2000020052,2000020053,2000020054,2000020055,2000020056,2000020057,2000020058,2000020059,2000020060,2000020061,2000020062,2000020063,2000020064,
 2000020065,2000020066,2000020067,2000020068,2000020069);
-INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES
-(2000020041, 'You filthy little beings need to work faster!', 0, 0, 0, 1, 'Vashj''ir Honor Guard - discipline Technicians 1'),
-(2000020042, 'FASTER!!!!', 0, 0, 0, 15, 'Vashj''ir Honor Guard - discipline Technicians 2'),
-(2000020043, 'What''s on your mind, sir?', 0, 0, 0, 1, 'Coilfang Priestess/Shatterer - greet Vashj''r Honor Guard'),
-(2000020044, 'We will be at capacity soon enough.', 0, 0, 0, 1, 'Vashj''ir Honor Guard - response 1'),
-(2000020045, 'Soon all of Draenor''s water will be ours.', 0, 0, 0, 1, 'Vashj''ir Honor Guard - response 1'),
-(2000020046, 'The reservoir fills nicely.', 0, 0, 0, 1, 'Vashj''ir Honor Guard - response 1'),
-(2000020047, 'We appear to be on target.', 0, 0, 0, 1, 'Vashj''ir Honor Guard - response 1'),
-(2000020048, 'Purification seems to be ahead of schedule.', 0, 0, 0, 1, 'Vashj''ir Honor Guard - response 1'),
-(2000020049, 'Things are proceeding as planned.', 0, 0, 0, 1, 'Vashj''ir Honor Guard - response 1'),
-(2000020050, 'The pumps are working magnificently.', 0, 0, 0, 1, 'Vashj''ir Honor Guard - response 1'),
-(2000020051, 'If we can keep working at this rate, the Lady will be pleased.', 0, 0, 0, 1, 'Vashj''ir Honor Guard - response 1'),
-(2000020052, 'I couldn''t agree more.', 0, 0, 0, 1, 'Coilfang Priestess/Shatterer - response 1'),
-(2000020053, 'You speak the truth.', 0, 0, 0, 1, 'Coilfang Priestess/Shatterer - response 1'),
-(2000020054, 'My thoughts exactly.', 0, 0, 0, 1, 'Coilfang Priestess/Shatterer - response 1'),
-(2000020055, 'It''s as if you were reading my mind.', 0, 0, 0, 1, 'Coilfang Priestess/Shatterer - response 1'),
-(2000020056, 'Don''t let the levels get too low.', 0, 0, 0, 1, 'Vashj''ir Honor Guard - response 2'),
-(2000020057, 'Direct the flow from the western bog.', 0, 0, 0, 1, 'Vashj''ir Honor Guard - response 2'),
-(2000020058, 'Keep regulating the main valve to ensure steady flow.', 0, 0, 0, 1, 'Vashj''ir Honor Guard - response 2'),
-(2000020059, 'Open the purification valves and continue work.', 0, 0, 0, 1, 'Vashj''ir Honor Guard - response 2'),
-(2000020060, 'Don''t take your eyes off of these filthy Broken. I don''t trust them.', 0, 0, 0, 1, 'Vashj''ir Honor Guard - response 2'),
-(2000020061, 'Keep everyone working efficiently.', 0, 0, 0, 1, 'Vashj''ir Honor Guard - response 2'),
-(2000020062, 'Make sure these Broken are thoroughly cleaned before touching the water.', 0, 0, 0, 1, 'Vashj''ir Honor Guard - response 2'),
-(2000020063, 'Keep ample pressure on the southern pump.', 0, 0, 0, 1, 'Vashj''ir Honor Guard - response 2'),
-(2000020064, 'Be wary of intruders.', 0, 0, 0, 1, 'Coilfang Fathom-Witch - say to Coilfang Serpentguard'),
-(2000020065, 'Stay alert!', 0, 0, 0, 1, 'Coilfang Fathom-Witch - say to Coilfang Serpentguard'),
-(2000020066, 'We must not fail the master.', 0, 0, 0, 1, 'Coilfang Fathom-Witch - say to Coilfang Serpentguard'),
-(2000020067, 'Understood.', 0, 0, 0, 1, 'Coilfang Serpentguard - respond to Coilfang Fathom-Witch'),
-(2000020068, 'We will not fail.', 0, 0, 0, 1, 'Coilfang Serpentguard - respond to Coilfang Fathom-Witch'),
-(2000020069, 'The naga came close to breaking my will... but the secret is still safe, thanks to you.', 0, 0, 0, 1, 'Seer Olum - freed');
+INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `broadcast_text_id`, `comment`) VALUES
+(2000020041, 'You filthy little beings need to work faster!', 0, 0, 0, 1, 18910, 'Vashj''ir Honor Guard - discipline Technicians 1'),
+(2000020042, 'FASTER!!!!', 0, 0, 0, 15, 18911, 'Vashj''ir Honor Guard - discipline Technicians 2'),
+(2000020043, 'What''s on your mind, sir?', 0, 0, 0, 1, 18909, 'Coilfang Priestess/Shatterer - greet Vashj''r Honor Guard'),
+(2000020044, 'We will be at capacity soon enough.', 0, 0, 0, 1, 18893, 'Vashj''ir Honor Guard - response 1'),
+(2000020045, 'Soon all of Draenor''s water will be ours.', 0, 0, 0, 1, 18888, 'Vashj''ir Honor Guard - response 1'),
+(2000020046, 'The reservoir fills nicely.', 0, 0, 0, 1, 18889, 'Vashj''ir Honor Guard - response 1'),
+(2000020047, 'We appear to be on target.', 0, 0, 0, 1, 18891, 'Vashj''ir Honor Guard - response 1'),
+(2000020048, 'Purification seems to be ahead of schedule.', 0, 0, 0, 1, 18890, 'Vashj''ir Honor Guard - response 1'),
+(2000020049, 'Things are proceeding as planned.', 0, 0, 0, 1, 19344, 'Vashj''ir Honor Guard - response 1'),
+(2000020050, 'The pumps are working magnificently.', 0, 0, 0, 1, 18887, 'Vashj''ir Honor Guard - response 1'),
+(2000020051, 'If we can keep working at this rate, the Lady will be pleased.', 0, 0, 0, 1, 18892, 'Vashj''ir Honor Guard - response 1'),
+(2000020052, 'I couldn''t agree more.', 0, 0, 0, 1, 18903, 'Coilfang Priestess/Shatterer - response 1'),
+(2000020053, 'You speak the truth.', 0, 0, 0, 1, 18905, 'Coilfang Priestess/Shatterer - response 1'),
+(2000020054, 'My thoughts exactly.', 0, 0, 0, 1, 18902, 'Coilfang Priestess/Shatterer - response 1'),
+(2000020055, 'It''s as if you were reading my mind.', 0, 0, 0, 1, 18904, 'Coilfang Priestess/Shatterer - response 1'),
+(2000020056, 'Don''t let the levels get too low.', 0, 0, 0, 1, 18895, 'Vashj''ir Honor Guard - response 2'),
+(2000020057, 'Direct the flow from the western bog.', 0, 0, 0, 1, 18897, 'Vashj''ir Honor Guard - response 2'), -- blizzlike here would be "Direct the flow from from the western bog."
+(2000020058, 'Keep regulating the main valve to ensure steady flow.', 0, 0, 0, 1, 18900, 'Vashj''ir Honor Guard - response 2'),
+(2000020059, 'Open the purification valves and continue work.', 0, 0, 0, 1, 18898, 'Vashj''ir Honor Guard - response 2'),
+(2000020060, 'Don''t take your eyes off of these filthy Broken. I don''t trust them.', 0, 0, 0, 1, 18901, 'Vashj''ir Honor Guard - response 2'),
+(2000020061, 'Keep everyone working efficiently.', 0, 0, 0, 1, 18894, 'Vashj''ir Honor Guard - response 2'),
+(2000020062, 'Make sure these Broken are thoroughly cleaned before touching the water.', 0, 0, 0, 1, 18899, 'Vashj''ir Honor Guard - response 2'),
+(2000020063, 'Keep ample pressure on the southern pump.', 0, 0, 0, 1, 18896, 'Vashj''ir Honor Guard - response 2'),
+(2000020064, 'Be wary of intruders.', 0, 0, 0, 1, 17713, 'Coilfang Fathom-Witch - say to Coilfang Serpentguard'),
+(2000020065, 'Stay alert!', 0, 0, 0, 1, 17711, 'Coilfang Fathom-Witch - say to Coilfang Serpentguard'),
+(2000020066, 'We must not fail the master.', 0, 0, 0, 1, 18145, 'Coilfang Fathom-Witch - say to Coilfang Serpentguard'),
+(2000020067, 'Understood.', 0, 0, 0, 1, 18146, 'Coilfang Serpentguard - respond to Coilfang Fathom-Witch'),
+(2000020068, 'We will not fail.', 0, 0, 0, 1, 18410, 'Coilfang Serpentguard - respond to Coilfang Fathom-Witch'),
+(2000020069, 'The naga came close to breaking my will... but the secret is still safe, thanks to you.', 0, 0, 0, 1, 20460, 'Seer Olum - freed');
 
 DELETE FROM `dbscript_random_templates` WHERE `id` IN (10101,10102,10105,10106,10107,10108,10109,10110,10111,10112);
 INSERT INTO dbscript_random_templates (id, type, target_id, chance) VALUES

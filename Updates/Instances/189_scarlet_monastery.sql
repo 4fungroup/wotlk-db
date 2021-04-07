@@ -138,7 +138,7 @@ REPLACE INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath
 (4306, 0, 0, 1, 16, 0, 0, '9276'), -- Scarlet Torturer
 (4308, 0, 0, 1, 16, 0, 0, NULL), -- Unfettered Spirit
 (4540, 0, 0, 1, 16, 0, 0, '8876'), -- Scarlet Monk
-(4542, 0, 7, 1, 16, 0, 0, NULL), -- High Inquisitor Fairbanks
+(4542, 0, 0, 1, 16, 0, 0, NULL), -- High Inquisitor Fairbanks
 (4543, 0, 0, 1, 16, 0, 0, NULL), -- Bloodmage Thalnos
 (6426, 0, 0, 1, 16, 0, 0, NULL), -- Anguished Dead
 (6427, 0, 0, 1, 16, 0, 0, NULL), -- Haunting Phantasm
@@ -498,8 +498,10 @@ INSERT INTO `creature` (`guid`, `id`, `map`, `position_x`, `position_y`, `positi
 (@CGUID+341, 4293, 189, 1805.176, 1167.855, 6.820, 0.162434, 7200, 7200, 0, 0, 0, 0), -- Scarlet Scryer
 (@CGUID+342, 4293, 189, 1782.416, 1118.755, 7.490, 5.97183, 7200, 7200, 0, 0, 0, 0), -- Scarlet Scryer
 (@CGUID+343, 4293, 189, 1759.67, 1146.85, 7.49036, 3.19674, 7200, 7200, 0, 0, 0, 0), -- Scarlet Scryer
-(@CGUID+344, 4293, 189, 1788.68, 1145.46, 7.49084, 6.10664, 7200, 7200, 0, 0, 0, 0); -- Scarlet Scryer
+(@CGUID+344, 4293, 189, 1788.68, 1145.46, 7.49084, 6.10664, 7200, 7200, 0, 0, 0, 0), -- Scarlet Scryer
 
+-- TBC+ only
+(@CGUID+401, 23758, 189, 1767.034, 1348.685, 17.542156, 6.267, 7200, 7200, 0, 0, 0, 0); -- Headless Horseman - Earth Explosion Bunny - extrapolated sniff pos from cata+ SM
 
 -- ===========
 -- GAMEOBJECTS
@@ -719,20 +721,20 @@ INSERT INTO `dbscripts_on_go_use` (`id`, `delay`, `command`, `datalong`, `datalo
 DELETE FROM dbscripts_on_quest_end WHERE id=11405;
 INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- TBC+ only
-(11405, 1, 0, 0, 0, 0, 0, 0, 2, 2000020001, 0, 0, 0, 0, 0, 0, 0, 'say_summon_horseman_1'),
-(11405, 3, 0, 0, 0, 0, 0, 0, 2, 2000020002, 0, 0, 0, 0, 0, 0, 0, 'say_summon_horseman_2'),
-(11405, 5, 0, 0, 0, 0, 0, 0, 2, 2000020003, 0, 0, 0, 0, 0, 0, 0, 'say_summon_horseman_3'),
-(11405, 8, 0, 0, 0, 0, 0, 0, 2, 2000020004, 0, 0, 0, 0, 0, 0, 0, 'say_summon_horseman_4'),
-(11405, 8, 15, 42909, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'cast Headless Horseman Climax - Summoning Rhyme, Shake, Medium'),
-(11405, 10, 10, 23682, 0, 0, 0, 0, 2, 0, 0, 0, 0, 1765.28, 1347.46, 17.5514, 0.100363, 'summon Headless Horseman'); -- player should summon so that we can use spawner guid in C++
+(11405, 1000, 0, 0, 0, 0, 0, 0, 2, 2000020001, 0, 0, 0, 0, 0, 0, 0, 'say_summon_horseman_1'),
+(11405, 3000, 0, 0, 0, 0, 0, 0, 2, 2000020002, 0, 0, 0, 0, 0, 0, 0, 'say_summon_horseman_2'),
+(11405, 5000, 0, 0, 0, 0, 0, 0, 2, 2000020003, 0, 0, 0, 0, 0, 0, 0, 'say_summon_horseman_3'),
+(11405, 8000, 0, 0, 0, 0, 0, 0, 2, 2000020004, 0, 0, 0, 0, 0, 0, 0, 'say_summon_horseman_4'),
+(11405, 8000, 15, 42909, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'cast Headless Horseman Climax - Summoning Rhyme, Shake, Medium'),
+(11405, 10000, 10, 23682, 0, 0, 0, 0, 2, 0, 0, 0, 0, 1765.28, 1347.46, 17.5514, 0.100363, 'summon Headless Horseman'); -- player should summon so that we can use spawner guid in C++
 
 DELETE FROM `dbscript_string` WHERE `entry` IN (2000020001,2000020002,2000020003,2000020004);
-INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES
+INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `broadcast_text_id`, `comment`) VALUES
 -- TBC+ only
-(2000020001, 'Horseman rise...', 0, 0, 0, 0, 'horseman say_summon_horseman_1'),
-(2000020002, 'Your time is night...', 0, 0, 0, 0, 'horseman say_summon_horseman_2'),
-(2000020003, 'You felt death once...', 0, 0, 0, 0, 'horseman say_summon_horseman_3'),
-(2000020004, 'Now, know demise!', 0, 0, 0, 0, 'horseman say_summon_horseman_4');
+(2000020001, 'Horseman rise...', 0, 0, 0, 0, 22695, 'horseman say_summon_horseman_1'),
+(2000020002, 'Your time is nigh...', 0, 0, 0, 0, 22696, 'horseman say_summon_horseman_2'),
+(2000020003, 'You felt death once...', 0, 0, 0, 0, 22720, 'horseman say_summon_horseman_3'),
+(2000020004, 'Now, know demise!', 0, 0, 0, 0, 22721, 'horseman say_summon_horseman_4');
 
 -- INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `comments`) VALUES
 

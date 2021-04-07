@@ -4,6 +4,7 @@ DBScriptName: instance_steam_vault
 DB%Complete: 90
 DBComment:
 * Dreghood Slave Post RP Event - Movement
+@CGUID+177 stops at point 2 instead of 3 due to unknown reasons
 EndDBScriptData */
 
 SET @CGUID := 5450000; -- creatures
@@ -101,16 +102,16 @@ INSERT INTO `creature_movement` (`id`, `point`, `position_x`, `position_y`, `pos
 (@CGUID+174, 1, -103.0932, -412.6261, -6.715064, 100, 0, 0),
 (@CGUID+174, 2, -102.9049, -410.0541, -7.629989, 100, 0, 0),
 (@CGUID+174, 3, -102.8985, -409.8516, -7.701919, 100, 0, 0),
-(@CGUID+174, 4, -102.8985, -409.8517, -7.701902, 100, 0, 3),
+(@CGUID+174, 4, -102.8985, -409.8517, -7.701902, 100, 100, 3),
 (@CGUID+175, 1, -91.10979, -413.2563, -6.49236, 100, 0, 0),
 (@CGUID+175, 2, -90.96289, -410.4629, -7.484769, 100, 0, 0),
-(@CGUID+175, 3, -90.95283, -410.2715, -7.552732, 100, 0, 3),
+(@CGUID+175, 3, -90.95283, -410.2715, -7.552732, 100, 100, 3),
 (@CGUID+176, 1, -99.09876, -412.8362, -6.641628, 100, 0, 0),
 (@CGUID+176, 2, -98.95186, -410.0427, -7.634037, 100, 0, 0),
-(@CGUID+176, 3, -98.9418, -409.8514, -7.702, 100, 0, 3),
+(@CGUID+176, 3, -98.9418, -409.8514, -7.702, 100, 100, 3),
 (@CGUID+177, 1, -95.715, -431.2523, 1.661656, 100, 0, 0),
 (@CGUID+177, 2, -95.65462, -423.5111, -1.838279, 100, 0, 0),
-(@CGUID+177, 3, -94.94731, -410.0615, -7.625664, 100, 0, 3),
+(@CGUID+177, 3, -94.94731, -410.0615, -7.625664, 100, 100, 3),
 (@CGUID+36, 1, -219.2435, -87.32145, -7.755558, 100, 0, 0),
 (@CGUID+36, 2, -237.9914, -82.86905, -7.755557, 100, 0, 0),
 (@CGUID+36, 3, -234.5452, -83.63921, -7.755558, 100, 0, 0),
@@ -216,34 +217,34 @@ REPLACE INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath
 (21694, 0, 0, 0, 0, 0, 0, '18950'); -- Bog Overlord
 
 INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
-(@CGUID+90, @CGUID+91, 1167), -- Coilfang Warrior -> Coilfang Warrior
+(@CGUID+90, @CGUID+91, 1155), -- Coilfang Warrior -> Coilfang Warrior
 (@CGUID+92, @CGUID+75, 1679), -- Coilfang Warrior -> Coilfang Siren
-(@CGUID+26, @CGUID+100, 1167), -- Coilfang Engineer -> Coilfang Warrior
-(@CGUID+27, @CGUID+100, 1167), -- Coilfang Engineer -> Coilfang Warrior
-(@CGUID+25, @CGUID+103, 1167), -- Coilfang Engineer -> Coilfang Engineer
-(@CGUID+30, @CGUID+103, 1167), -- Coilfang Engineer -> Coilfang Engineer
-(@CGUID+179, @CGUID+103, 1167), -- creature_spawn_entry -> Coilfang Engineer
-(@CGUID+20, @CGUID+93, 1167), -- Coilfang Engineer -> Coilfang Warrior
-(@CGUID+181, @CGUID+93, 1167), -- creature_spawn_entry -> Coilfang Warrior
-(@CGUID+31, @CGUID+93, 1167), -- Coilfang Engineer -> Coilfang Warrior
-(@CGUID+24, @CGUID+101, 1167), -- Coilfang Engineer -> Coilfang Engineer
-(@CGUID+84, @CGUID+101, 1167), -- Coilfang Siren -> Coilfang Engineer
-(@CGUID+111, @CGUID+101, 1167), -- Coilfang Oracle -> Coilfang Engineer
-(@CGUID+76, @CGUID+94, 1167), -- Coilfang Warrior -> Coilfang Oracle
-(@CGUID+106, @CGUID+94, 1167), -- Coilfang Siren -> Coilfang Oracle
-(@CGUID+85, @CGUID+94, 1167), -- Coilfang Siren -> Coilfang Oracle
-(@CGUID+23, @CGUID+102, 1167), -- Coilfang Engineer -> Coilfang Warrior
-(@CGUID+28, @CGUID+102, 1167), -- Coilfang Engineer -> Coilfang Warrior
-(@CGUID+180, @CGUID+102, 1167), -- creature_spawn_entry -> Coilfang Warrior
+(@CGUID+26, @CGUID+100, 1155), -- Coilfang Engineer -> Coilfang Warrior
+(@CGUID+27, @CGUID+100, 1155), -- Coilfang Engineer -> Coilfang Warrior
+(@CGUID+25, @CGUID+103, 1155), -- Coilfang Engineer -> Coilfang Engineer
+(@CGUID+30, @CGUID+103, 1155), -- Coilfang Engineer -> Coilfang Engineer
+(@CGUID+179, @CGUID+103, 1155), -- creature_spawn_entry -> Coilfang Engineer
+(@CGUID+20, @CGUID+93, 1155), -- Coilfang Engineer -> Coilfang Warrior
+(@CGUID+181, @CGUID+93, 1155), -- creature_spawn_entry -> Coilfang Warrior
+(@CGUID+31, @CGUID+93, 1155), -- Coilfang Engineer -> Coilfang Warrior
+(@CGUID+24, @CGUID+101, 1155), -- Coilfang Engineer -> Coilfang Engineer
+(@CGUID+84, @CGUID+101, 1155), -- Coilfang Siren -> Coilfang Engineer
+(@CGUID+111, @CGUID+101, 1155), -- Coilfang Oracle -> Coilfang Engineer
+(@CGUID+76, @CGUID+94, 1155), -- Coilfang Warrior -> Coilfang Oracle
+(@CGUID+106, @CGUID+94, 1155), -- Coilfang Siren -> Coilfang Oracle
+(@CGUID+85, @CGUID+94, 1155), -- Coilfang Siren -> Coilfang Oracle
+(@CGUID+23, @CGUID+102, 1155), -- Coilfang Engineer -> Coilfang Warrior
+(@CGUID+28, @CGUID+102, 1155), -- Coilfang Engineer -> Coilfang Warrior
+(@CGUID+180, @CGUID+102, 1155), -- creature_spawn_entry -> Coilfang Warrior
 (@CGUID+77, @CGUID+96, 1679), -- Coilfang Siren -> Coilfang Warrior
 (@CGUID+78, @CGUID+96, 1679), -- Coilfang Siren -> Coilfang Warrior
-(@CGUID+86, @CGUID+98, 1167), -- Coilfang Siren -> Coilfang Siren
-(@CGUID+87, @CGUID+98, 1167), -- Coilfang Warrior -> Coilfang Warrior
-(@CGUID+107, @CGUID+98, 1167), -- Coilfang Warrior -> Coilfang Warrior
-(@CGUID+29, @CGUID+99, 1167), -- Coilfang Engineer -> Coilfang Warrior
-(@CGUID+178, @CGUID+99, 1167), -- creature_spawn_entry -> Coilfang Warrior
-(@CGUID+88, @CGUID+112, 1167), -- Coilfang Siren -> Coilfang Oracle
-(@CGUID+89, @CGUID+112, 1167), -- Coilfang Siren -> Coilfang Oracle
+(@CGUID+86, @CGUID+98, 1155), -- Coilfang Siren -> Coilfang Siren
+(@CGUID+87, @CGUID+98, 1155), -- Coilfang Warrior -> Coilfang Warrior
+(@CGUID+107, @CGUID+98, 1155), -- Coilfang Warrior -> Coilfang Warrior
+(@CGUID+29, @CGUID+99, 1155), -- Coilfang Engineer -> Coilfang Warrior
+(@CGUID+178, @CGUID+99, 1155), -- creature_spawn_entry -> Coilfang Warrior
+(@CGUID+88, @CGUID+112, 1155), -- Coilfang Siren -> Coilfang Oracle
+(@CGUID+89, @CGUID+112, 1155), -- Coilfang Siren -> Coilfang Oracle
 (@CGUID+160, @CGUID+157, 1679), -- Steam Surger -> Tidal Surger
 (@CGUID+161, @CGUID+157, 1679), -- Steam Surger -> Tidal Surger
 (@CGUID+162, @CGUID+157, 1679), -- Steam Surger -> Tidal Surger
@@ -256,62 +257,52 @@ INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES
 (@CGUID+168, @CGUID+159, 1679), -- Steam Surger -> Tidal Surger
 (@CGUID+169, @CGUID+159, 1679), -- Steam Surger -> Tidal Surger
 (@CGUID+170, @CGUID+159, 1679), -- Steam Surger -> Tidal Surger
-(@CGUID+60, @CGUID+61, 1167), -- Coilfang Myrmidon -> Coilfang Myrmidon
+(@CGUID+60, @CGUID+61, 1155), -- Coilfang Myrmidon -> Coilfang Myrmidon
 (@CGUID+40, @CGUID+97, 1679), -- Coilfang Sorceress -> Coilfang Warrior
 (@CGUID+41, @CGUID+97, 1679), -- Coilfang Sorceress -> Coilfang Warrior
 (@CGUID+95, @CGUID+32, 1679), -- Coilfang Warrior -> Coilfang Sorceress
 (@CGUID+104, @CGUID+32, 1679), -- Coilfang Warrior -> Coilfang Sorceress
 (@CGUID+66, @CGUID+34, 1679), -- Coilfang Myrmidon-> Coilfang Sorceress
 (@CGUID+67, @CGUID+34, 1679), -- Coilfang Myrmidon-> Coilfang Sorceress
-(@CGUID+35, @CGUID+81, 1167), -- Coilfang Sorceress -> Coilfang Siren
-(@CGUID+80, @CGUID+81, 1167), -- Coilfang Siren -> Coilfang Siren
-(@CGUID+68, @CGUID+81, 1167), -- Coilfang Myrmidon -> Coilfang Siren
-(@CGUID+65, @CGUID+64, 1167), -- Coilfang Myrmidon -> Coilfang Myrmidon
-(@CGUID+33, @CGUID+64, 1167), -- Coilfang Sorceress -> Coilfang Myrmidon
-(@CGUID+79, @CGUID+64, 1167), -- Coilfang Siren -> Coilfang Myrmidon
-(@CGUID+49, @CGUID+50, 1167), -- Dreghood Slave -> Dreghood Slave
-(@CGUID+56, @CGUID+59, 1167), -- Dreghood Slave -> Dreghood Slave
-(@CGUID+57, @CGUID+55, 1167), -- Dreghood Slave -> Dreghood Slave
-(@CGUID+58, @CGUID+45, 1167), -- Dreghood Slave -> Dreghood Slave
-(@CGUID+46, @CGUID+47, 1167), -- Dreghood Slave -> Dreghood Slave
-(@CGUID+52, @CGUID+51, 1167), -- Dreghood Slave -> Dreghood Slave
-(@CGUID+53, @CGUID+51, 1167), -- Dreghood Slave -> Dreghood Slave
-(@CGUID+54, @CGUID+51, 1167), -- Dreghood Slave -> Dreghood Slave
-(@CGUID+115, @CGUID+48, 1167), -- Coilfang Slavemaster -> Dreghood Slave
-(@CGUID+116, @CGUID+48, 1167), -- Coilfang Slavemaster -> Dreghood Slave
-(@CGUID+136, @CGUID+140, 1167), -- Coilfang Leper -> Coilfang Leper
-(@CGUID+137, @CGUID+140, 1167), -- Coilfang Leper -> Coilfang Leper
-(@CGUID+138, @CGUID+140, 1167), -- Coilfang Leper -> Coilfang Leper
-(@CGUID+139, @CGUID+140, 1167), -- Coilfang Leper -> Coilfang Leper
-(@CGUID+141, @CGUID+140, 1167), -- Coilfang Leper -> Coilfang Leper
-(@CGUID+142, @CGUID+140, 1167), -- Coilfang Leper -> Coilfang Leper
-(@CGUID+143, @CGUID+140, 1167), -- Coilfang Leper -> Coilfang Leper
-(@CGUID+144, @CGUID+148, 1167), -- Coilfang Leper -> Coilfang Leper
-(@CGUID+145, @CGUID+148, 1167), -- Coilfang Leper -> Coilfang Leper
-(@CGUID+146, @CGUID+148, 1167), -- Coilfang Leper -> Coilfang Leper
-(@CGUID+147, @CGUID+148, 1167), -- Coilfang Leper -> Coilfang Leper
-(@CGUID+149, @CGUID+148, 1167), -- Coilfang Leper -> Coilfang Leper
-(@CGUID+150, @CGUID+148, 1167), -- Coilfang Leper -> Coilfang Leper
-(@CGUID+151, @CGUID+148, 1167), -- Coilfang Leper -> Coilfang Leper
-(@CGUID+21, @CGUID+74, 1167), -- Coilfang Engineer -> Coilfang Myrmidon
-(@CGUID+22, @CGUID+74, 1167), -- Coilfang Engineer -> Coilfang Myrmidon
-(@CGUID+39, @CGUID+74, 1167), -- Coilfang Sorceress -> Coilfang Myrmidon
-(@CGUID+174, @CGUID+177, 1679), -- Coilfang Engineer -> Coilfang Myrmidon
-(@CGUID+175, @CGUID+177, 1679), -- Coilfang Engineer -> Coilfang Myrmidon
-(@CGUID+176, @CGUID+177, 1679), -- Coilfang Sorceress -> Coilfang Myrmidon
-(@CGUID+38, @CGUID+72, 1167), -- Coilfang Sorceress -> Coilfang Myrmidon
-(@CGUID+82, @CGUID+72, 1167), -- Coilfang Siren -> Coilfang Myrmidon
-(@CGUID+109, @CGUID+72, 1167), -- Coilfang Oracle -> Coilfang Myrmidon
-(@CGUID+37, @CGUID+73, 1167), -- Coilfang Sorceress -> Coilfang Myrmidon
-(@CGUID+83, @CGUID+73, 1167), -- Coilfang Siren -> Coilfang Myrmidon
-(@CGUID+110, @CGUID+73, 1167), -- Coilfang Oracle -> Coilfang Myrmidon
-(@CGUID+70, @CGUID+118, 1167), -- Coilfang Myrmidon -> Coilfang Siren
-(@CGUID+71, @CGUID+118, 1167), -- Coilfang Myrmidon -> Coilfang Siren
-(@CGUID+108, @CGUID+118, 1167), -- Coilfang Oracle -> Coilfang Siren
+(@CGUID+35, @CGUID+81, 1155), -- Coilfang Sorceress -> Coilfang Siren
+(@CGUID+80, @CGUID+81, 1155), -- Coilfang Siren -> Coilfang Siren
+(@CGUID+68, @CGUID+81, 1155), -- Coilfang Myrmidon -> Coilfang Siren
+(@CGUID+65, @CGUID+64, 1155), -- Coilfang Myrmidon -> Coilfang Myrmidon
+(@CGUID+33, @CGUID+64, 1155), -- Coilfang Sorceress -> Coilfang Myrmidon
+(@CGUID+79, @CGUID+64, 1155), -- Coilfang Siren -> Coilfang Myrmidon
+(@CGUID+136, @CGUID+140, 1155), -- Coilfang Leper -> Coilfang Leper
+(@CGUID+137, @CGUID+140, 1155), -- Coilfang Leper -> Coilfang Leper
+(@CGUID+138, @CGUID+140, 1155), -- Coilfang Leper -> Coilfang Leper
+(@CGUID+139, @CGUID+140, 1155), -- Coilfang Leper -> Coilfang Leper
+(@CGUID+141, @CGUID+140, 1155), -- Coilfang Leper -> Coilfang Leper
+(@CGUID+142, @CGUID+140, 1155), -- Coilfang Leper -> Coilfang Leper
+(@CGUID+143, @CGUID+140, 1155), -- Coilfang Leper -> Coilfang Leper
+(@CGUID+144, @CGUID+148, 1155), -- Coilfang Leper -> Coilfang Leper
+(@CGUID+145, @CGUID+148, 1155), -- Coilfang Leper -> Coilfang Leper
+(@CGUID+146, @CGUID+148, 1155), -- Coilfang Leper -> Coilfang Leper
+(@CGUID+147, @CGUID+148, 1155), -- Coilfang Leper -> Coilfang Leper
+(@CGUID+149, @CGUID+148, 1155), -- Coilfang Leper -> Coilfang Leper
+(@CGUID+150, @CGUID+148, 1155), -- Coilfang Leper -> Coilfang Leper
+(@CGUID+151, @CGUID+148, 1155), -- Coilfang Leper -> Coilfang Leper
+(@CGUID+21, @CGUID+74, 1155), -- Coilfang Engineer -> Coilfang Myrmidon
+(@CGUID+22, @CGUID+74, 1155), -- Coilfang Engineer -> Coilfang Myrmidon
+(@CGUID+39, @CGUID+74, 1155), -- Coilfang Sorceress -> Coilfang Myrmidon
+(@CGUID+174, @CGUID+177, 1155), -- Coilfang Engineer -> Coilfang Myrmidon
+(@CGUID+175, @CGUID+177, 1155), -- Coilfang Engineer -> Coilfang Myrmidon
+(@CGUID+176, @CGUID+177, 1155), -- Coilfang Sorceress -> Coilfang Myrmidon
+(@CGUID+38, @CGUID+72, 1155), -- Coilfang Sorceress -> Coilfang Myrmidon
+(@CGUID+82, @CGUID+72, 1155), -- Coilfang Siren -> Coilfang Myrmidon
+(@CGUID+109, @CGUID+72, 1155), -- Coilfang Oracle -> Coilfang Myrmidon
+(@CGUID+37, @CGUID+73, 1155), -- Coilfang Sorceress -> Coilfang Myrmidon
+(@CGUID+83, @CGUID+73, 1155), -- Coilfang Siren -> Coilfang Myrmidon
+(@CGUID+110, @CGUID+73, 1155), -- Coilfang Oracle -> Coilfang Myrmidon
+(@CGUID+70, @CGUID+118, 1155), -- Coilfang Myrmidon -> Coilfang Siren
+(@CGUID+71, @CGUID+118, 1155), -- Coilfang Myrmidon -> Coilfang Siren
+(@CGUID+108, @CGUID+118, 1155), -- Coilfang Oracle -> Coilfang Siren
 (@CGUID+121, @CGUID+42, 1159), -- Steamrigger Mechanic -> Mekgineer Steamrigger
 (@CGUID+122, @CGUID+42, 1159), -- Steamrigger Mechanic -> Mekgineer Steamrigger
 (@CGUID+123, @CGUID+42, 1159), -- Steamrigger Mechanic -> Mekgineer Steamrigger
-(@CGUID+63, @CGUID+62, 1167); -- Coilfang Myrmidon -> Coilfang Myrmidon
+(@CGUID+63, @CGUID+62, 1155); -- Coilfang Myrmidon -> Coilfang Myrmidon
 
 REPLACE INTO `creature_linking_template` (`entry`, `map`, `master_entry`, `flag`, `search_range`) VALUES
 (17917, 545, 17797, 1159, 0), -- Coilfang Water Elemental -> Hydromancer Thespia
@@ -600,7 +591,7 @@ INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
 (@PGUID+22, 1, 'Steamvault - Ragveil / Flame Cap #1'),
 (@PGUID+23, 1, 'Steamvault - Ragveil / Flame Cap #2'),
 (@PGUID+24, 4, 'Steamvault - Ancient Lichen (181278)'),
-(@PGUID+25, 6, 'Steamvault - Master Mineral Pool'),
+(@PGUID+25, 4, 'Steamvault - Master Mineral Pool'),
 (@PGUID+26, 1, 'Steamvault - Adamantite Deposit / Rich Adamantite Deposit #1'),
 (@PGUID+27, 1, 'Steamvault - Adamantite Deposit / Rich Adamantite Deposit #2'),
 (@PGUID+28, 1, 'Steamvault - Adamantite Deposit / Rich Adamantite Deposit #3'),
@@ -687,10 +678,10 @@ INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `command`, `datalong`
 (184125, 0, 0, 0, 0, 0, 0, 0, 0, 2000020037, 0, 0, 0, 0, 0, 0, 0, 'Invisible Stalker Coilfang Doors 20926 - Emote on 184125 go template use'),
 (184126, 0, 0, 0, 0, 0, 0, 0, 0, 2000020037, 0, 0, 0, 0, 0, 0, 0, 'Invisible Stalker Coilfang Doors 20926 - Emote on 184126 go template use'),
 (184126, 0, 0, 0, 0, 0, 0, 0, 0, 2000020038, 0, 0, 0, 0, 0, 0, 0, 'Invisible Stalker Coilfang Doors 20926 - Emote on 184126 go template use'), -- should be conditioned to whichever go is activated last
-(184126, 12, 20, 2, 0, 0, 17722, @CGUID+174, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Coilfang Sorceress 17722 - Change MovementType to 2 on 2000020038'),
-(184126, 12, 20, 2, 0, 0, 17803, @CGUID+175, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Coilfang Oracle 17803 - Change MovementType to 2 on 2000020038'),
-(184126, 12, 20, 2, 0, 0, 17800, @CGUID+177, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Coilfang Myrmidon 17800 - Change MovementType to 2 on 2000020038'),
-(184126, 12, 20, 2, 0, 0, 17800, @CGUID+176, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Coilfang Myrmidon 17800 - Change MovementType to 2 on 2000020038');
+(184126, 12000, 20, 2, 0, 0, 17722, @CGUID+174, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Coilfang Sorceress 17722 - Change MovementType to 2 on 2000020038'),
+(184126, 12000, 20, 2, 0, 0, 17803, @CGUID+175, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Coilfang Oracle 17803 - Change MovementType to 2 on 2000020038'),
+(184126, 12000, 20, 2, 0, 0, 17800, @CGUID+177, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Coilfang Myrmidon 17800 - Change MovementType to 2 on 2000020038'),
+(184126, 12000, 20, 2, 0, 0, 17800, @CGUID+176, 23, 0, 0, 0, 0, 0, 0, 0, 0, 'Coilfang Myrmidon 17800 - Change MovementType to 2 on 2000020038');
 
 -- INSERT INTO `dbscripts_on_relay` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 -- INSERT INTO `dbscripts_on_event` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
@@ -700,9 +691,9 @@ INSERT INTO `dbscripts_on_go_template_use` (`id`, `delay`, `command`, `datalong`
 -- INSERT INTO `dbscripts_on_quest_end` (`id`, `delay`, `command`, `datalong`, `datalong2`, `datalong3`, `buddy_entry`, `search_radius`, `data_flags`, `dataint`, `dataint2`, `dataint3`, `dataint4`, `x`, `y`, `z`, `o`, `comments`) VALUES
 
 DELETE FROM `dbscript_string` WHERE `entry` IN (2000020037,2000020038);
-INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES
-(2000020037, 'You hear a faint echo....', 0, 2, 0, 0, NULL),
-(2000020038, 'You hear a loud rumble of metal grinding on stone...', 0, 2, 0, 0, NULL);
+INSERT INTO `dbscript_string` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `broadcast_text_id`, `comment`) VALUES
+(2000020037, 'You hear a faint echo....', 0, 2, 0, 0, 18599, NULL),
+(2000020038, 'You hear a loud rumble of metal grinding on stone...', 0, 2, 0, 0, 18600, NULL);
 
 -- INSERT INTO `dbscript_random_templates` (`id`, `type`, `target_id`, `chance`, `comments`) VALUES
 
