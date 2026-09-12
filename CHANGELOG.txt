@@ -1,4 +1,166 @@
 ===============================================================
+WoTLKDB v1.9 'Icecrown' for CMaNGOS 14092 for 3.3.5a
+===============================================================
+
+Main changes:
+* Icecrown - Northrend - Completed
+	- all quests
+	- all areas spawns/waypoints/events
+* Lots updates backported from CDB
+* Lots updates backported from TBCDB
+* Lots updates for ACID Scrips 
+* Lots of Quests / spawns / gossips / Events / Waypoints were added in random Zones
+
+===============================================================
+WoTLKDB v1.8 'Nesingwary's Hunt' for CMaNGOS 14080 for 3.3.5a
+===============================================================
+
+Main changes:
+* Sholazar Basin - Northrend - Completed
+* Crystalsong - Northrend - Completed
+	- all quests
+	- all areas spawns/waypoints/events
+* All Transports - Fully Scripted
+* Many creatures and objects moved to 'Group Spawn' system
+* Lots updates backported from CDB
+* Lots updates backported from TBCDB
+* Lots updates for ACID Scrips 
+* Lots of Quests / spawns / gossips / Events / Waypoints were added in random Zones
+
+
+===============================================================
+WoTLKDB v1.7 'Drakkaris Dream' for CMaNGOS 14065 for 3.3.5a
+===============================================================
+
+Main changes:
+* Zul'Drak - Northrend - Completed
+	- all quests
+	- all areas spawns/waypoints/events
+* Instances:
+	- Gundrak - Reconstructed
+	- Naxxramas (Wotlk) - Reconstructed
+* Many creatures and objects moved to new 'Group Spawn' system
+* Lots updates backported from CDB
+* Lots updates backported from TBCDB
+* Lots updates for ACID Scrips 
+* Lots of Quests / spawns / gossips / Events / Waypoints were added in random Zones
+
+
+===============================================================
+WoTLKDB v1.6 'Holiday Fun' for CMaNGOS 14060 for 3.3.5a
+===============================================================
+
+Main changes:
+* Midsummer Fire Festival - Reconstructed
+	- quests
+	- spawns
+	- Event Boss Ahune - fixed and missing RP event added
+* Brewfest - Reconstructed
+	- quests
+	- spawns
+	- Event Boss Coren Direbrew - fixed
+* Event Bosses moved to Dungeon Finder
+* Zul'Drak - Northrend - Updated (work in progress)
+* Many creatures and objects moved to new 'Group Spawn' system
+* Lots updates backported from CDB
+* Lots updates backported from TBCDB
+* Lots updates for ACID Scrips 
+* Lots of Quests / spawns / gossips / Events / Waypoints were added in random Zones
+
+
+===============================================================
+WoTLKDB v1.5 'Arugal's Fate' for CMaNGOS 14034 for 3.3.5a
+===============================================================
+
+Main changes:
+* Grizzly Hills - Completed
+	- all quests
+	- all areas spawns/waypoints/events
+* Death Knights Starting Zone - Revisited
+	- all quests
+	- all areas spawns/waypoints/events
+* All Transports Populated	
+* Love is in the Air - Updated
+* BG:  Alterac valley - Updated
+* All WoTLK-era Instances moved to 'Instance File System'
+* Instances:
+	- Drak'Tharon - Reconstructed
+	- The Eye of Eternity - Reconstructed
+	- Icecrown Citadel - Reconstructed (still req. more work)
+	- The Violet Hold  - Updated
+	- Ruby Sanctum     - Updated
+	- Utgarde Pinnacle - Updated
+	- Halls of Stone   - Updated
+	- Utgarde Keep     - Updated
+	- Ulduar           - Updated	
+	- The Nexus        - Updated
+	- Azjol-Nerub      - Updated
+	- Pit of Saron     - Updated
+	- Forge of Souls   - Updated
+	- Halls of Reflection - Updated
+	- Ahn'kahet: The Old Kingdom - Updated
+* Lots updates backported from CDB
+* Lots updates backported from TBCDB
+* Lots updates for ACID Scrips 
+* Lots of Quests / spawns / gossips / Events / Waypoints were added in random Zones
+
+
+===============================================================
+WoTLKDB v1.4 'WrathGate' for CMaNGOS 14029 for 3.3.5a
+===============================================================
+
+Main changes:
+* Dragonblight - Completed
+	- all quests
+	- all areas spawns/waypoints/events
+* All Northrend guids moved to new 500k Range
+* Wrathgate storyline - both factions
+* Breadcrumbs quests - redone
+* Instances:
+	- Azjol-Nerub - Reconstructed and added 'Instance File System'
+	- Ahn'kahet: The Old Kingdom - Reconstructed and added 'Instance File System'
+	- The Obsidian Sanctum - Reconstructed and added 'Instance File System'
+	- The Ruby Sanctum - Reconstructed and added 'Instance File System' 
+* Creature linking: vehicle accessories - specific accessories despawn / die on vehicle death
+* Various updates for Strand of the Ancients
+* Isle of conquest:
+    - fix gameobjects and creature factions
+    - spell targets for teleporters
+    - battleground boss scripts
+    - spawn missing creatures and gameobjects
+    - broken cannon script
+    - vehicle scripts
+* Add graveyard zones for battlegrounds
+* Add battleground honorable defenders auras (IoC, EotS and AB)
+* Add spell script targets for battleground / outdoor PvP flags unlock spells
+* Add event scripts for Wintergrasp towers (on tower damanged / destroyed)
+* Add various achievement criterias for battlegrounds and Wintergrasp
+* Update spirit healers in battlegrounds (add missing / remove the ones spawned by script)
+* Alterac Valley:
+    - fix spawn mask of creatures and gameobjects for level 80
+    - fix creature levels and factions for level 70 and 80
+* Lots updates backported from CDB
+* Lots updates backported from TBCDB
+* Lots updates for ACID Scrips 
+* Lots of Quests / spawns / gossips / Events / Waypoints were added in random Zones
+
+
+===============================================================
+WoTLKDB v1.3 'Antares' for CMaNGOS 14015 for 3.3.5a
+===============================================================
+
+Main changes:
+* All Pre-WoTLK Instances moved to 'Instance File System'
+* We started Scripting Dragonblight - Northrend
+* Lots updates backported from CDB   (sync with 1.10.1 'The Shifting Sands') 
+* Lots updates backported from TBCDB (sync with 1.8.0  'Vengeance Strikes Back')
+* Lots updates for ACID Scrips 
+* Lots of Quests / spawns / gossips / Events / Waypoints were added
+* ACID Scripts    Readded to Release file
+* spell_templates Readded to Release file
+
+
+===============================================================
 WoTLKDB v1.2 'Ymiron' for CMaNGOS 13992 for 3.3.5a
 ===============================================================
 
